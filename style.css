@@ -76,4 +76,5 @@ button {
 .workbook-form textarea {
     border: 0px;
     border: 1px solid var(--primary-color);
+    font-size: 24px;
 }
