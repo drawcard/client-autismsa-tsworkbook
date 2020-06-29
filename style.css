@@ -1,80 +1,80 @@
 /* Styles */
 
 :root {
-    --primary-color: #702f8a;
-    --primary-color-light: #af86be;
-    --primary-color-xlight: #ebdbf1;
+  --primary-color: rgb(112, 47, 138);
+  --primary-color-light: #af86be;
+  --primary-color-xlight: #ebdbf1;
 }
 * {
-    font-family: "Krub", sans-serif;
+  font-family: 'Krub', sans-serif;
 }
 a {
-    color: var(--primary-color) !important;
+  color: var(--primary-color) !important;
 }
 button {
-    background-color: #702f8a;
-    color: #fff;
-    font-weight: 600;
+  background-color: #702f8a;
+  color: #fff;
+  font-weight: 600;
 }
 .content {
-    padding: 16px;
+  padding: 16px;
 }
 .workbook {
-    margin: 64px 0px;
+  margin: 64px 0px;
 }
 .menu-system {
-    background-color: var(--primary-color);
+  background-color: var(--primary-color);
 }
 .menu-system a {
-    color: #fff !important;
-    font-size: 150%;
-    margin: 0px 8px;
+  color: #fff !important;
+  font-size: 150%;
+  margin: 0px 8px;
 }
 .menu-system a:first-of-type {
-    font-style: italic;
+  font-style: italic;
 }
 .menu-system .logo {
-    color: #fff;
-    opacity: 0.5;
-    font-size: 200% !important;
+  color: #fff;
+  opacity: 0.5;
+  font-size: 200% !important;
 }
 .page-title {
-    font-size: 500%;
-    color: var(--primary-color);
-    font-weight: 600;
+  font-size: 500%;
+  color: var(--primary-color);
+  font-weight: 600;
 }
 .jump-to {
-    position: relative;
+  position: relative;
 }
 .jump-to-nav {
-    margin: 0px;
-    padding: 0px;
-    position: fixed;
-    width: 250px;
-    margin-left: 16px;
+  margin: 0px;
+  padding: 0px;
+  position: fixed;
+  width: 250px;
+  margin-left: 16px;
 }
 .jump-to-nav li {
-    list-style-type: none;
-    border-top: 1px solid var(--primary-color-light);
-    padding: 8px 0px;
-    font-size: 125%;
+  list-style-type: none;
+  border-top: 1px solid var(--primary-color-light);
+  padding: 8px 0px;
+  font-size: 125%;
 }
 .workbook-form {
-    margin: 24px 0px;
-    background-color: var(--primary-color-xlight);
+  margin: 24px 0px;
+  background-color: var(--primary-color-xlight);
 }
 .workbook-form fieldset {
-    border: 0px;
+  border: 0px;
 }
 .workbook-form legend {
-    font-size: 18px;
+  font-size: 18px;
 }
 .workbook-form .field {
-    margin: 16px auto;
+  margin: 16px auto;
 }
 .workbook-form input,
 .workbook-form textarea {
-    border: 0px;
-    border: 1px solid var(--primary-color);
-    font-size: 24px;
+  border: 0px;
+  border: 1px solid var(--primary-color);
+  font-size: 24px;
 }
