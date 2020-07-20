@@ -1,3 +1,24 @@
 <mat-toolbar color="primary">
-    <span>Workbook</span>
+    <button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu" mat-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <mat-icon color="primary">person</mat-icon>
+            <span>Link 1</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon color="primary">person</mat-icon>
+            <span>Link 2</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon color="primary">person</mat-icon>
+            <span>Link 3</span>
+        </button>
+        <button mat-menu-item>
+            <mat-icon color="primary">person</mat-icon>
+            <span>Link 4</span>
+        </button>
+    </mat-menu>
+    <span>Autism and Me</span>
 </mat-toolbar>
