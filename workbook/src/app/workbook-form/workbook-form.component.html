@@ -1,6 +1,5 @@
 <div class="wb-container">
-    <form class="wb-form" [formGroup]="formContent" validate (ngSubmit)="onSubmit()">
-
+    <form class="wb-form">
         <h1 class="wb-section-title">Welcome</h1>
         <div class="wb-section-intro">
             <p>My Autism and Me: Planning Booklet includes important information about me! It is a document that will
@@ -19,19 +18,20 @@
             <mat-card-content class="block01">
                 <h1>About Me!</h1>
                 <mat-form-field>
-                    <input matInput placeholder="My name is" value="" formControlName="b1_q1">
+                    <input matInput placeholder="My name is" value="" [formControl]="b1_q1">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="And my age is" value="" formControlName="b1_q2">
+                    <input matInput placeholder="And my age is" value="" [formControl]="b1_q2">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="I live with" value="" formControlName="b1_q3">
+                    <input matInput placeholder="I live with" value="" [formControl]="b1_q3">
                 </mat-form-field>
                 <mat-form-field>
-                    <input matInput placeholder="I attend...^" value="" formControlName="b1_q4">
+                    <input matInput placeholder="I attend...^" value="" [formControl]="b1_q4">
                 </mat-form-field>
                 <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
             </mat-card-content>
         </mat-card>
+        <button mat-raised-button color="primary" (click)="formComplete()">Submit</button>
     </form>
 </div>
