@@ -53,6 +53,7 @@ export class WorkbookFormComponent implements AfterViewInit {
               width: 75,
               style: 'imageMargin'
             },
+            { text: 'Autism & Me: Workbook', style: 'title' },
             // Block 0
             { text: this.blockHeading[0], style: 'heading' },
             { text: this.blockText[0].replace(this.regex, '\n'), style: 'body' },
@@ -65,8 +66,13 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
       ],
       styles: {
-        heading: {
+        title: {
           fontSize: 36,
+          bold: true,
+          margin: [0, 0, 0, 16]
+        },
+        heading: {
+          fontSize: 24,
           bold: true,
           margin: [0, 0, 0, 16]
         },
@@ -82,7 +88,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         imageMargin: {
           margin: [0, 24, 0, 24]
         }
-      }
+      },
     };
     pdfMake.createPdf(documentDefinition).open();
   }
@@ -92,7 +98,7 @@ export class WorkbookFormComponent implements AfterViewInit {
     * Static content (intro paragraphs, body text, footer text, etc)
     */
     this.blockHeading = [
-      `Your information`,
+      `About Me`,
     ]
     this.blockText = [
       `My Autism and Me: Planning Booklet includes important information about me! It is a document that will change and develop as I do. It's purpose is to help everyone in my life understand my autism and what it means for me and my family on a day to day basis. <br><br>
