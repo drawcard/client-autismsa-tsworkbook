@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import pdfMake from '../../../node_modules/pdfmake/build/pdfmake';
 import pdfFonts from '../../../node_modules/pdfmake/build/vfs_fonts';
+
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
 @Component({

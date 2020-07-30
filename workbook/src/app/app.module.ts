@@ -19,13 +19,15 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ImageUploadComponent } from './shared/image-upload/image-upload.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SharedComponent,
     MainMenuComponent,
-    WorkbookFormComponent
+    WorkbookFormComponent,
+    ImageUploadComponent
   ],
   imports: [
     FormsModule,
