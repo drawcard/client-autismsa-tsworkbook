@@ -11,6 +11,10 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 })
 
 export class WorkbookFormComponent {
+
+  b1_intro: string;
+
+  // Initialise Form Data Fields
   b1_q1 = new FormControl('');
   b1_q2 = new FormControl('');
   b1_q3 = new FormControl('');
@@ -32,6 +36,7 @@ export class WorkbookFormComponent {
               width: 150,
               style: 'imageMargin'
             },
+            { text: this.b1_intro, style: 'intro' },
             { text: 'Autism and Me: Workbook', style: 'section' },
             { text: 'About me!', style: 'h1' },
             'My name is: ' + this.b1_q1.value,
@@ -65,5 +70,25 @@ export class WorkbookFormComponent {
       }
     };
     pdfMake.createPdf(documentDefinition).open();
+  }
+
+  constructor() {
+    /*
+    * Static content
+    */
+    // Introduction texts
+    this.b1_intro = `
+                <p>My Autism and Me: Planning Booklet includes important information about me! It is a document that will
+                change and develop as I do. It's purpose is to help everyone in my life understand my autism and what it
+                means for me and my family on a day to day basis.</p>
+            <p>My Autism and Me: Planning Booklet includes information about:</p>
+            <ul>
+                <li>The characteristics of my autism</li>
+                <li>The impact of those characteristics on me and my family</li>
+                <li>Strategies that can support me and my family</li>
+                <li>Information about supports and services</li>
+                <li>My short term and long term goals</li>
+            </ul>
+            `
   }
 }

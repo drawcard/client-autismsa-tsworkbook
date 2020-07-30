@@ -1,22 +1,10 @@
 <div class="wb-container">
     <form class="wb-form">
+        <!-- Begin Block #1 -->
         <h1 class="wb-section-title">Welcome</h1>
-        <div class="wb-section-intro">
-            <p>My Autism and Me: Planning Booklet includes important information about me! It is a document that will
-                change and develop as I do. It's purpose is to help everyone in my life understand my autism and what it
-                means for me and my family on a day to day basis.</p>
-            <p>My Autism and Me: Planning Booklet includes information about:</p>
-            <ul>
-                <li>The characteristics of my autism</li>
-                <li>The impact of those characteristics on me and my family</li>
-                <li>Strategies that can support me and my family</li>
-                <li>Information about supports and services</li>
-                <li>My short term and long term goals</li>
-            </ul>
-        </div>
+        <div class="wb-section-intro" [innerHTML]="b1_intro"></div>
         <mat-card>
             <mat-card-content class="block01">
-                <h1>About Me!</h1>
                 <mat-form-field>
                     <input matInput placeholder="My name is" value="" [formControl]="b1_q1">
                 </mat-form-field>
@@ -35,5 +23,6 @@
                 <button mat-raised-button color="primary" (click)="generatePdf()">Generate PDF</button>
             </mat-card-actions>
         </mat-card>
+        <!-- End Block #1 -->
     </form>
 </div>
