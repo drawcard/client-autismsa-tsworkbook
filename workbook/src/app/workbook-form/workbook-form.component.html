@@ -1,28 +1,28 @@
 <div class="wb-container">
     <form class="wb-form">
-        <!-- Begin Block #1 -->
-        <h1 class="wb-section-title">Welcome</h1>
-        <div class="wb-section-intro" [innerHTML]="b1_intro"></div>
-        <mat-card>
-            <mat-card-content class="block01">
-                <mat-form-field>
-                    <input matInput placeholder="My name is" value="" [formControl]="b1_q1">
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="And my age is" value="" [formControl]="b1_q2">
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="I live with" value="" [formControl]="b1_q3">
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="I attend...^" value="" [formControl]="b1_q4">
-                </mat-form-field>
-                <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="generatePdf()">Generate PDF</button>
-            </mat-card-actions>
-        </mat-card>
-        <!-- End Block #1 -->
+        <div class="wb-block block-00">
+            <h1 class="wb-block-heading" [innerHTML]="blockHeading[0]"></h1>
+            <div class="wb-block-text" [innerHTML]="blockText[0]"></div>
+            <mat-card>
+                <mat-card-content>
+                    <mat-form-field>
+                        <input matInput placeholder="My name is" value="" [formControl]="b1_q1">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="And my age is" value="" [formControl]="b1_q2">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="I live with" value="" [formControl]="b1_q3">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput placeholder="I attend...^" value="" [formControl]="b1_q4">
+                    </mat-form-field>
+                    <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-raised-button color="primary" (click)="generatePdf()">Generate PDF</button>
+                </mat-card-actions>
+            </mat-card>
+        </div>
     </form>
 </div>

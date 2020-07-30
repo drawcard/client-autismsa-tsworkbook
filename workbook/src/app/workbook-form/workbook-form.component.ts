@@ -13,12 +13,17 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
 export class WorkbookFormComponent {
 
   b1_intro: string;
+  blockHeading: any[];
+  blockText: any[];
 
   // Initialise Form Data Fields
   b1_q1 = new FormControl('');
   b1_q2 = new FormControl('');
   b1_q3 = new FormControl('');
   b1_q4 = new FormControl('');
+
+  // Regular expression for stripping <br> tags in the PDF output
+  regex = /\<br>/gi;
 
   formComplete() {
     console.table(this);
@@ -36,9 +41,9 @@ export class WorkbookFormComponent {
               width: 150,
               style: 'imageMargin'
             },
-            { text: this.b1_intro, style: 'intro' },
-            { text: 'Autism and Me: Workbook', style: 'section' },
-            { text: 'About me!', style: 'h1' },
+            // Block 0
+            { text: this.blockHeading[0], style: 'heading' },
+            { text: this.blockText[0].replace(this.regex, '\n'), style: 'body' },
             'My name is: ' + this.b1_q1.value,
             'My age is: ' + this.b1_q2.value,
             'I live with: ' + this.b1_q3.value,
@@ -47,22 +52,19 @@ export class WorkbookFormComponent {
         },
       ],
       styles: {
-        section: {
+        heading: {
           fontSize: 36,
           bold: true,
           margin: [0, 0, 0, 16]
         },
-        h1: {
+        body: {
+          margin: [0, 16, 0, 16],
+          color: 'gray'
+        },
+        subheading: {
           fontSize: 18,
           bold: true,
           margin: [0, 0, 0, 8]
-        },
-        subheader: {
-          fontSize: 14
-        },
-        superMargin: {
-          margin: [20, 0, 40, 0],
-          fontSize: 15
         },
         imageMargin: {
           margin: [0, 24, 0, 24]
@@ -74,21 +76,19 @@ export class WorkbookFormComponent {
 
   constructor() {
     /*
-    * Static content
+    * Static content (intro paragraphs, body text, footer text, etc)
     */
-    // Introduction texts
-    this.b1_intro = `
-                <p>My Autism and Me: Planning Booklet includes important information about me! It is a document that will
-                change and develop as I do. It's purpose is to help everyone in my life understand my autism and what it
-                means for me and my family on a day to day basis.</p>
-            <p>My Autism and Me: Planning Booklet includes information about:</p>
-            <ul>
-                <li>The characteristics of my autism</li>
-                <li>The impact of those characteristics on me and my family</li>
-                <li>Strategies that can support me and my family</li>
-                <li>Information about supports and services</li>
-                <li>My short term and long term goals</li>
-            </ul>
-            `
+    this.blockHeading = [
+      `Your information`,
+    ]
+    this.blockText = [
+      `My Autism and Me: Planning Booklet includes important information about me! It is a document that will change and develop as I do. It's purpose is to help everyone in my life understand my autism and what it means for me and my family on a day to day basis. <br><br>
+      My Autism and Me: Planning Booklet includes information about: <br><br>
+      • The characteristics of my autism <br>
+      • The impact of those characteristics on me and my family <br>
+      • Strategies that can support me and my family <br>
+      • Information about supports and services <br>
+      • My short term and long term goals`,
+    ]
   }
 }
