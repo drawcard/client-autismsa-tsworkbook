@@ -13,6 +13,7 @@ export class ImageUploadComponent implements OnInit {
   imageError: string;
   isImageSaved: boolean;
   cardImageBase64: string;
+  blankImage: string = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mP8Xw8AAoMBgDTD2qgAAAAASUVORK5CYII='; // Transparent 1x1 pixel image
 
   constructor() { }
 
@@ -25,8 +26,8 @@ export class ImageUploadComponent implements OnInit {
       // Size Filter Bytes
       const max_size = 2097152; // 2mb max
       const allowed_types = ['image/png', 'image/jpeg'];
-      const max_height = 800;
-      const max_width = 800;
+      const max_height = 400;
+      const max_width = 400;
 
       if (fileInput.target.files[0].size > max_size) {
         this.imageError =
@@ -62,6 +63,7 @@ export class ImageUploadComponent implements OnInit {
             const imgBase64Path = e.target.result;
             this.cardImageBase64 = imgBase64Path;
             this.isImageSaved = true;
+            console.log(this.cardImageBase64);
             // this.previewImagePath = imgBase64Path;
           }
         };
@@ -72,8 +74,9 @@ export class ImageUploadComponent implements OnInit {
   }
 
   removeImage() {
-    this.cardImageBase64 = null;
+    this.cardImageBase64 = this.blankImage;
     this.isImageSaved = false;
+    console.log(this.cardImageBase64);
   }
 
 }

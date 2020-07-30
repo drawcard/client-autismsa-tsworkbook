@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import pdfMake from '../../../node_modules/pdfmake/build/pdfmake';
 import pdfFonts from '../../../node_modules/pdfmake/build/vfs_fonts';
+import { ImageUploadComponent } from "./image-upload/image-upload.component";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -11,11 +12,12 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   styleUrls: ['./workbook-form.component.scss']
 })
 
-export class WorkbookFormComponent {
+export class WorkbookFormComponent implements AfterViewInit {
 
   b1_intro: string;
   blockHeading: any[];
   blockText: any[];
+  blankImage: string;
 
   // Initialise Form Data Fields
   b1_q1 = new FormControl('');
@@ -25,6 +27,14 @@ export class WorkbookFormComponent {
 
   // Regular expression for stripping <br> tags in the PDF output
   regex = /\<br>/gi;
+
+  @ViewChild(ImageUploadComponent) child: ImageUploadComponent;
+
+  ngAfterViewInit(): void {
+    this.blankImage = this.child.blankImage;
+    console.log(this.child.blankImage);
+  }
+
 
   formComplete() {
     console.table(this);
@@ -45,6 +55,7 @@ export class WorkbookFormComponent {
             // Block 0
             { text: this.blockHeading[0], style: 'heading' },
             { text: this.blockText[0].replace(this.regex, '\n'), style: 'body' },
+            { image: (this.child.cardImageBase64 ? this.child.cardImageBase64 : this.child.blankImage), style: 'imageMargin' }, // No image uploaded? Show blank image
             'My name is: ' + this.b1_q1.value,
             'My age is: ' + this.b1_q2.value,
             'I live with: ' + this.b1_q3.value,
