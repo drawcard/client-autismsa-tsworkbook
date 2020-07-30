@@ -31,10 +31,17 @@
   margin: 16px auto;
 }
 
-.wb-section-title {
+.wb-block-heading {
   font-size: 3em;
 }
-.wb-section-intro {
+
+.wb-block-text {
   font-size: 1.2em;
   line-height: 1.6em;
+  margin: 24px 0px;
+}
+
+.generate-pdf {
+  font-size: 16px;
+  margin: 32px 0px;
 }

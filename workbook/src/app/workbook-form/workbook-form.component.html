@@ -1,6 +1,7 @@
 <div class="wb-container">
     <form class="wb-form">
-        <div class="wb-block block-00">
+        <div class="wb-block">
+            <a id="block-00"></a>
             <h1 class="wb-block-heading" [innerHTML]="blockHeading[0]"></h1>
             <div class="wb-block-text" [innerHTML]="blockText[0]"></div>
             <mat-card>
@@ -19,10 +20,9 @@
                     </mat-form-field>
                     <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
                 </mat-card-content>
-                <mat-card-actions>
-                    <button mat-raised-button color="primary" (click)="generatePdf()">Generate PDF</button>
-                </mat-card-actions>
             </mat-card>
         </div>
+        <!-- Generate PDF -->
+        <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Generate PDF</button>
     </form>
 </div>
