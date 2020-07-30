@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-import { SharedComponent } from './shared/shared.component';
 import { MainMenuComponent } from './main-menu/main-menu.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatButtonModule } from '@angular/material/button';
@@ -24,7 +23,6 @@ import { ImageUploadComponent } from './shared/image-upload/image-upload.compone
 @NgModule({
   declarations: [
     AppComponent,
-    SharedComponent,
     MainMenuComponent,
     WorkbookFormComponent,
     ImageUploadComponent
