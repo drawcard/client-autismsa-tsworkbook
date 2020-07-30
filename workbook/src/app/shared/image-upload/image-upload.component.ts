@@ -23,10 +23,10 @@ export class ImageUploadComponent implements OnInit {
     this.imageError = null;
     if (fileInput.target.files && fileInput.target.files[0]) {
       // Size Filter Bytes
-      const max_size = 20971520;
+      const max_size = 2097152; // 2mb max
       const allowed_types = ['image/png', 'image/jpeg'];
-      const max_height = 15200;
-      const max_width = 25600;
+      const max_height = 800;
+      const max_width = 800;
 
       if (fileInput.target.files[0].size > max_size) {
         this.imageError =
@@ -36,7 +36,7 @@ export class ImageUploadComponent implements OnInit {
       }
 
       if (!_.includes(allowed_types, fileInput.target.files[0].type)) {
-        this.imageError = 'Only Images are allowed ( JPG | PNG )';
+        this.imageError = 'Only images are allowed (JPG or PNG)';
         return false;
       }
       const reader = new FileReader();
@@ -52,9 +52,9 @@ export class ImageUploadComponent implements OnInit {
 
           if (img_height > max_height && img_width > max_width) {
             this.imageError =
-              'Maximum dimentions allowed ' +
+              'Maximum dimensions allowed: ' +
               max_height +
-              '*' +
+              ' x ' +
               max_width +
               'px';
             return false;
