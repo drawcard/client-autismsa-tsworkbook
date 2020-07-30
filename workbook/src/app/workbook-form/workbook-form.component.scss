@@ -31,11 +31,15 @@
   margin: 16px auto;
 }
 
-.wb-block-heading {
+.wb-section h1 {
   font-size: 3em;
 }
 
-.wb-block-text {
+.wb-section h2 {
+  font-size: 2em;
+}
+
+.wb-section h3 {
   font-size: 1.2em;
   line-height: 1.6em;
   margin: 24px 0px;
@@ -44,4 +48,8 @@
 .generate-pdf {
   font-size: 16px;
   margin: 32px 0px;
+}
+
+mat-form-field {
+  width: 100%;
 }

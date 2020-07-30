@@ -1,23 +1,20 @@
 <div class="form-group">
     <fieldset class="form-group">
 
-        <label>Upload your photo</label>
-        {{imageError}}
+        <h3>Upload your photo</h3>
+        <p>Max size 400x400px, JPG or PNG, under 2mb</p>
+        <p class="img-error">{{imageError}}</p>
         <div class="custom-file fileInputProfileWrap">
             <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
             <div class="img-space">
-
                 <ng-container *ngIf="isImageSaved; else elseTemplate">
                     <img [src]="cardImageBase64" />
                 </ng-container>
                 <ng-template #elseTemplate>
-
-                    <img src="./../../assets/placeholder.png" class="img-responsive">
+                    <img src="./../../assets/placeholder.png" class="placeholder">
                 </ng-template>
-
             </div>
-
         </div>
     </fieldset>
 </div>
-<a class="btn btn-danger" (click)="removeImage()" *ngIf="isImageSaved">Remove</a>
+<button mat-raised-button (click)="removeImage()" *ngIf="isImageSaved">Remove image</button>
