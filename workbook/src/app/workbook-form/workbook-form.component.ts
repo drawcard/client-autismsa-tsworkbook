@@ -68,7 +68,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         // Section 01
         { text: this.blockHeading[0], style: 'heading' },
         { text: this.blockText[0].replace(this.regex, '\n'), style: 'body' },
-        { image: (this.child.cardImageBase64 ? this.child.cardImageBase64 : this.child.blankImage), style: 'imageMargin' }, // No image uploaded? Show blank image
+        { image: (this.child.cardImageBase64 ? this.child.cardImageBase64 : this.child.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
         'My name is: ' + this.b1_q1.value,
         'My age is: ' + this.b1_q2.value,
         'I live with: ' + this.b1_q3.value,
@@ -175,7 +175,7 @@ export class WorkbookFormComponent implements AfterViewInit {
       `It is always helpful for the people in my life to know what I like, what I am good at, what I find challenging and the supports I need. This information can help guide decisions around how to interact with me, what I am likely to be successful at and what skills I need to continue developing.`,
 
       // Section 02
-
+      `Social communication and social interaction are areas of difference for people on the spectrum, but these characteristics are not the same for every person with autism. It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide the development of personalised strategies that can have a positive impact on my communication and play!`,
     ]
   }
 }

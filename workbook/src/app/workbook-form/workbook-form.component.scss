@@ -33,16 +33,27 @@
 
 .wb-section h1 {
   font-size: 3em;
+  margin: 24px 0px;
 }
 
 .wb-section h2 {
   font-size: 2em;
+  margin: 24px 0px;
 }
 
 .wb-section h3 {
   font-size: 1.2em;
   line-height: 1.6em;
   margin: 24px 0px;
+}
+
+.wb-section ul {
+  padding: 0px;
+  list-style: none;
+}
+
+.wb-section .mat-checkbox-label {
+  white-space: initial !important;
 }
 
 .generate-pdf {

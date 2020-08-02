@@ -17,6 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
+import { MatCheckboxModule } from "@angular/material/checkbox";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ImageUploadComponent } from "./workbook-form/image-upload/image-upload.component";
 
@@ -42,6 +43,7 @@ import { ImageUploadComponent } from "./workbook-form/image-upload/image-upload.
     MatSelectModule,
     MatRadioModule,
     MatCardModule,
+    MatCheckboxModule,
     ReactiveFormsModule
   ],
   providers: [],
