@@ -59,14 +59,14 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: this.docName, style: 'title' },
         // Section 01
-        { text: this.blockHeading[0], style: 'heading' },
-        { text: this.blockText[0].replace(this.regex, '\n'), style: 'body' },
+        // { text: this.blockHeading[0], style: 'heading' },
+        // { text: this.blockText[0].replace(this.regex, '\n'), style: 'body' },
         { image: (this.iu.cardImageBase64 ? this.iu.cardImageBase64 : this.iu.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
         'My name is: ' + this.s01.b1_q1.value,
         'My age is: ' + this.s01.b1_q2.value,
         'I live with: ' + this.s01.b1_q3.value,
         'My school / kindergarten / childcare details are: ' + this.s01.b1_q4.value,
-        { text: this.blockText[1].replace(this.regex, '\n'), style: 'body' },
+        // { text: this.blockText[1].replace(this.regex, '\n'), style: 'body' },
         'I like (e.g.people, places, objects, activities): ' + this.s01.b1_q5.value,
         'I am good at (strengths): ' + this.s01.b1_q6.value,
         'I have trouble with (challenges): ' + this.s01.b1_q7.value,
@@ -104,23 +104,10 @@ export class WorkbookFormComponent implements AfterViewInit {
     /*
     * Static content (intro paragraphs, body text, footer text, etc)
     */
-    this.sectionHeading = [
-      `Section 1`,
-      `Section 2`,
-      `Section 3`,
-      `Section 4`,
-      `Section 5`,
-      `Section 6`,
-      `Section 7`,
-      `Section 8`,
-      `Section 9`,
 
-    ]
+    // TODO: Refactor this
+
     this.blockHeading = [
-      // Section 01
-      ``,
-      // Section 02
-      `My social communication and social interaction: Characteristics`,
       `My social communication and social interaction: Strategies`,
       `My social communication and social interaction: Supports`,
       `My social communication and social interaction: Characteristics`,
@@ -154,15 +141,6 @@ export class WorkbookFormComponent implements AfterViewInit {
       `Learn more about Autism`,
       // Section 09
       `User notes & Copyright`,
-    ]
-    this.blockText = [
-      // Section 01
-      ``,
-
-      ``,
-
-      // Section 02
-      `Social communication and social interaction are areas of difference for people on the spectrum, but these characteristics are not the same for every person with autism. It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide the development of personalised strategies that can have a positive impact on my communication and play!`,
     ]
   }
 }
