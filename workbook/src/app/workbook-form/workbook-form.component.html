@@ -2,59 +2,14 @@
     <form class="wb-form">
         <app-section01></app-section01>
         <app-image-upload></app-image-upload>
-        <div class="wb-section">
-            <a id="section-02"></a>
-            <h1 [innerHTML]="sectionHeading[1]"></h1>
-            <h2 [innerHTML]="blockHeading[1]"></h2>
-            <h3 [innerHTML]="blockText[2]"></h3>
-            <mat-card>
-                <mat-card-content>
-                    <h4>Sometimes...</h4>
-                    <!-- <mat-form-field>
-                        <ul>
-                            <li>
-                                <mat-checkbox>I understand pictures better than spoken words</mat-checkbox>
-                            </li>
-                            <li>
-                                <mat-checkbox>I find it tricky to give eye contact</mat-checkbox>
-                            </li>
-                            <li>
-                                <mat-checkbox>I have trouble knowing what others are going to do e.g. I don’t reach out
-                                    my arms
-                                    when someone is about to pick me up, or I don’t seem to understand familiar games
-                                    e.g.
-                                    ‘Peek-a-Boo’ or ‘Chasey’</mat-checkbox>
-                            </li>
-                            <li>
-                                <mat-checkbox>I find understanding body language and gestures confusing e.g. smiling
-                                    when smiled
-                                    at; pointing or waving in context</mat-checkbox>
-                            </li>
-                            <li>
-                                <mat-checkbox>I can find it tricky to know how close to stand and sit next to other
-                                    people
-                                </mat-checkbox>
-                            </li>
-                            <li>
-                                <mat-checkbox>I physically show people what I want or need rather than telling them with
-                                    words
-                                    eg pull mum to the fridge when I want a snack or bang on the door if I want to go
-                                    outside
-                                </mat-checkbox>
-                            </li>
-                            <li>
-                                <mat-checkbox>I prefer to be alone, with adults or younger children instead of playing
-                                    with
-                                    peers</mat-checkbox>
-                            </li>
-                            <li>
-                                <mat-checkbox>I stick with people and activities I know</mat-checkbox>
-                            </li>
-                        </ul>
-                    </mat-form-field> -->
-                </mat-card-content>
-            </mat-card>
-        </div>
+        <app-section02></app-section02>
+        <app-section03></app-section03>
+        <app-section04></app-section04>
+        <app-section05></app-section05>
+        <app-section06></app-section06>
+        <app-section07></app-section07>
+        <app-section08></app-section08>
+        <app-section09></app-section09>
         <!-- Generate PDF -->
         <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Generate PDF</button>
     </form>

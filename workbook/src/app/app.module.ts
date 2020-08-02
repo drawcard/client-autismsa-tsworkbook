@@ -21,6 +21,14 @@ import { MatCheckboxModule } from "@angular/material/checkbox";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ImageUploadComponent } from "./workbook-form/image-upload/image-upload.component";
 import { Section01Component } from './workbook-form/section01/section01.component';
+import { Section02Component } from './workbook-form/section02/section02.component';
+import { Section03Component } from './workbook-form/section03/section03.component';
+import { Section04Component } from './workbook-form/section04/section04.component';
+import { Section05Component } from './workbook-form/section05/section05.component';
+import { Section06Component } from './workbook-form/section06/section06.component';
+import { Section07Component } from './workbook-form/section07/section07.component';
+import { Section08Component } from './workbook-form/section08/section08.component';
+import { Section09Component } from './workbook-form/section09/section09.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +36,15 @@ import { Section01Component } from './workbook-form/section01/section01.componen
     MainMenuComponent,
     WorkbookFormComponent,
     ImageUploadComponent,
-    Section01Component
+    Section01Component,
+    Section02Component,
+    Section03Component,
+    Section04Component,
+    Section05Component,
+    Section06Component,
+    Section07Component,
+    Section08Component,
+    Section09Component
   ],
   imports: [
     FormsModule,
