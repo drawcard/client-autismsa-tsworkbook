@@ -1,5 +1,9 @@
 .img-space {
     margin: 8px;
+    img {
+        width: 150px;
+        height: auto;
+    }
 }
 .img-error {
     color: red;
