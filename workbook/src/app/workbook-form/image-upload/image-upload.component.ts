@@ -63,7 +63,7 @@ export class ImageUploadComponent implements OnInit {
             const imgBase64Path = e.target.result;
             this.cardImageBase64 = imgBase64Path;
             this.isImageSaved = true;
-            console.log(this.cardImageBase64);
+            console.log("fileChangeEvent() -> " + this.cardImageBase64);
             // this.previewImagePath = imgBase64Path;
           }
         };
@@ -76,7 +76,8 @@ export class ImageUploadComponent implements OnInit {
   removeImage() {
     this.cardImageBase64 = this.blankImage;
     this.isImageSaved = false;
-    console.log(this.cardImageBase64);
+    console.log("removeImage() -> " + this.cardImageBase64);
+    // TODO: Reset the HTML5 file upload element as well
   }
 
 }

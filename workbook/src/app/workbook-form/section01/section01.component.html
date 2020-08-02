@@ -1,0 +1,55 @@
+<div class="wb-section">
+    <a id="section-01"></a>
+    <h1>Section 1</h1>
+    <h2>About Me</h2>
+    <h3>My Autism and Me: Planning Booklet includes important information about me! It is a document that will change
+        and
+        develop as I do. It's purpose is to help everyone in my life understand my autism and what it means for me and
+        my family
+        on a day to day basis. <br><br>
+        My Autism and Me: Planning Booklet includes information about: <br><br>
+        • The characteristics of my autism <br>
+        • The impact of those characteristics on me and my family <br>
+        • Strategies that can support me and my family <br>
+        • Information about supports and services <br>
+        • My short term and long term goals</h3>
+    <mat-card>
+        <mat-card-content>
+            <mat-form-field>
+                <input matInput placeholder="My name is" value="" [formControl]="b1_q2">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="And my age is" value="" [formControl]="b1_q2">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="I live with" value="" [formControl]="b1_q3">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="I attend...^" value="" [formControl]="b1_q4">
+            </mat-form-field>
+            <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
+        </mat-card-content>
+    </mat-card>
+    <h3>It is always helpful for the people in my life to know what I like, what I am good at, what I find challenging
+        and the
+        supports I need. This information can help guide decisions around how to interact with me, what I am likely to
+        be
+        successful at and what skills I need to continue developing.</h3>
+    <mat-card>
+        <mat-card-content>
+            <mat-form-field>
+                <textarea matInput placeholder="I like (e.g. people, places, objects, activities):"
+                    [formControl]="b1_q5"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="I am good at (strengths):" [formControl]="b1_q6"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="I have trouble with (challenges):" [formControl]="b1_q7"></textarea>
+            </mat-form-field>
+            <mat-form-field>
+                <textarea matInput placeholder="I need (supports and strategies):" [formControl]="b1_q8"></textarea>
+            </mat-form-field>
+        </mat-card-content>
+    </mat-card>
+</div>

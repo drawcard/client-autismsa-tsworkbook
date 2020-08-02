@@ -2,7 +2,8 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import pdfMake from '../../../node_modules/pdfmake/build/pdfmake';
 import pdfFonts from '../../../node_modules/pdfmake/build/vfs_fonts';
-import { ImageUploadComponent } from "./image-upload/image-upload.component";
+import { Section01Component } from './section01/section01.component';
+import { ImageUploadComponent } from './image-upload/image-upload.component';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -19,27 +20,18 @@ export class WorkbookFormComponent implements AfterViewInit {
   sectionHeading: any[];
   blockHeading: any[];
   blockText: any[];
-  blankImage: string;
+  cardImageBase64: string = "test";
   docName: string = 'Autism & Me: Workbook';
-
-  // Initialise Form Data Fields
-  b1_q1 = new FormControl('');
-  b1_q2 = new FormControl('');
-  b1_q3 = new FormControl('');
-  b1_q4 = new FormControl('');
-  b1_q5 = new FormControl('');
-  b1_q6 = new FormControl('');
-  b1_q7 = new FormControl('');
-  b1_q8 = new FormControl('');
 
   // Regular expression for stripping <br> tags in the PDF output
   regex = /\<br>/gi;
 
-  @ViewChild(ImageUploadComponent) child: ImageUploadComponent;
+  //Fetch data from nested child components & assign to member variable
+  @ViewChild(Section01Component) s01: Section01Component;
+  @ViewChild(ImageUploadComponent) iu: ImageUploadComponent;
 
   ngAfterViewInit(): void {
-    this.blankImage = this.child.blankImage;
-    console.log(this.child.blankImage);
+
   }
 
 
@@ -49,6 +41,7 @@ export class WorkbookFormComponent implements AfterViewInit {
 
   // PDF Generator
   generatePdf() {
+    console.log('generatePDF() -> ' + this.iu.cardImageBase64);
     const documentDefinition = {
       pageSize: 'A4',
       pageMargins: [40, 40, 40, 40],
@@ -68,16 +61,16 @@ export class WorkbookFormComponent implements AfterViewInit {
         // Section 01
         { text: this.blockHeading[0], style: 'heading' },
         { text: this.blockText[0].replace(this.regex, '\n'), style: 'body' },
-        { image: (this.child.cardImageBase64 ? this.child.cardImageBase64 : this.child.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
-        'My name is: ' + this.b1_q1.value,
-        'My age is: ' + this.b1_q2.value,
-        'I live with: ' + this.b1_q3.value,
-        'My school / kindergarten / childcare details are: ' + this.b1_q4.value,
+        { image: (this.iu.cardImageBase64 ? this.iu.cardImageBase64 : this.iu.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
+        'My name is: ' + this.s01.b1_q1.value,
+        'My age is: ' + this.s01.b1_q2.value,
+        'I live with: ' + this.s01.b1_q3.value,
+        'My school / kindergarten / childcare details are: ' + this.s01.b1_q4.value,
         { text: this.blockText[1].replace(this.regex, '\n'), style: 'body' },
-        'I like (e.g.people, places, objects, activities): ' + this.b1_q5.value,
-        'I am good at (strengths): ' + this.b1_q6.value,
-        'I have trouble with (challenges): ' + this.b1_q7.value,
-        'I need (supports and strategies): ' + this.b1_q8.value,
+        'I like (e.g.people, places, objects, activities): ' + this.s01.b1_q5.value,
+        'I am good at (strengths): ' + this.s01.b1_q6.value,
+        'I have trouble with (challenges): ' + this.s01.b1_q7.value,
+        'I need (supports and strategies): ' + this.s01.b1_q8.value,
       ],
       styles: {
         title: {
@@ -125,7 +118,7 @@ export class WorkbookFormComponent implements AfterViewInit {
     ]
     this.blockHeading = [
       // Section 01
-      `About Me`,
+      ``,
       // Section 02
       `My social communication and social interaction: Characteristics`,
       `My social communication and social interaction: Strategies`,
@@ -164,15 +157,9 @@ export class WorkbookFormComponent implements AfterViewInit {
     ]
     this.blockText = [
       // Section 01
-      `My Autism and Me: Planning Booklet includes important information about me! It is a document that will change and develop as I do. It's purpose is to help everyone in my life understand my autism and what it means for me and my family on a day to day basis. <br><br>
-      My Autism and Me: Planning Booklet includes information about: <br><br>
-      • The characteristics of my autism <br>
-      • The impact of those characteristics on me and my family <br>
-      • Strategies that can support me and my family <br>
-      • Information about supports and services <br>
-      • My short term and long term goals`,
+      ``,
 
-      `It is always helpful for the people in my life to know what I like, what I am good at, what I find challenging and the supports I need. This information can help guide decisions around how to interact with me, what I am likely to be successful at and what skills I need to continue developing.`,
+      ``,
 
       // Section 02
       `Social communication and social interaction are areas of difference for people on the spectrum, but these characteristics are not the same for every person with autism. It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide the development of personalised strategies that can have a positive impact on my communication and play!`,

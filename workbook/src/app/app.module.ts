@@ -20,13 +20,15 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ImageUploadComponent } from "./workbook-form/image-upload/image-upload.component";
+import { Section01Component } from './workbook-form/section01/section01.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainMenuComponent,
     WorkbookFormComponent,
-    ImageUploadComponent
+    ImageUploadComponent,
+    Section01Component
   ],
   imports: [
     FormsModule,

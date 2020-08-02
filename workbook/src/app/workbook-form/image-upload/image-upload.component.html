@@ -1,20 +1,25 @@
-<div class="form-group">
-    <fieldset class="form-group">
-
-        <h3>Upload your photo</h3>
-        <p>Max size 400x400px, JPG or PNG, under 2mb</p>
-        <p class="img-error">{{imageError}}</p>
-        <div class="custom-file fileInputProfileWrap">
-            <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
-            <div class="img-space">
-                <ng-container *ngIf="isImageSaved; else elseTemplate">
-                    <img [src]="cardImageBase64" />
-                </ng-container>
-                <ng-template #elseTemplate>
-                    <img src="./../../assets/placeholder.png" class="placeholder">
-                </ng-template>
-            </div>
+<h2>Upload your photo</h2>
+<mat-card>
+    <mat-card-content>
+        <div class="form-group">
+            <fieldset class="form-group">
+                <p>Max size 400x400px, JPG or PNG, under 2mb</p>
+                <p class="img-error">{{imageError}}</p>
+                <div class="custom-file fileInputProfileWrap">
+                    <input type="file" (change)="fileChangeEvent($event)" class="fileInputProfile">
+                    <div class="img-space">
+                        <ng-container *ngIf="isImageSaved; else elseTemplate">
+                            <img [src]="cardImageBase64" />
+                        </ng-container>
+                        <ng-template #elseTemplate>
+                            <img src="./../../assets/placeholder.png" class="placeholder">
+                        </ng-template>
+                    </div>
+                </div>
+            </fieldset>
         </div>
-    </fieldset>
-</div>
-<button mat-raised-button (click)="removeImage()" *ngIf="isImageSaved">Remove image</button>
+    </mat-card-content>
+    <mat-card-actions>
+        <button mat-raised-button (click)="removeImage()" *ngIf="isImageSaved">Remove image</button>
+    </mat-card-actions>
+</mat-card>
