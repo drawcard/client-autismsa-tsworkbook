@@ -30,16 +30,19 @@ export class Section03Component implements OnInit {
   cbl2 = [];
   cbl4 = [];
   rad1 = [
-    { name: "name 0", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 1", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 2", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 3", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 4", selected: null, id: "4", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 5", selected: null, id: "5", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 6", selected: null, id: "6", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 7", selected: null, id: "7", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 8", selected: null, id: "8", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 9", selected: null, id: "9", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use a visual support to provide warning of what is next ", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use a visual support to provide warning of unexpected changes", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Create and follow routines for regular tasks e.g. bedtime, dinner time  ", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use visual supports to assist completing my routines e.g. a visual schedule of bedtime routine ", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Reduce sensory input where needed", selected: null, id: "4", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Increase sensory input where needed", selected: null, id: "5", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Provide breaks from difficult tasks e.g. social interactions, chores, learning activities", selected: null, id: "6", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use what I am passionate about to engage with me ", selected: null, id: "7", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use a communication book/system between home and other environments that I attend to keep everyone informed and to promote consistency ", selected: null, id: "8", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use timers to signal end of tasks/activities", selected: null, id: "9", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use limited choice to help me make decisions e.g. “Do you want red or blue” instead of “What colour do you want?”", selected: null, id: "10", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Break tasks into smaller steps and complete one by one", selected: null, id: "11", rating: ['Currently use', 'Have not tried yet'] },
+    // Other
   ];
 
   constructor() {

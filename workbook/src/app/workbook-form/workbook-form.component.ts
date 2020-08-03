@@ -129,7 +129,6 @@ export class WorkbookFormComponent implements AfterViewInit {
               [{ text: this.s02.cbl1[18].name }, { image: (this.s02.cbl1[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s02.cbl1[19].name }, { image: (this.s02.cbl1[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s02.cbl1[20].name }, { image: (this.s02.cbl1[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.cbl1[21].name }, { image: (this.s02.cbl1[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
             ]
           }
         },
@@ -371,6 +370,16 @@ export class WorkbookFormComponent implements AfterViewInit {
                 { image: (this.s03.rad1[9].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
                 { image: (this.s03.rad1[9].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
               ],
+              [
+                { text: this.s03.rad1[10].name },
+                { image: (this.s03.rad1[9].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[9].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[11].name },
+                { image: (this.s03.rad1[9].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[9].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
             ]
           }
         },
@@ -496,26 +505,6 @@ export class WorkbookFormComponent implements AfterViewInit {
                 { text: this.s04.rad1[5].name },
                 { image: (this.s04.rad1[5].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
                 { image: (this.s04.rad1[5].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
-              ],
-              [
-                { text: this.s04.rad1[6].name },
-                { image: (this.s04.rad1[6].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
-                { image: (this.s04.rad1[6].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
-              ],
-              [
-                { text: this.s04.rad1[7].name },
-                { image: (this.s04.rad1[7].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
-                { image: (this.s04.rad1[7].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
-              ],
-              [
-                { text: this.s04.rad1[8].name },
-                { image: (this.s04.rad1[8].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
-                { image: (this.s04.rad1[8].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
-              ],
-              [
-                { text: this.s04.rad1[9].name },
-                { image: (this.s04.rad1[9].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
-                { image: (this.s04.rad1[9].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
               ],
             ]
           }

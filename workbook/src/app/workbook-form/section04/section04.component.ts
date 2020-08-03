@@ -31,16 +31,13 @@ export class Section04Component implements OnInit {
   cbl2 = [];
   cbl4 = [];
   rad1 = [
-    { name: "name 0", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 1", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 2", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 3", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 4", selected: null, id: "4", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 5", selected: null, id: "5", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 6", selected: null, id: "6", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 7", selected: null, id: "7", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 8", selected: null, id: "8", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 9", selected: null, id: "9", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use visual reminders e.g. visual list of what needs to go into my school bag", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use day or week planners to show what I have happening in my life", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Give one instruction at a time ", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Practice (generalize) what I learn in all environments in which I spend a lot of time ", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Practice (generalize) what I learn with all people in my life", selected: null, id: "4", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use timers to signal end of tasks/activities", selected: null, id: "5", rating: ['Currently use', 'Have not tried yet'] },
+    // Other
   ];
 
   constructor() {

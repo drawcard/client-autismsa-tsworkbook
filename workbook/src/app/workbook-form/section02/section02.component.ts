@@ -29,22 +29,27 @@ export class Section02Component implements OnInit {
   cbl2 = [];
   cbl4 = [];
   rad1 = [
-    { name: "name 0", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 1", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 2", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 3", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 4", selected: null, id: "4", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 5", selected: null, id: "5", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 6", selected: null, id: "6", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 7", selected: null, id: "7", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 8", selected: null, id: "8", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "name 9", selected: null, id: "9", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Visual supports e.g. photos, videos, pictures", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Visual schedules", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Social narratives", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Picture Exchange Communication system (PECS)", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Sign language", selected: null, id: "4", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Simplify words used when talking to me e.g. say “Time for lunch” instead of, “It’s lunch time now, come over to the table to eat your lunch”", selected: null, id: "5", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Phrase information as statements not questions e.g. say “It’s time for bed” instead of “Do you want to go to bed?”", selected: null, id: "6", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Give one instruction at a time e.g. say “Get your shoes” instead of “Get your shoes and your bag then wait for me at the door”", selected: null, id: "7", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use positive phrasing e.g. “Walk inside” instead of “Stop running”", selected: null, id: "8", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Join in with my play, rather than direct my play ", selected: null, id: "9", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use what I am interested in to help me engage with play ", selected: null, id: "10", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Establish consistency between people and places i.e. have consistent expectations, routines, resources etc. ", selected: null, id: "11", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Give me extra processing time to take in and respond to verbal information ", selected: null, id: "12", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Use my name to get my attention before talking to me ", selected: null, id: "13", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "Other. Please add: ", selected: null, id: "14", rating: ['Currently use', 'Have not tried yet'] },
   ];
 
   constructor() {
     this.cbl1 = [
       // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
-      { name: "I understand pictures better than spoken words", checked: false },
+      { name: "Use a visual support to provide warning of what is next ", checked: false },
       { name: "I find it tricky to give eye contact", checked: false },
       { name: "I have trouble knowing what others are going to do e.g. I don’t reach out my arms when someone is about to pick me up, or I don’t seem to understand familiar games e.g. ‘Peek-a-Boo’ or ‘Chasey’", checked: false },
       { name: "I find understanding body language and gestures confusing e.g. smiling when smiled at; pointing or waving in context ", checked: false },
@@ -65,7 +70,7 @@ export class Section02Component implements OnInit {
       { name: "I ask questions but don’t make comments (or vice versa) ", checked: false },
       { name: "I find understanding or talking about feelings tricky (mine and others)", checked: false },
       { name: "I have a literal understanding of words e.g. I think “pull your socks up” means I need to pull up my socks rather than try to improve ", checked: false },
-      { name: "Other. Please add ...", checked: false },
+      // Other
     ],
       this.cbl2 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
