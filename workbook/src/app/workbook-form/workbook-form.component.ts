@@ -166,7 +166,7 @@ export class WorkbookFormComponent implements AfterViewInit {
           }
         },
         // END Checkbox Group
-        // Checkbox Group
+        // NOTE: Radio Group
         {
           table: {
             headerRows: 1,
@@ -174,14 +174,59 @@ export class WorkbookFormComponent implements AfterViewInit {
             body: [
               [{ text: "Strategy" }, { text: "Currently use" }, { text: "Have not tried yet" }],
               [
-                { text: this.s02.cbl3[0].name },
-                { image: (this.s02.cbl3[0].value == "2" ? this.imgChecked : this.imgUnchecked), width: 16 },
-                { image: (this.s02.cbl3[0].value == "2" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { text: this.s02.rad1[0].name },
+                { image: (this.s02.rad1[0].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[0].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[1].name },
+                { image: (this.s02.rad1[1].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[1].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[2].name },
+                { image: (this.s02.rad1[2].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[2].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[3].name },
+                { image: (this.s02.rad1[3].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[3].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[4].name },
+                { image: (this.s02.rad1[4].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[4].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[5].name },
+                { image: (this.s02.rad1[5].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[5].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[6].name },
+                { image: (this.s02.rad1[6].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[6].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[7].name },
+                { image: (this.s02.rad1[7].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[7].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[8].name },
+                { image: (this.s02.rad1[8].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[8].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s02.rad1[9].name },
+                { image: (this.s02.rad1[9].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s02.rad1[9].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
               ],
             ]
           }
         },
-        // END Checkbox Group
+        // NOTE: END Radio Group
         // Checkbox Group
         {
           table: {
@@ -269,36 +314,67 @@ export class WorkbookFormComponent implements AfterViewInit {
           }
         },
         // END Checkbox Group
-        // Checkbox Group
+        // NOTE: Radio Group
         {
           table: {
             headerRows: 1,
-            widths: ['*', 'auto'],
+            widths: ['*', 'auto', 'auto'],
             body: [
-              [{ text: this.s03.cbl3[0].name }, { image: (this.s03.cbl3[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[1].name }, { image: (this.s03.cbl3[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[2].name }, { image: (this.s03.cbl3[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[3].name }, { image: (this.s03.cbl3[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[4].name }, { image: (this.s03.cbl3[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[5].name }, { image: (this.s03.cbl3[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[6].name }, { image: (this.s03.cbl3[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[7].name }, { image: (this.s03.cbl3[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[8].name }, { image: (this.s03.cbl3[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[9].name }, { image: (this.s03.cbl3[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[10].name }, { image: (this.s03.cbl3[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[11].name }, { image: (this.s03.cbl3[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[12].name }, { image: (this.s03.cbl3[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[13].name }, { image: (this.s03.cbl3[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[14].name }, { image: (this.s03.cbl3[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[15].name }, { image: (this.s03.cbl3[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[16].name }, { image: (this.s03.cbl3[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[17].name }, { image: (this.s03.cbl3[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[18].name }, { image: (this.s03.cbl3[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl3[19].name }, { image: (this.s03.cbl3[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: "Strategy" }, { text: "Currently use" }, { text: "Have not tried yet" }],
+              [
+                { text: this.s03.rad1[0].name },
+                { image: (this.s03.rad1[0].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[0].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[1].name },
+                { image: (this.s03.rad1[1].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[1].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[2].name },
+                { image: (this.s03.rad1[2].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[2].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[3].name },
+                { image: (this.s03.rad1[3].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[3].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[4].name },
+                { image: (this.s03.rad1[4].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[4].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[5].name },
+                { image: (this.s03.rad1[5].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[5].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[6].name },
+                { image: (this.s03.rad1[6].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[6].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[7].name },
+                { image: (this.s03.rad1[7].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[7].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[8].name },
+                { image: (this.s03.rad1[8].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[8].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s03.rad1[9].name },
+                { image: (this.s03.rad1[9].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s03.rad1[9].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
             ]
           }
         },
-        // END Checkbox Group
+        // NOTE: END Radio Group
         // Checkbox Group
         {
           table: {
@@ -384,36 +460,67 @@ export class WorkbookFormComponent implements AfterViewInit {
           }
         },
         // END Checkbox Group
-        // Checkbox Group
+        // NOTE: Radio Group
         {
           table: {
             headerRows: 1,
-            widths: ['*', 'auto'],
+            widths: ['*', 'auto', 'auto'],
             body: [
-              [{ text: this.s04.cbl3[0].name }, { image: (this.s04.cbl3[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[1].name }, { image: (this.s04.cbl3[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[2].name }, { image: (this.s04.cbl3[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[3].name }, { image: (this.s04.cbl3[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[4].name }, { image: (this.s04.cbl3[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[5].name }, { image: (this.s04.cbl3[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[6].name }, { image: (this.s04.cbl3[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[7].name }, { image: (this.s04.cbl3[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[8].name }, { image: (this.s04.cbl3[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[9].name }, { image: (this.s04.cbl3[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[10].name }, { image: (this.s04.cbl3[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[11].name }, { image: (this.s04.cbl3[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[12].name }, { image: (this.s04.cbl3[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[13].name }, { image: (this.s04.cbl3[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[14].name }, { image: (this.s04.cbl3[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[15].name }, { image: (this.s04.cbl3[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[16].name }, { image: (this.s04.cbl3[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[17].name }, { image: (this.s04.cbl3[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[18].name }, { image: (this.s04.cbl3[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl3[19].name }, { image: (this.s04.cbl3[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: "Strategy" }, { text: "Currently use" }, { text: "Have not tried yet" }],
+              [
+                { text: this.s04.rad1[0].name },
+                { image: (this.s04.rad1[0].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[0].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[1].name },
+                { image: (this.s04.rad1[1].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[1].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[2].name },
+                { image: (this.s04.rad1[2].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[2].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[3].name },
+                { image: (this.s04.rad1[3].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[3].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[4].name },
+                { image: (this.s04.rad1[4].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[4].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[5].name },
+                { image: (this.s04.rad1[5].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[5].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[6].name },
+                { image: (this.s04.rad1[6].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[6].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[7].name },
+                { image: (this.s04.rad1[7].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[7].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[8].name },
+                { image: (this.s04.rad1[8].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[8].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
+              [
+                { text: this.s04.rad1[9].name },
+                { image: (this.s04.rad1[9].selected == "Currently use" ? this.imgChecked : this.imgUnchecked), width: 16 },
+                { image: (this.s04.rad1[9].selected == "Have not tried yet" ? this.imgChecked : this.imgUnchecked), width: 16 },
+              ],
             ]
           }
         },
-        // END Checkbox Group
+        // NOTE: END Radio Group
         // Checkbox Group
         {
           table: {

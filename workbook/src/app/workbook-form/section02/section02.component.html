@@ -15,19 +15,16 @@
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>
                 </mat-list-item>
-                <div>
-                    <div *ngFor="let sort of someName; let i=index">
-                        <label id="example-radio-group-label">{{sort.name}}</label>
-                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                            <mat-radio-button [ngStyle]="{'display':'inline'}" class="example-radio-button"
-                                *ngFor="let section of sort.rating" [value]="section"
-                                (change)="radioChange($event,sort)">
-                                {{section}}</mat-radio-button>
-                        </mat-radio-group>
-                        <br>
-                        <br>
-                    </div>
-                </div>
+
+                <ng-container *ngFor="let item of rad1; let i=index">
+                    <label id="example-radio-group-label">{{item.name}}</label>
+                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                        <mat-radio-button class="example-radio-button" *ngFor="let value of item.rating" [value]="value"
+                            (change)="radioChange($event,item)">
+                            {{value}}</mat-radio-button>
+                    </mat-radio-group>
+                </ng-container>
+
                 <mat-list-item *ngFor="let item of cbl4">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>

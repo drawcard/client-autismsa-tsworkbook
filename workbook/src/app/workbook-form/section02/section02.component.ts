@@ -30,8 +30,19 @@ export class Section02Component implements OnInit {
   master_indeterminate: boolean = false;
   cbl1 = [];
   cbl2 = [];
-  cbl3 = [];
   cbl4 = [];
+  rad1 = [
+    { name: "name 0", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 1", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 2", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 3", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 4", selected: null, id: "4", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 5", selected: null, id: "5", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 6", selected: null, id: "6", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 7", selected: null, id: "7", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 8", selected: null, id: "8", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "name 9", selected: null, id: "9", rating: ['Currently use', 'Have not tried yet'] },
+  ];
 
   constructor() {
     this.cbl1 = [
@@ -84,29 +95,6 @@ export class Section02Component implements OnInit {
         { name: "label21", checked: false },
         { name: "label22", checked: false },
       ],
-      this.cbl3 = [
-        // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
-        { name: "label1", id: "1", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label2", id: "2", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label3", id: "3", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label4", id: "4", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label5", id: "5", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label6", id: "6", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label7", id: "7", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label8", id: "8", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label9", id: "9", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label10", id: "10", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label11", id: "11", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label12", id: "12", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label13", id: "13", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label14", id: "14", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label15", id: "15", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label16", id: "16", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label17", id: "17", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label18", id: "18", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label19", id: "19", label: ['test', 'test2'], value: ['1', '2'] },
-        { name: "label20", id: "20", label: ['test', 'test2'], value: ['1', '2'] },
-      ],
       this.cbl4 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
         { name: "Parents", checked: false },
@@ -126,22 +114,9 @@ export class Section02Component implements OnInit {
   ngOnInit(): void {
   }
 
-  someName = [
-    { name: "name 1", id: "1", rating: ['0', '1', '2', '3', '4', '5'], selected: null },
-    { name: "name 2", id: "2", rating: ['0', '1', '2', '3', '4', '5'], selected: null },
-    { name: "name 3", id: "3", rating: ['0', '1', '2', '3', '4', '5'], selected: null }
-  ];
-
-  finalArray: any[] = [];
-
-  radioChange(event: MatRadioChange, data: any) {
-    var obj = this.someName.filter(x => x.id == data.id)[0];
-    console.log(obj);
+  radioChange(event: MatRadioChange, data) {
+    var obj = this.rad1.filter(x => x.id == data.id)[0];
     obj.selected = event.value;
-    console.log(this.finalArray.some(x => x.id == data.id))
-    if (!this.finalArray.some(x => x.id == data.id)) {
-      this.finalArray.push(obj);
-    }
   }
 
   master_change() {
