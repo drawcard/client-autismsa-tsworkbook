@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './section04.component.html',
   styleUrls: ['./section04.component.scss']
 })
+
 export class Section04Component implements OnInit {
 
   staticContent: any = [
@@ -85,28 +86,26 @@ export class Section04Component implements OnInit {
       ],
       this.cbl3 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
-        { name: "label1", checked: false },
-        { name: "label2", checked: false },
-        { name: "label3", checked: false },
-        { name: "label4", checked: false },
-        { name: "label5", checked: false },
-        { name: "label6", checked: false },
-        { name: "label7", checked: false },
-        { name: "label8", checked: false },
-        { name: "label9", checked: false },
-        { name: "label10", checked: false },
-        { name: "label11", checked: false },
-        { name: "label12", checked: false },
-        { name: "label13", checked: false },
-        { name: "label14", checked: false },
-        { name: "label15", checked: false },
-        { name: "label16", checked: false },
-        { name: "label17", checked: false },
-        { name: "label18", checked: false },
-        { name: "label19", checked: false },
-        { name: "label20", checked: false },
-        { name: "label21", checked: false },
-        { name: "label22", checked: false },
+        { name: "label1", value: "value1" },
+        { name: "label2", value: "value2" },
+        { name: "label3", value: "value3" },
+        { name: "label4", value: "value4" },
+        { name: "label5", value: "value5" },
+        { name: "label6", value: "value6" },
+        { name: "label7", value: "value7" },
+        { name: "label8", value: "value8" },
+        { name: "label9", value: "value9" },
+        { name: "label10", value: "value10" },
+        { name: "label11", value: "value11" },
+        { name: "label12", value: "value12" },
+        { name: "label13", value: "value13" },
+        { name: "label14", value: "value14" },
+        { name: "label15", value: "value15" },
+        { name: "label16", value: "value16" },
+        { name: "label17", value: "value17" },
+        { name: "label18", value: "value18" },
+        { name: "label19", value: "value19" },
+        { name: "label20", value: "value20" },
       ],
       this.cbl4 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/

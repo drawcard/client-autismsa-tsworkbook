@@ -14,10 +14,13 @@
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>
                 </mat-list-item>
-                <mat-list-item *ngFor="let item of cbl3">
-                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
-                    </mat-checkbox>
-                </mat-list-item>
+                <div *ngFor="let item of cbl3">
+                    <p>{{item.name}}</p>
+                    <mat-radio-group aria-label="Select an option">
+                        <mat-radio-button value="1">Currently use</mat-radio-button>
+                        <mat-radio-button value="2">Have not tried yet</mat-radio-button>
+                    </mat-radio-group>
+                </div>
                 <mat-list-item *ngFor="let item of cbl4">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>
