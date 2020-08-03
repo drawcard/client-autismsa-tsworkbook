@@ -20,9 +20,12 @@ export class Section01Component implements OnInit {
 
   staticContent: any = [
     {
+      // Section Title
       sectionTitle: `Section 1`,
-      title: `About Me`,
-      body: `My Autism and Me: Planning Booklet includes important information about me! It is a document that will change and
+      // Titles
+      title0: `About Me`,
+      // Body
+      body0: `My Autism and Me: Planning Booklet includes important information about me! It is a document that will change and
         develop as I do. It's purpose is to help everyone in my life understand my autism and what it means for me and
         my family on a day to day basis. <br><br>
         My Autism and Me: Planning Booklet includes information about: <br><br>
@@ -30,9 +33,12 @@ export class Section01Component implements OnInit {
         • The impact of those characteristics on me and my family <br>
         • Strategies that can support me and my family <br>
         • Information about supports and services <br>`,
-      body2: `It is always helpful for the people in my life to know what I like, what I am good at, what I find challenging and
+      body1: `It is always helpful for the people in my life to know what I like, what I am good at, what I find challenging and
   the supports I need. This information can help guide decisions around how to interact with me, what I am likely to be
   successful at and what skills I need to continue developing.`,
+      // Labels
+      label0: ``,
+      label1: ``,
     }
   ];
 

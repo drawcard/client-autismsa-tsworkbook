@@ -7,6 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Section03Component implements OnInit {
 
+  staticContent: any = [
+    {
+      // Section Title
+      sectionTitle: `Section 3`,
+      // Titles
+      title0: ``,
+      title1: ``,
+      // Body
+      body0: ``,
+      body1: ``,
+      // Labels
+      label0: ``,
+      label1: ``
+    }
+  ];
+
   constructor() { }
 
   ngOnInit(): void {
