@@ -61,15 +61,6 @@ export class Section03Component implements OnInit {
       { name: "I like following rules and can become upset when other people break the rules", checked: false },
       { name: "I enjoy sticking with places and activities I know  ", checked: false },
       { name: "Other. Please add …", checked: false },
-      { name: "label14", checked: false },
-      { name: "label15", checked: false },
-      { name: "label16", checked: false },
-      { name: "label17", checked: false },
-      { name: "label18", checked: false },
-      { name: "label19", checked: false },
-      { name: "label20", checked: false },
-      { name: "label21", checked: false },
-      { name: "label22", checked: false },
     ],
       this.cbl2 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
@@ -80,21 +71,7 @@ export class Section03Component implements OnInit {
         { name: "Mealtimes can be tricky as we often need to prepare a range of meals to meet everyone’s needs", checked: false },
         { name: "My family need to carefully choose my clothes, toys, food etc as I am very specific about what I like  ", checked: false },
         { name: "My sensory differences often need to be considered when planning family outings e.g. going to restaurants or in busy shopping centers ", checked: false },
-        { name: "Other. Please add …", checked: false },
-        { name: "label9", checked: false },
-        { name: "label10", checked: false },
-        { name: "label11", checked: false },
-        { name: "label12", checked: false },
-        { name: "label13", checked: false },
-        { name: "label14", checked: false },
-        { name: "label15", checked: false },
-        { name: "label16", checked: false },
-        { name: "label17", checked: false },
-        { name: "label18", checked: false },
-        { name: "label19", checked: false },
-        { name: "label20", checked: false },
-        { name: "label21", checked: false },
-        { name: "label22", checked: false },
+        // Other
       ],
       this.cbl4 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatRadioChange } from '@angular/material/radio';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-section02',
@@ -43,7 +44,7 @@ export class Section02Component implements OnInit {
     { name: "Establish consistency between people and places i.e. have consistent expectations, routines, resources etc. ", selected: null, id: "11", rating: ['Currently use', 'Have not tried yet'] },
     { name: "Give me extra processing time to take in and respond to verbal information ", selected: null, id: "12", rating: ['Currently use', 'Have not tried yet'] },
     { name: "Use my name to get my attention before talking to me ", selected: null, id: "13", rating: ['Currently use', 'Have not tried yet'] },
-    { name: "Other. Please add: ", selected: null, id: "14", rating: ['Currently use', 'Have not tried yet'] },
+    // Other
   ];
 
   constructor() {
@@ -83,19 +84,7 @@ export class Section02Component implements OnInit {
         { name: "I find it helpful when my family and friends adjust their communication style to help me understand ", checked: false },
         { name: "I can find it hard to attend mainstream social activities with my family", checked: false },
         { name: "My extended family and friends can find it hard to understand me ", checked: false },
-        { name: "Other. Please add ...", checked: false },
-        { name: "label11", checked: false },
-        { name: "label12", checked: false },
-        { name: "label13", checked: false },
-        { name: "label14", checked: false },
-        { name: "label15", checked: false },
-        { name: "label16", checked: false },
-        { name: "label17", checked: false },
-        { name: "label18", checked: false },
-        { name: "label19", checked: false },
-        { name: "label20", checked: false },
-        { name: "label21", checked: false },
-        { name: "label22", checked: false },
+        // Other
       ],
       this.cbl4 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
@@ -109,7 +98,7 @@ export class Section02Component implements OnInit {
         { name: "Psychologists", checked: false },
         { name: "Coaches e.g. swimming coach, gymnastic coach", checked: false },
         { name: "Therapists", checked: false },
-        { name: "Other. Please add ...", checked: false },
+        // Other
       ]
   }
 
