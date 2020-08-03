@@ -28,10 +28,10 @@ export class Section02Component implements OnInit {
 
   master_checked: boolean = false;
   master_indeterminate: boolean = false;
-  cbl1: any[] = [];
-  cbl2: any[] = [];
-  cbl3: any[] = [];
-  cbl4: any[] = [];
+  cbl1 = [];
+  cbl2 = [];
+  cbl3 = [];
+  cbl4 = [];
 
   constructor() {
     this.cbl1 = [
@@ -85,9 +85,27 @@ export class Section02Component implements OnInit {
         { name: "label22", checked: false },
       ],
       this.cbl3 = [
-        { name: "John", id: "1", radioLabel: ['Have', 'Have Not'], value: ['0', '1'], selected: null },
-        { name: "robert", id: "2", radioLabel: ['Have', 'Have Not'], value: ['0', '1'], selected: null },
-        { name: "luv", id: "3", radioLabel: ['Have', 'Have Not'], value: ['0', '1'], selected: null }
+        // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
+        { name: "label1", id: "1", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label2", id: "2", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label3", id: "3", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label4", id: "4", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label5", id: "5", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label6", id: "6", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label7", id: "7", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label8", id: "8", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label9", id: "9", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label10", id: "10", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label11", id: "11", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label12", id: "12", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label13", id: "13", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label14", id: "14", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label15", id: "15", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label16", id: "16", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label17", id: "17", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label18", id: "18", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label19", id: "19", label: ['test', 'test2'], value: ['1', '2'] },
+        { name: "label20", id: "20", label: ['test', 'test2'], value: ['1', '2'] },
       ],
       this.cbl4 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
@@ -108,13 +126,18 @@ export class Section02Component implements OnInit {
   ngOnInit(): void {
   }
 
-
+  someName = [
+    { name: "name 1", id: "1", rating: ['0', '1', '2', '3', '4', '5'], selected: null },
+    { name: "name 2", id: "2", rating: ['0', '1', '2', '3', '4', '5'], selected: null },
+    { name: "name 3", id: "3", rating: ['0', '1', '2', '3', '4', '5'], selected: null }
+  ];
 
   finalArray: any[] = [];
 
   radioChange(event: MatRadioChange, data: any) {
-    var obj = this.cbl3.filter(x => x.id == data.id)[0];
+    var obj = this.someName.filter(x => x.id == data.id)[0];
     console.log(obj);
+    obj.selected = event.value;
     console.log(this.finalArray.some(x => x.id == data.id))
     if (!this.finalArray.some(x => x.id == data.id)) {
       this.finalArray.push(obj);
