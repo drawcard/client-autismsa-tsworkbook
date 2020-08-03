@@ -2,6 +2,14 @@ import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import pdfMake from '../../../node_modules/pdfmake/build/pdfmake';
 import pdfFonts from '../../../node_modules/pdfmake/build/vfs_fonts';
 import { Section01Component } from './section01/section01.component';
+import { Section02Component } from './section02/section02.component';
+import { Section03Component } from './section03/section03.component';
+import { Section04Component } from './section04/section04.component';
+import { Section05Component } from './section05/section05.component';
+import { Section06Component } from './section06/section06.component';
+import { Section07Component } from './section07/section07.component';
+import { Section08Component } from './section08/section08.component';
+import { Section09Component } from './section09/section09.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
@@ -26,10 +34,26 @@ export class WorkbookFormComponent implements AfterViewInit {
   regex = /\<br>/gi;
 
   //Fetch data from nested child components & assign to member variable
-  @ViewChild(Section01Component) s01: Section01Component;
-  @ViewChild(ImageUploadComponent) iu: ImageUploadComponent;
-
   section01StaticContent: any[];
+  section02StaticContent: any[];
+  section03StaticContent: any[];
+  section04StaticContent: any[];
+  section05StaticContent: any[];
+  section06StaticContent: any[];
+  section07StaticContent: any[];
+  section08StaticContent: any[];
+  section09StaticContent: any[];
+
+  @ViewChild(Section01Component) s01: Section01Component;
+  @ViewChild(Section02Component) s02: Section02Component;
+  @ViewChild(Section03Component) s03: Section03Component;
+  @ViewChild(Section04Component) s04: Section04Component;
+  @ViewChild(Section05Component) s05: Section05Component;
+  @ViewChild(Section06Component) s06: Section06Component;
+  @ViewChild(Section07Component) s07: Section07Component;
+  @ViewChild(Section08Component) s08: Section08Component;
+  @ViewChild(Section09Component) s09: Section09Component;
+  @ViewChild(ImageUploadComponent) iu: ImageUploadComponent;
 
   ngAfterViewInit(): void {
     this.section01StaticContent = this.s01.staticContent.sectionTitle;
@@ -74,6 +98,22 @@ export class WorkbookFormComponent implements AfterViewInit {
         'I am good at (strengths): ' + this.s01.b1_q6.value,
         'I have trouble with (challenges): ' + this.s01.b1_q7.value,
         'I need (supports and strategies): ' + this.s01.b1_q8.value,
+        // Section 02
+        { text: this.s02.staticContent[0].sectionTitle, style: 'heading' },
+        // Section 03
+        { text: this.s03.staticContent[0].sectionTitle, style: 'heading' },
+        // Section 04
+        { text: this.s04.staticContent[0].sectionTitle, style: 'heading' },
+        // Section 05
+        { text: this.s05.staticContent[0].sectionTitle, style: 'heading' },
+        // Section 06
+        { text: this.s06.staticContent[0].sectionTitle, style: 'heading' },
+        // Section 07
+        { text: this.s07.staticContent[0].sectionTitle, style: 'heading' },
+        // Section 08
+        { text: this.s08.staticContent[0].sectionTitle, style: 'heading' },
+        // Section 09
+        { text: this.s09.staticContent[0].sectionTitle, style: 'heading' },
       ],
       styles: {
         title: {
