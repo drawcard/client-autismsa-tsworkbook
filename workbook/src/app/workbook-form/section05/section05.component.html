@@ -2,9 +2,10 @@
     <a id="section-05"></a>
     <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <h2 [innerHTML]="item.title0"></h2>
-    <h3 [innerHTML]="item.body0"></h3>
     <mat-card>
         <mat-card-content>
+            <h3 [innerHTML]="item.body0"></h3>
+            <h3 class="wb-body" [innerHTML]="item.body0"></h3>
             <mat-form-field>
                 <input matInput placeholder="Formal: " value="" [formControl]="q1">
             </mat-form-field>
@@ -15,6 +16,7 @@
                 <input matInput placeholder="Community: " value="" [formControl]="q3">
             </mat-form-field>
 
+            <h3 class="wb-body" [innerHTML]="item.body1"></h3>
             <mat-form-field>
                 <input matInput placeholder="Formal: " value="" [formControl]="q4">
             </mat-form-field>
@@ -25,6 +27,7 @@
                 <input matInput placeholder="Community: " value="" [formControl]="q6">
             </mat-form-field>
 
+            <h3 class="wb-body" [innerHTML]="item.body2"></h3>
             <mat-form-field>
                 <input matInput placeholder="Formal: " value="" [formControl]="q7">
             </mat-form-field>
@@ -35,6 +38,7 @@
                 <input matInput placeholder="Community: " value="" [formControl]="q9">
             </mat-form-field>
 
+            <h3 class="wb-body" [innerHTML]="item.body3"></h3>
             <mat-form-field>
                 <input matInput placeholder="Formal: " value="" [formControl]="q10">
             </mat-form-field>

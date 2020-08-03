@@ -2,10 +2,9 @@
     <a id="section-07"></a>
     <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <h2 [innerHTML]="item.title0"></h2>
-    <h3 [innerHTML]="item.body0"></h3>
     <mat-card>
         <mat-card-content>
-
+            <h3 [innerHTML]="item.body0"></h3>
             <mat-form-field>
                 <input matInput placeholder="A month: " value="" [formControl]="q1">
             </mat-form-field>

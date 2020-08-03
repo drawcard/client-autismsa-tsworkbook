@@ -25,8 +25,20 @@ export class Section03Component implements OnInit {
       title3: `My restricted and repetitive behaviors and sensory processing: Supports`,
       other: `Other (please add...)`,
       // Body
-      body0: ``,
-      body1: ``,
+      body0: `My restricted and repetitive behaviors and sensory processing: Characteristics <br><br>
+      Restricted and repetitive behaviours and varied sensory processing styles are areas of difference for people on the spectrum, BUT these characteristics are not the same for every person with autism.  It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide development of  ersonalized strategies that can have a positive impact on my day to day life!
+      <br><br>Sometimes...
+      `,
+      body1: `My restricted and repetitive behaviors and sensory processing: Impact <br><br>
+      My autism changes how I learn, which can affect me and my family in our everyday activities.
+      <br><br>
+      `,
+      body2: `My restricted and repetitive behaviors and sensory processing: Strategies <br><br>
+      There are many strategies that can assist me in all areas of my development. The key is to make sure the strategies my family and I use fit with the characteristics that are true to me.  Below are some strategies we already use and know work well for me, some we have not tried yet but may be helpful.
+      `,
+      body3: `My restricted and repetitive behaviors and sensory processing: Supports <br><br>
+      Who could support me and my family to further understand my restricted and repetitive behaviours and sensory processing characteristics and impacts, and using my strategies?
+      `,
 
     }
   ];

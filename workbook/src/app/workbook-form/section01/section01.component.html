@@ -2,8 +2,8 @@
     <a id="section-01"></a>
     <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <h2 [innerHTML]="item.title0"></h2>
-    <h3 [innerHTML]="item.body0"></h3>
     <mat-card>
+        <h3 class="wb-body" [innerHTML]="item.body0"></h3>
         <mat-card-content>
             <mat-form-field>
                 <input matInput placeholder="My name is" value="" [formControl]="q1">
@@ -20,7 +20,7 @@
             <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
         </mat-card-content>
     </mat-card>
-    <h3 [innerHTML]="item.body1"></h3>
+    <h3 class="wb-body" [innerHTML]="item.body1"></h3>
     <mat-card>
         <mat-card-content>
             <mat-form-field>

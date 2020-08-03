@@ -85,9 +85,9 @@ export class WorkbookFormComponent implements AfterViewInit {
           width: 75,
           style: 'imageMargin'
         },
-        { text: this.docName, style: 'title' },
+        { text: this.docName, style: 'headingSection' },
         // Section 01
-        { text: this.s01.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s01.staticContent[0].sectionTitle, style: 'headingSection' },
         { text: this.s01.staticContent[0].title0, style: 'heading' },
         { text: this.s01.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         { image: (this.iu.cardImageBase64 ? this.iu.cardImageBase64 : this.iu.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
@@ -101,7 +101,9 @@ export class WorkbookFormComponent implements AfterViewInit {
         'I have trouble with (challenges): ' + this.s01.q7.value,
         'I need (supports and strategies): ' + this.s01.q8.value,
         // Section 02
-        { text: this.s02.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s02.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s02.staticContent[0].title0, style: 'heading' },
+        { text: this.s02.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -134,6 +136,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s02.other1.value, },
         // END Checkbox Group
+        { text: this.s02.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         // Radio Group
         {
           table: {
@@ -154,6 +157,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s02.other2.value, },
         // END Checkbox Group
+        { text: this.s02.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         // NOTE: Radio Group
         {
           table: {
@@ -216,6 +220,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s02.other3.value, },
         // NOTE: END Radio Group
+        { text: this.s02.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -238,7 +243,9 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: 'Other (please add...) :' + this.s02.other4.value, },
         // END Checkbox Group
         // Section 03
-        { text: this.s03.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s03.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s03.staticContent[0].title0, style: 'heading' },
+        { text: this.s03.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -263,6 +270,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s03.other1.value, },
         // END Checkbox Group
+        { text: this.s03.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -281,6 +289,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s03.other2.value, },
         // END Checkbox Group
+        { text: this.s03.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         // NOTE: Radio Group
         {
           table: {
@@ -353,6 +362,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s03.other3.value, },
         // NOTE: END Radio Group
+        { text: this.s03.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -375,6 +385,10 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s03.other4.value, },
         // END Checkbox Group
+        // Section 04
+        { text: this.s04.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s04.staticContent[0].title0, style: 'heading' },
+        { text: this.s04.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -395,6 +409,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s04.other1.value, },
         // END Checkbox Group
+        { text: this.s04.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -412,6 +427,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s04.other2.value, },
         // END Checkbox Group
+        { text: this.s04.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         // NOTE: Radio Group
         {
           table: {
@@ -454,6 +470,7 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s04.other3.value, },
         // NOTE: END Radio Group
+        { text: this.s04.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
         {
           table: {
@@ -476,30 +493,39 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: 'Other (please add...) :' + this.s04.other4.value, },
         // END Checkbox Group
-        // Section 04
-        { text: this.s04.staticContent[0].sectionTitle, style: 'heading' },
+
         // Section 05
-        { text: this.s05.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s05.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s05.staticContent[0].title0, style: 'heading' },
+        { text: this.s05.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+
         { text: 'Formal: ' + this.s05.q1.value },
         { text: 'Informal: ' + this.s05.q2.value },
         { text: 'Community: ' + this.s05.q3.value },
 
+        { text: this.s05.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q4.value },
         { text: 'Informal: ' + this.s05.q5.value },
         { text: 'Community: ' + this.s05.q6.value },
 
+        { text: this.s05.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q7.value },
         { text: 'Informal: ' + this.s05.q8.value },
         { text: 'Community: ' + this.s05.q9.value },
 
+        { text: this.s05.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q10.value },
         { text: 'Informal: ' + this.s05.q11.value },
         { text: 'Community: ' + this.s05.q12.value },
 
         // Section 06
-        { text: this.s06.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s06.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s06.staticContent[0].title0, style: 'heading' },
+        { text: this.s06.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         // Section 07
-        { text: this.s07.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s07.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s07.staticContent[0].title0, style: 'heading' },
+        { text: this.s07.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         { text: 'A month: ' + this.s07.q1.value },
         { text: '3 months: ' + this.s07.q2.value },
         { text: 'A year: ' + this.s07.q3.value },
@@ -507,12 +533,16 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: 'How e.g. what strategies?: ' + this.s07.q5.value },
         { text: 'Monitor progress: ' + this.s07.q6.value },
         // Section 08
-        { text: this.s08.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s08.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s08.staticContent[0].title0, style: 'heading' },
+        { text: this.s08.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         // Section 09
-        { text: this.s09.staticContent[0].sectionTitle, style: 'heading' },
+        { text: this.s09.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s09.staticContent[0].title0, style: 'heading' },
+        { text: this.s09.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
       ],
       styles: {
-        title: {
+        headingSection: {
           fontSize: 36,
           bold: true,
           margin: [0, 0, 0, 16]

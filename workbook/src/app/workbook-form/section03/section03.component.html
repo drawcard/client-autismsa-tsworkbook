@@ -2,10 +2,10 @@
     <a id="section-03"></a>
     <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <h2 [innerHTML]="item.title0"></h2>
-    <h3 [innerHTML]="item.body0"></h3>
     <mat-card>
         <mat-card-content>
             <mat-list>
+                <h3 class="wb-body" [innerHTML]="item.body0"></h3>
                 <mat-list-item *ngFor="let item of cbl1">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>
@@ -16,6 +16,7 @@
                     </mat-form-field>
                 </mat-list-item>
 
+                <h3 class="wb-body" [innerHTML]="item.body1"></h3>
                 <mat-list-item *ngFor="let item of cbl2">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>
@@ -26,6 +27,7 @@
                     </mat-form-field>
                 </mat-list-item>
 
+                <h3 class="wb-body" [innerHTML]="item.body2"></h3>
                 <ng-container *ngFor="let item of rad1; let i=index">
                     <label id="example-radio-group-label">{{item.name}}</label>
                     <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
@@ -40,6 +42,7 @@
                     </mat-form-field>
                 </mat-list-item>
 
+                <h3 class="wb-body" [innerHTML]="item.body3"></h3>
                 <mat-list-item *ngFor="let item of cbl4">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>

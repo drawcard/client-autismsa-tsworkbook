@@ -19,14 +19,27 @@ export class Section02Component implements OnInit {
       // Section Title
       sectionTitle: `Section 2`,
       // Titles
-      title0: `My social communication and social interaction: Strategies`,
+      title0: `My social communication and social interaction`,
       title1: `My social communication and social interaction: Strategies`,
       title2: `My social communication and social interaction: Supports`,
       title3: `My social communication and social interaction: Characteristics`,
       other: `Other (please add...)`,
       // Body
-      body0: ``,
-      body1: ``,
+      body0: `My social communication and social interaction: Characteristics <br><br>
+      Social communication and social interaction are areas of difference for people on the spectrum BUT these characteristics are not the same for every person with autism.  It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide the development of personalised strategies that can have a positive impact on my communication and play!
+      <br><br>Sometimes...
+      `,
+      body1: `My social communication and social interaction: Impact <br><br>
+      My autism changes how I learn, which can affect me and my family in our everyday activities.
+      <br><br>Sometimes...
+      `,
+      body2: `My social communication and social interaction: Strategies <br><br>
+      There are many strategies that can assist me in all areas of my development. The key is to make sure the strategies my family and I use fit with the characteristics that are true to me.  Below are some strategies, some we already use and know work well for me, some we have not tried yet but may be helpful.
+      <br><br>To find out more about any of the strategies in this Planning Booklet you may wish to seek further training or input from different professionals. See the Further Information links list for training options.
+      `,
+      body3: `My social communication and social interaction: Supports <br><br>
+      My autism changes how I learn, which can affect me and my family in our everyday activities.
+      `,
     }
   ];
 
