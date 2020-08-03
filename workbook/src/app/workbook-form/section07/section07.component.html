@@ -6,6 +6,27 @@
     <mat-card>
         <mat-card-content>
 
+            <mat-form-field>
+                <input matInput placeholder="A month: " value="" [formControl]="q1">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="3 Months: " value="" [formControl]="q2">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="A year: " value="" [formControl]="q3">
+            </mat-form-field>
+
+            <mat-form-field>
+                <input matInput placeholder="Who will help? (Informal, formal and community supports) " value=""
+                    [formControl]="q4">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="How e.g. what strategies? " value="" [formControl]="q5">
+            </mat-form-field>
+            <mat-form-field>
+                <input matInput placeholder="Monitor progress: " value="" [formControl]="q6">
+            </mat-form-field>
+
         </mat-card-content>
     </mat-card>
 </div>

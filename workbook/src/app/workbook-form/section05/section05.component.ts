@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-section05',
@@ -6,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section05.component.scss']
 })
 export class Section05Component implements OnInit {
+
+  // Initialise Form Data Fields
+  q1 = new FormControl('');
+  q2 = new FormControl('');
+  q3 = new FormControl('');
+  q4 = new FormControl('');
+  q5 = new FormControl('');
+  q6 = new FormControl('');
+  q7 = new FormControl('');
+  q8 = new FormControl('');
+  q9 = new FormControl('');
+  q10 = new FormControl('');
+  q11 = new FormControl('');
+  q12 = new FormControl('');
 
   staticContent: any = [
     {

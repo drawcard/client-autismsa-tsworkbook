@@ -480,10 +480,32 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: this.s04.staticContent[0].sectionTitle, style: 'heading' },
         // Section 05
         { text: this.s05.staticContent[0].sectionTitle, style: 'heading' },
+        { text: 'Formal: ' + this.s05.q1.value },
+        { text: 'Informal: ' + this.s05.q2.value },
+        { text: 'Community: ' + this.s05.q3.value },
+
+        { text: 'Formal: ' + this.s05.q4.value },
+        { text: 'Informal: ' + this.s05.q5.value },
+        { text: 'Community: ' + this.s05.q6.value },
+
+        { text: 'Formal: ' + this.s05.q7.value },
+        { text: 'Informal: ' + this.s05.q8.value },
+        { text: 'Community: ' + this.s05.q9.value },
+
+        { text: 'Formal: ' + this.s05.q10.value },
+        { text: 'Informal: ' + this.s05.q11.value },
+        { text: 'Community: ' + this.s05.q12.value },
+
         // Section 06
         { text: this.s06.staticContent[0].sectionTitle, style: 'heading' },
         // Section 07
         { text: this.s07.staticContent[0].sectionTitle, style: 'heading' },
+        { text: 'A month: ' + this.s07.q1.value },
+        { text: '3 months: ' + this.s07.q2.value },
+        { text: 'A year: ' + this.s07.q3.value },
+        { text: 'Who will help? (Informal, formal and community supports): ' + this.s07.q4.value },
+        { text: 'How e.g. what strategies?: ' + this.s07.q5.value },
+        { text: 'Monitor progress: ' + this.s07.q6.value },
         // Section 08
         { text: this.s08.staticContent[0].sectionTitle, style: 'heading' },
         // Section 09
