@@ -16,9 +16,7 @@ export class Section09Component implements OnInit {
       // Body
       body0: ``,
       body1: ``,
-      // Labels
-      label0: ``,
-      label1: ``
+
     }
   ];
 
