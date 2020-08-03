@@ -12,8 +12,10 @@ export class Section02Component implements OnInit {
       // Section Title
       sectionTitle: `Section 2`,
       // Titles
-      title0: ``,
-      title1: ``,
+      title0: `My social communication and social interaction: Strategies`,
+      title1: `My social communication and social interaction: Strategies`,
+      title2: `My social communication and social interaction: Supports`,
+      title3: `My social communication and social interaction: Characteristics`,
       // Body
       body0: ``,
       body1: ``,

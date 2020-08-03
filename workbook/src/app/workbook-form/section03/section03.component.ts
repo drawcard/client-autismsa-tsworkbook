@@ -12,8 +12,10 @@ export class Section03Component implements OnInit {
       // Section Title
       sectionTitle: `Section 3`,
       // Titles
-      title0: ``,
-      title1: ``,
+      title0: `My restricted and repetitive behaviors and sensory processing: Characteristics`,
+      title1: `My restricted and repetitive behaviors and sensory processing: Impact`,
+      title2: `My restricted and repetitive behaviors and sensory processing: Strategies`,
+      title3: `My restricted and repetitive behaviors and sensory processing: Supports`,
       // Body
       body0: ``,
       body1: ``,

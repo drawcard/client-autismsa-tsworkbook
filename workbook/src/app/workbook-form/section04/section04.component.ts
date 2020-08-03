@@ -12,8 +12,10 @@ export class Section04Component implements OnInit {
       // Section Title
       sectionTitle: `Section 4`,
       // Titles
-      title0: ``,
-      title1: ``,
+      title0: `My learning style: Characteristics`,
+      title1: `My learning style: Impact`,
+      title2: `My learning style: Strategies`,
+      title3: `My learning style: Supports`,
       // Body
       body0: ``,
       body1: ``,

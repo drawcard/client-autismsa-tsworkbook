@@ -12,8 +12,10 @@ export class Section05Component implements OnInit {
       // Section Title
       sectionTitle: `Section 5`,
       // Titles
-      title0: ``,
-      title1: ``,
+      title0: `My current supports and services`,
+      title1: `Supports and services I need`,
+      title2: `My family’s current supports and services`,
+      title3: `Supports and services my family need`,
       // Body
       body0: ``,
       body1: ``,

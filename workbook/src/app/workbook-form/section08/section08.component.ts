@@ -12,8 +12,9 @@ export class Section08Component implements OnInit {
       // Section Title
       sectionTitle: `Section 8`,
       // Titles
-      title0: ``,
-      title1: ``,
+      title0: `To do list`,
+      title1: `Links to further information`,
+      title2: `Learn more about Autism`,
       // Body
       body0: ``,
       body1: ``,

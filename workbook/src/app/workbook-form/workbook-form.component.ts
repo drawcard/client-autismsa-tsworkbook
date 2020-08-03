@@ -147,43 +147,5 @@ export class WorkbookFormComponent implements AfterViewInit {
     /*
     * Static content (intro paragraphs, body text, footer text, etc)
     */
-
-    // TODO: Refactor this
-
-    this.blockHeading = [
-      `My social communication and social interaction: Strategies`,
-      `My social communication and social interaction: Supports`,
-      `My social communication and social interaction: Characteristics`,
-      // Section 03
-      `My restricted and repetitive behaviors and sensory processing: Characteristics`,
-      `My restricted and repetitive behaviors and sensory processing: Impact`,
-      `My restricted and repetitive behaviors and sensory processing: Strategies`,
-      `My restricted and repetitive behaviors and sensory processing: Supports`,
-      // Section 04
-      `My learning style: Characteristics`,
-      `My learning style: Impact`,
-      `My learning style: Strategies`,
-      `My learning style: Supports`,
-      // Section 05
-      `My current supports and services`,
-      `Supports and services I need`,
-      `My family’s current supports and services`,
-      `Supports and services my family need`,
-      // Section 06
-      `How to choose supports and services: Questions to ask yourself about therapies, services, and supports`,
-      `Provider`,
-      `Therapy / Service`,
-      `Logistics`,
-      `General`,
-      // Section 07
-      `Settings Goals`,
-      `Reaching Goals`,
-      // Section 08
-      `To do list`,
-      `Links to further information`,
-      `Learn more about Autism`,
-      // Section 09
-      `User notes & Copyright`,
-    ]
   }
 }

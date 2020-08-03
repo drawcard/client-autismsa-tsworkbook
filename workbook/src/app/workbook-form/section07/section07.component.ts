@@ -12,8 +12,8 @@ export class Section07Component implements OnInit {
       // Section Title
       sectionTitle: `Section 7`,
       // Titles
-      title0: ``,
-      title1: ``,
+      title0: `Settings Goals`,
+      title1: `Reaching Goals`,
       // Body
       body0: ``,
       body1: ``,

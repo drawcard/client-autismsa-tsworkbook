@@ -12,8 +12,7 @@ export class Section09Component implements OnInit {
       // Section Title
       sectionTitle: `Section 9`,
       // Titles
-      title0: ``,
-      title1: ``,
+      title0: `User notes & Copyright`,
       // Body
       body0: ``,
       body1: ``,
