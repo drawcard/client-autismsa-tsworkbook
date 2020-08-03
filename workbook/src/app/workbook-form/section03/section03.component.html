@@ -1,1 +1,11 @@
-<p>section03 works!</p>
+<div class="wb-section" *ngFor="let item of staticContent">
+    <a id="section-03"></a>
+    <h1 [innerHTML]="item.sectionTitle"></h1>
+    <h2 [innerHTML]="item.title0"></h2>
+    <h3 [innerHTML]="item.body0"></h3>
+    <mat-card>
+        <mat-card-content>
+
+        </mat-card-content>
+    </mat-card>
+</div>
