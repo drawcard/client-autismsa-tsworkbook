@@ -102,41 +102,359 @@ export class WorkbookFormComponent implements AfterViewInit {
         'I need (supports and strategies): ' + this.s01.q8.value,
         // Section 02
         { text: this.s02.staticContent[0].sectionTitle, style: 'heading' },
+        // Checkbox Group
         {
-          // Checkbox Group
           table: {
             headerRows: 1,
             widths: ['*', 'auto'],
             body: [
-              [{ text: this.s02.checkbox_list[0].name }, { image: (this.s02.checkbox_list[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[1].name }, { image: (this.s02.checkbox_list[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[2].name }, { image: (this.s02.checkbox_list[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[3].name }, { image: (this.s02.checkbox_list[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[4].name }, { image: (this.s02.checkbox_list[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[5].name }, { image: (this.s02.checkbox_list[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[6].name }, { image: (this.s02.checkbox_list[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[7].name }, { image: (this.s02.checkbox_list[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[8].name }, { image: (this.s02.checkbox_list[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[9].name }, { image: (this.s02.checkbox_list[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[10].name }, { image: (this.s02.checkbox_list[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[11].name }, { image: (this.s02.checkbox_list[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[12].name }, { image: (this.s02.checkbox_list[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[13].name }, { image: (this.s02.checkbox_list[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[14].name }, { image: (this.s02.checkbox_list[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[15].name }, { image: (this.s02.checkbox_list[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[16].name }, { image: (this.s02.checkbox_list[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[17].name }, { image: (this.s02.checkbox_list[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[18].name }, { image: (this.s02.checkbox_list[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[19].name }, { image: (this.s02.checkbox_list[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[20].name }, { image: (this.s02.checkbox_list[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[21].name }, { image: (this.s02.checkbox_list[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s02.checkbox_list[22].name }, { image: (this.s02.checkbox_list[22].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[0].name }, { image: (this.s02.cbl1[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[1].name }, { image: (this.s02.cbl1[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[2].name }, { image: (this.s02.cbl1[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[3].name }, { image: (this.s02.cbl1[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[4].name }, { image: (this.s02.cbl1[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[5].name }, { image: (this.s02.cbl1[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[6].name }, { image: (this.s02.cbl1[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[7].name }, { image: (this.s02.cbl1[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[8].name }, { image: (this.s02.cbl1[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[9].name }, { image: (this.s02.cbl1[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[10].name }, { image: (this.s02.cbl1[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[11].name }, { image: (this.s02.cbl1[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[12].name }, { image: (this.s02.cbl1[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[13].name }, { image: (this.s02.cbl1[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[14].name }, { image: (this.s02.cbl1[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[15].name }, { image: (this.s02.cbl1[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[16].name }, { image: (this.s02.cbl1[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[17].name }, { image: (this.s02.cbl1[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[18].name }, { image: (this.s02.cbl1[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[19].name }, { image: (this.s02.cbl1[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[20].name }, { image: (this.s02.cbl1[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl1[21].name }, { image: (this.s02.cbl1[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
             ]
           }
-          // END Checkbox Group
         },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s02.cbl2[0].name }, { image: (this.s02.cbl2[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[1].name }, { image: (this.s02.cbl2[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[2].name }, { image: (this.s02.cbl2[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[3].name }, { image: (this.s02.cbl2[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[4].name }, { image: (this.s02.cbl2[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[5].name }, { image: (this.s02.cbl2[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[6].name }, { image: (this.s02.cbl2[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[7].name }, { image: (this.s02.cbl2[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[8].name }, { image: (this.s02.cbl2[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[9].name }, { image: (this.s02.cbl2[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[10].name }, { image: (this.s02.cbl2[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[11].name }, { image: (this.s02.cbl2[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[12].name }, { image: (this.s02.cbl2[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[13].name }, { image: (this.s02.cbl2[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[14].name }, { image: (this.s02.cbl2[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[15].name }, { image: (this.s02.cbl2[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[16].name }, { image: (this.s02.cbl2[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[17].name }, { image: (this.s02.cbl2[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[18].name }, { image: (this.s02.cbl2[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[19].name }, { image: (this.s02.cbl2[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[20].name }, { image: (this.s02.cbl2[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl2[21].name }, { image: (this.s02.cbl2[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s02.cbl3[0].name }, { image: (this.s02.cbl3[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[1].name }, { image: (this.s02.cbl3[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[2].name }, { image: (this.s02.cbl3[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[3].name }, { image: (this.s02.cbl3[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[4].name }, { image: (this.s02.cbl3[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[5].name }, { image: (this.s02.cbl3[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[6].name }, { image: (this.s02.cbl3[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[7].name }, { image: (this.s02.cbl3[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[8].name }, { image: (this.s02.cbl3[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[9].name }, { image: (this.s02.cbl3[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[10].name }, { image: (this.s02.cbl3[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[11].name }, { image: (this.s02.cbl3[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[12].name }, { image: (this.s02.cbl3[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[13].name }, { image: (this.s02.cbl3[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[14].name }, { image: (this.s02.cbl3[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[15].name }, { image: (this.s02.cbl3[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[16].name }, { image: (this.s02.cbl3[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[17].name }, { image: (this.s02.cbl3[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[18].name }, { image: (this.s02.cbl3[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[19].name }, { image: (this.s02.cbl3[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[20].name }, { image: (this.s02.cbl3[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl3[21].name }, { image: (this.s02.cbl3[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s02.cbl4[0].name }, { image: (this.s02.cbl4[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[1].name }, { image: (this.s02.cbl4[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[2].name }, { image: (this.s02.cbl4[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[3].name }, { image: (this.s02.cbl4[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[4].name }, { image: (this.s02.cbl4[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[5].name }, { image: (this.s02.cbl4[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[6].name }, { image: (this.s02.cbl4[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[7].name }, { image: (this.s02.cbl4[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[8].name }, { image: (this.s02.cbl4[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[9].name }, { image: (this.s02.cbl4[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s02.cbl4[10].name }, { image: (this.s02.cbl4[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
         // Section 03
         { text: this.s03.staticContent[0].sectionTitle, style: 'heading' },
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s03.cbl1[0].name }, { image: (this.s03.cbl1[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[1].name }, { image: (this.s03.cbl1[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[2].name }, { image: (this.s03.cbl1[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[3].name }, { image: (this.s03.cbl1[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[4].name }, { image: (this.s03.cbl1[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[5].name }, { image: (this.s03.cbl1[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[6].name }, { image: (this.s03.cbl1[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[7].name }, { image: (this.s03.cbl1[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[8].name }, { image: (this.s03.cbl1[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[9].name }, { image: (this.s03.cbl1[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[10].name }, { image: (this.s03.cbl1[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[11].name }, { image: (this.s03.cbl1[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[12].name }, { image: (this.s03.cbl1[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[13].name }, { image: (this.s03.cbl1[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[14].name }, { image: (this.s03.cbl1[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[15].name }, { image: (this.s03.cbl1[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[16].name }, { image: (this.s03.cbl1[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[17].name }, { image: (this.s03.cbl1[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[18].name }, { image: (this.s03.cbl1[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[19].name }, { image: (this.s03.cbl1[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[20].name }, { image: (this.s03.cbl1[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl1[21].name }, { image: (this.s03.cbl1[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s03.cbl2[0].name }, { image: (this.s03.cbl2[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[1].name }, { image: (this.s03.cbl2[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[2].name }, { image: (this.s03.cbl2[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[3].name }, { image: (this.s03.cbl2[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[4].name }, { image: (this.s03.cbl2[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[5].name }, { image: (this.s03.cbl2[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[6].name }, { image: (this.s03.cbl2[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[7].name }, { image: (this.s03.cbl2[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[8].name }, { image: (this.s03.cbl2[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[9].name }, { image: (this.s03.cbl2[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[10].name }, { image: (this.s03.cbl2[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[11].name }, { image: (this.s03.cbl2[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[12].name }, { image: (this.s03.cbl2[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[13].name }, { image: (this.s03.cbl2[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[14].name }, { image: (this.s03.cbl2[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[15].name }, { image: (this.s03.cbl2[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[16].name }, { image: (this.s03.cbl2[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[17].name }, { image: (this.s03.cbl2[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[18].name }, { image: (this.s03.cbl2[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[19].name }, { image: (this.s03.cbl2[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[20].name }, { image: (this.s03.cbl2[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl2[21].name }, { image: (this.s03.cbl2[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s03.cbl3[0].name }, { image: (this.s03.cbl3[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[1].name }, { image: (this.s03.cbl3[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[2].name }, { image: (this.s03.cbl3[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[3].name }, { image: (this.s03.cbl3[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[4].name }, { image: (this.s03.cbl3[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[5].name }, { image: (this.s03.cbl3[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[6].name }, { image: (this.s03.cbl3[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[7].name }, { image: (this.s03.cbl3[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[8].name }, { image: (this.s03.cbl3[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[9].name }, { image: (this.s03.cbl3[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[10].name }, { image: (this.s03.cbl3[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[11].name }, { image: (this.s03.cbl3[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[12].name }, { image: (this.s03.cbl3[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[13].name }, { image: (this.s03.cbl3[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[14].name }, { image: (this.s03.cbl3[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[15].name }, { image: (this.s03.cbl3[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[16].name }, { image: (this.s03.cbl3[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[17].name }, { image: (this.s03.cbl3[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[18].name }, { image: (this.s03.cbl3[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[19].name }, { image: (this.s03.cbl3[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[20].name }, { image: (this.s03.cbl3[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl3[21].name }, { image: (this.s03.cbl3[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s03.cbl4[0].name }, { image: (this.s03.cbl4[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[1].name }, { image: (this.s03.cbl4[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[2].name }, { image: (this.s03.cbl4[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[3].name }, { image: (this.s03.cbl4[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[4].name }, { image: (this.s03.cbl4[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[5].name }, { image: (this.s03.cbl4[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[6].name }, { image: (this.s03.cbl4[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[7].name }, { image: (this.s03.cbl4[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[8].name }, { image: (this.s03.cbl4[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[9].name }, { image: (this.s03.cbl4[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s03.cbl4[10].name }, { image: (this.s03.cbl4[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s04.cbl1[0].name }, { image: (this.s04.cbl1[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[1].name }, { image: (this.s04.cbl1[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[2].name }, { image: (this.s04.cbl1[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[3].name }, { image: (this.s04.cbl1[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[4].name }, { image: (this.s04.cbl1[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[5].name }, { image: (this.s04.cbl1[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[6].name }, { image: (this.s04.cbl1[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[7].name }, { image: (this.s04.cbl1[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[8].name }, { image: (this.s04.cbl1[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[9].name }, { image: (this.s04.cbl1[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[10].name }, { image: (this.s04.cbl1[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[11].name }, { image: (this.s04.cbl1[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[12].name }, { image: (this.s04.cbl1[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[13].name }, { image: (this.s04.cbl1[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[14].name }, { image: (this.s04.cbl1[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[15].name }, { image: (this.s04.cbl1[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[16].name }, { image: (this.s04.cbl1[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[17].name }, { image: (this.s04.cbl1[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[18].name }, { image: (this.s04.cbl1[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[19].name }, { image: (this.s04.cbl1[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[20].name }, { image: (this.s04.cbl1[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[21].name }, { image: (this.s04.cbl1[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s04.cbl2[0].name }, { image: (this.s04.cbl2[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[1].name }, { image: (this.s04.cbl2[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[2].name }, { image: (this.s04.cbl2[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[3].name }, { image: (this.s04.cbl2[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[4].name }, { image: (this.s04.cbl2[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[5].name }, { image: (this.s04.cbl2[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[6].name }, { image: (this.s04.cbl2[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[7].name }, { image: (this.s04.cbl2[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[8].name }, { image: (this.s04.cbl2[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[9].name }, { image: (this.s04.cbl2[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[10].name }, { image: (this.s04.cbl2[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[11].name }, { image: (this.s04.cbl2[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[12].name }, { image: (this.s04.cbl2[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[13].name }, { image: (this.s04.cbl2[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[14].name }, { image: (this.s04.cbl2[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[15].name }, { image: (this.s04.cbl2[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[16].name }, { image: (this.s04.cbl2[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[17].name }, { image: (this.s04.cbl2[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[18].name }, { image: (this.s04.cbl2[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[19].name }, { image: (this.s04.cbl2[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[20].name }, { image: (this.s04.cbl2[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl2[21].name }, { image: (this.s04.cbl2[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s04.cbl3[0].name }, { image: (this.s04.cbl3[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[1].name }, { image: (this.s04.cbl3[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[2].name }, { image: (this.s04.cbl3[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[3].name }, { image: (this.s04.cbl3[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[4].name }, { image: (this.s04.cbl3[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[5].name }, { image: (this.s04.cbl3[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[6].name }, { image: (this.s04.cbl3[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[7].name }, { image: (this.s04.cbl3[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[8].name }, { image: (this.s04.cbl3[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[9].name }, { image: (this.s04.cbl3[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[10].name }, { image: (this.s04.cbl3[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[11].name }, { image: (this.s04.cbl3[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[12].name }, { image: (this.s04.cbl3[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[13].name }, { image: (this.s04.cbl3[13].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[14].name }, { image: (this.s04.cbl3[14].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[15].name }, { image: (this.s04.cbl3[15].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[16].name }, { image: (this.s04.cbl3[16].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[17].name }, { image: (this.s04.cbl3[17].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[18].name }, { image: (this.s04.cbl3[18].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[19].name }, { image: (this.s04.cbl3[19].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[20].name }, { image: (this.s04.cbl3[20].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl3[21].name }, { image: (this.s04.cbl3[21].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
+        // Checkbox Group
+        {
+          table: {
+            headerRows: 1,
+            widths: ['*', 'auto'],
+            body: [
+              [{ text: this.s04.cbl4[0].name }, { image: (this.s04.cbl4[0].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[1].name }, { image: (this.s04.cbl4[1].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[2].name }, { image: (this.s04.cbl4[2].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[3].name }, { image: (this.s04.cbl4[3].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[4].name }, { image: (this.s04.cbl4[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[5].name }, { image: (this.s04.cbl4[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[6].name }, { image: (this.s04.cbl4[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[7].name }, { image: (this.s04.cbl4[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[8].name }, { image: (this.s04.cbl4[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[9].name }, { image: (this.s04.cbl4[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl4[10].name }, { image: (this.s04.cbl4[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+            ]
+          }
+        },
+        // END Checkbox Group
         // Section 04
         { text: this.s04.staticContent[0].sectionTitle, style: 'heading' },
         // Section 05

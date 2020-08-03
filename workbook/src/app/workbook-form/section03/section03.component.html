@@ -5,7 +5,24 @@
     <h3 [innerHTML]="item.body0"></h3>
     <mat-card>
         <mat-card-content>
-
+            <mat-list>
+                <mat-list-item *ngFor="let item of cbl1">
+                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
+                    </mat-checkbox>
+                </mat-list-item>
+                <mat-list-item *ngFor="let item of cbl2">
+                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
+                    </mat-checkbox>
+                </mat-list-item>
+                <mat-list-item *ngFor="let item of cbl3">
+                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
+                    </mat-checkbox>
+                </mat-list-item>
+                <mat-list-item *ngFor="let item of cbl4">
+                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
+                    </mat-checkbox>
+                </mat-list-item>
+            </mat-list>
         </mat-card-content>
     </mat-card>
 </div>
