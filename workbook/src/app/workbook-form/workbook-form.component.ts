@@ -132,6 +132,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s02.other1.value, },
         // END Checkbox Group
         // Radio Group
         {
@@ -151,6 +152,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s02.other2.value, },
         // END Checkbox Group
         // NOTE: Radio Group
         {
@@ -212,6 +214,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s02.other3.value, },
         // NOTE: END Radio Group
         // Checkbox Group
         {
@@ -232,6 +235,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s02.other4.value, },
         // END Checkbox Group
         // Section 03
         { text: this.s03.staticContent[0].sectionTitle, style: 'heading' },
@@ -257,6 +261,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s03.other1.value, },
         // END Checkbox Group
         // Checkbox Group
         {
@@ -274,6 +279,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s03.other2.value, },
         // END Checkbox Group
         // NOTE: Radio Group
         {
@@ -345,6 +351,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s03.other3.value, },
         // NOTE: END Radio Group
         // Checkbox Group
         {
@@ -366,6 +373,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s03.other4.value, },
         // END Checkbox Group
         // Checkbox Group
         {
@@ -385,6 +393,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s04.other1.value, },
         // END Checkbox Group
         // Checkbox Group
         {
@@ -401,6 +410,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s04.other2.value, },
         // END Checkbox Group
         // NOTE: Radio Group
         {
@@ -442,6 +452,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s04.other3.value, },
         // NOTE: END Radio Group
         // Checkbox Group
         {
@@ -463,6 +474,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
+        { text: 'Other (please add...) :' + this.s04.other4.value, },
         // END Checkbox Group
         // Section 04
         { text: this.s04.staticContent[0].sectionTitle, style: 'heading' },

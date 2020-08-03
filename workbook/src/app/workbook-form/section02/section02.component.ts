@@ -9,6 +9,11 @@ import { FormControl } from '@angular/forms';
 })
 export class Section02Component implements OnInit {
 
+  other1 = new FormControl('');
+  other2 = new FormControl('');
+  other3 = new FormControl('');
+  other4 = new FormControl('');
+
   staticContent: any = [
     {
       // Section Title
@@ -18,6 +23,7 @@ export class Section02Component implements OnInit {
       title1: `My social communication and social interaction: Strategies`,
       title2: `My social communication and social interaction: Supports`,
       title3: `My social communication and social interaction: Characteristics`,
+      other: `Other (please add...)`,
       // Body
       body0: ``,
       body1: ``,

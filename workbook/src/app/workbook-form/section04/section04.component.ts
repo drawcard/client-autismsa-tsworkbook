@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatRadioChange } from '@angular/material/radio';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-section04',
@@ -8,6 +9,11 @@ import { MatRadioChange } from '@angular/material/radio';
 })
 
 export class Section04Component implements OnInit {
+
+  other1 = new FormControl('');
+  other2 = new FormControl('');
+  other3 = new FormControl('');
+  other4 = new FormControl('');
 
   staticContent: any = [
     {
@@ -18,6 +24,7 @@ export class Section04Component implements OnInit {
       title1: `My learning style: Impact`,
       title2: `My learning style: Strategies`,
       title3: `My learning style: Supports`,
+      other: `Other (please add)...`,
       // Body
       body0: ``,
       body1: ``,
