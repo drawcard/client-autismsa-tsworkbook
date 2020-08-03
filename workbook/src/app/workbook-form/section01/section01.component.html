@@ -1,40 +1,40 @@
 <div class="wb-section" *ngFor="let item of staticContent">
     <a id="section-01"></a>
     <h1 [innerHTML]="item.sectionTitle"></h1>
-    <h2 [innerHTML]="item.title"></h2>
-    <h3 [innerHTML]="item.body"></h3>
+    <h2 [innerHTML]="item.title0"></h2>
+    <h3 [innerHTML]="item.body0"></h3>
     <mat-card>
         <mat-card-content>
             <mat-form-field>
-                <input matInput placeholder="My name is" value="" [formControl]="b1_q2">
+                <input matInput placeholder="My name is" value="" [formControl]="q1">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="And my age is" value="" [formControl]="b1_q2">
+                <input matInput placeholder="And my age is" value="" [formControl]="q2">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="I live with" value="" [formControl]="b1_q3">
+                <input matInput placeholder="I live with" value="" [formControl]="q3">
             </mat-form-field>
             <mat-form-field>
-                <input matInput placeholder="I attend...^" value="" [formControl]="b1_q4">
+                <input matInput placeholder="I attend...^" value="" [formControl]="q4">
             </mat-form-field>
             <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
         </mat-card-content>
     </mat-card>
-    <h3 [innerHTML]="item.body2"></h3>
+    <h3 [innerHTML]="item.body1"></h3>
     <mat-card>
         <mat-card-content>
             <mat-form-field>
                 <textarea matInput placeholder="I like (e.g. people, places, objects, activities):"
-                    [formControl]="b1_q5"></textarea>
+                    [formControl]="q5"></textarea>
             </mat-form-field>
             <mat-form-field>
-                <textarea matInput placeholder="I am good at (strengths):" [formControl]="b1_q6"></textarea>
+                <textarea matInput placeholder="I am good at (strengths):" [formControl]="q6"></textarea>
             </mat-form-field>
             <mat-form-field>
-                <textarea matInput placeholder="I have trouble with (challenges):" [formControl]="b1_q7"></textarea>
+                <textarea matInput placeholder="I have trouble with (challenges):" [formControl]="q7"></textarea>
             </mat-form-field>
             <mat-form-field>
-                <textarea matInput placeholder="I need (supports and strategies):" [formControl]="b1_q8"></textarea>
+                <textarea matInput placeholder="I need (supports and strategies):" [formControl]="q8"></textarea>
             </mat-form-field>
         </mat-card-content>
     </mat-card>

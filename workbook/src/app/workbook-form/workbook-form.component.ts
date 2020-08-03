@@ -89,15 +89,15 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: this.s01.staticContent[0].title0, style: 'heading' },
         { text: this.s01.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         { image: (this.iu.cardImageBase64 ? this.iu.cardImageBase64 : this.iu.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
-        'My name is: ' + this.s01.b1_q1.value,
-        'My age is: ' + this.s01.b1_q2.value,
-        'I live with: ' + this.s01.b1_q3.value,
-        'My school / kindergarten / childcare details are: ' + this.s01.b1_q4.value,
+        'My name is: ' + this.s01.q1.value,
+        'My age is: ' + this.s01.q2.value,
+        'I live with: ' + this.s01.q3.value,
+        'My school / kindergarten / childcare details are: ' + this.s01.q4.value,
         { text: this.s01.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
-        'I like (e.g.people, places, objects, activities): ' + this.s01.b1_q5.value,
-        'I am good at (strengths): ' + this.s01.b1_q6.value,
-        'I have trouble with (challenges): ' + this.s01.b1_q7.value,
-        'I need (supports and strategies): ' + this.s01.b1_q8.value,
+        'I like (e.g.people, places, objects, activities): ' + this.s01.q5.value,
+        'I am good at (strengths): ' + this.s01.q6.value,
+        'I have trouble with (challenges): ' + this.s01.q7.value,
+        'I need (supports and strategies): ' + this.s01.q8.value,
         // Section 02
         { text: this.s02.staticContent[0].sectionTitle, style: 'heading' },
         // Section 03
