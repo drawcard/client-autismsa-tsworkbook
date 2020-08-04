@@ -49,3 +49,13 @@ body {
   margin: 0;
 }
 
+// Allow checkbox label wrapping
+.mat-checkbox-layout .mat-checkbox-label {
+  white-space: initial !important;
+}
+
+// Align checkbox top left of wrapped labels
+.mat-checkbox-inner-container {
+  margin: 0px !important;
+  margin-right: 8px !important;
+}
