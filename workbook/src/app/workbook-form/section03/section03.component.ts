@@ -23,7 +23,6 @@ export class Section03Component implements OnInit {
       title1: `My restricted and repetitive behaviors and sensory processing: Impact`,
       title2: `My restricted and repetitive behaviors and sensory processing: Strategies`,
       title3: `My restricted and repetitive behaviors and sensory processing: Supports`,
-      other: `Other (please add...)`,
       // Body
       body0: `My restricted and repetitive behaviors and sensory processing: Characteristics <br><br>
       Restricted and repetitive behaviours and varied sensory processing styles are areas of difference for people on the spectrum, BUT these characteristics are not the same for every person with autism.  It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide development of  ersonalized strategies that can have a positive impact on my day to day life!
@@ -79,7 +78,7 @@ export class Section03Component implements OnInit {
       { name: "I am really good at talking about my favourite things ", checked: false },
       { name: "I like following rules and can become upset when other people break the rules", checked: false },
       { name: "I enjoy sticking with places and activities I know  ", checked: false },
-      { name: "Other. Please add …", checked: false },
+      // Other
     ],
       this.cbl2 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
@@ -104,7 +103,7 @@ export class Section03Component implements OnInit {
         { name: "Psychologists", checked: false },
         { name: "Coaches e.g. swimming coach, gymnastic coach", checked: false },
         { name: "Therapists", checked: false },
-        { name: "Other. Please add ...", checked: false },
+        // Other
       ]
   }
 

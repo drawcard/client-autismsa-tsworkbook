@@ -278,7 +278,6 @@ export class WorkbookFormComponent implements AfterViewInit {
               [{ text: this.s03.cbl1[9].name }, { image: (this.s03.cbl1[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s03.cbl1[10].name }, { image: (this.s03.cbl1[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s03.cbl1[11].name }, { image: (this.s03.cbl1[11].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl1[12].name }, { image: (this.s03.cbl1[12].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
             ]
           }
         },
@@ -393,7 +392,6 @@ export class WorkbookFormComponent implements AfterViewInit {
               [{ text: this.s03.cbl4[7].name }, { image: (this.s03.cbl4[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s03.cbl4[8].name }, { image: (this.s03.cbl4[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s03.cbl4[9].name }, { image: (this.s03.cbl4[9].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s03.cbl4[10].name }, { image: (this.s03.cbl4[10].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
             ]
           }
         },
