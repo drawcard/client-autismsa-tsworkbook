@@ -29,12 +29,14 @@
 
                 <h3 class="wb-body" [innerHTML]="item.body2"></h3>
                 <ng-container *ngFor="let item of rad1; let i=index">
-                    <label id="example-radio-group-label">{{item.name}}</label>
-                    <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
-                        <mat-radio-button class="example-radio-button" *ngFor="let value of item.rating" [value]="value"
-                            (change)="radioChange($event,item)">
-                            {{value}}</mat-radio-button>
-                    </mat-radio-group>
+                    <div class="wb-radio">
+                        <label class="radio-label" id="example-radio-group-label">{{item.name}}</label>
+                        <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
+                            <mat-radio-button class="example-radio-button" *ngFor="let value of item.rating"
+                                [value]="value" (change)="radioChange($event,item)">
+                                {{value}}</mat-radio-button>
+                        </mat-radio-group>
+                    </div>
                 </ng-container>
                 <mat-list-item>
                     <mat-form-field>
