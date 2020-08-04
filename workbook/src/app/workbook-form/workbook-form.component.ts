@@ -91,15 +91,15 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: this.s01.staticContent[0].title0, style: 'heading' },
         { text: this.s01.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
         { image: (this.iu.cardImageBase64 ? this.iu.cardImageBase64 : this.iu.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
-        'My name is: ' + this.s01.q1.value,
-        'My age is: ' + this.s01.q2.value,
-        'I live with: ' + this.s01.q3.value,
-        'My school / kindergarten / childcare details are: ' + this.s01.q4.value,
+        { text: 'My name is: ' + this.s01.q1.value, style: 'textAnswer' },
+        { text: 'My age is: ' + this.s01.q2.value, style: 'textAnswer' },
+        { text: 'I live with: ' + this.s01.q3.value, style: 'textAnswer' },
+        { text: 'My school / kindergarten / childcare details are: ' + this.s01.q4.value, style: 'textAnswer' },
         { text: this.s01.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
-        'I like (e.g.people, places, objects, activities): ' + this.s01.q5.value,
-        'I am good at (strengths): ' + this.s01.q6.value,
-        'I have trouble with (challenges): ' + this.s01.q7.value,
-        'I need (supports and strategies): ' + this.s01.q8.value,
+        { text: 'I like (e.g.people, places, objects, activities): ' + this.s01.q5.value, style: 'textAnswer' },
+        { text: 'I am good at (strengths): ' + this.s01.q6.value, style: 'textAnswer' },
+        { text: 'I have trouble with (challenges): ' + this.s01.q7.value, style: 'textAnswer' },
+        { text: 'I need (supports and strategies): ' + this.s01.q8.value, style: 'textAnswer' },
         // Section 02
         { text: this.s02.staticContent[0].sectionTitle, style: 'headingSection' },
         { text: this.s02.staticContent[0].title0, style: 'heading' },
@@ -134,7 +134,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s02.other1.value, },
+        { text: 'Other (please add...) :' + this.s02.other1.value, style: 'textAnswer' },
         // END Checkbox Group
         { text: this.s02.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         // Radio Group
@@ -155,7 +155,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s02.other2.value, },
+        { text: 'Other (please add...) :' + this.s02.other2.value, style: 'textAnswer' },
         // END Checkbox Group
         { text: this.s02.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         // NOTE: Radio Group
@@ -218,7 +218,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s02.other3.value, },
+        { text: 'Other (please add...) :' + this.s02.other3.value, style: 'textAnswer' },
         // NOTE: END Radio Group
         { text: this.s02.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
@@ -240,7 +240,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s02.other4.value, },
+        { text: 'Other (please add...) :' + this.s02.other4.value, style: 'textAnswer' },
         // END Checkbox Group
         // Section 03
         { text: this.s03.staticContent[0].sectionTitle, style: 'headingSection' },
@@ -268,7 +268,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s03.other1.value, },
+        { text: 'Other (please add...) :' + this.s03.other1.value, style: 'textAnswer' },
         // END Checkbox Group
         { text: this.s03.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
@@ -287,7 +287,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s03.other2.value, },
+        { text: 'Other (please add...) :' + this.s03.other2.value, style: 'textAnswer' },
         // END Checkbox Group
         { text: this.s03.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         // NOTE: Radio Group
@@ -360,7 +360,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s03.other3.value, },
+        { text: 'Other (please add...) :' + this.s03.other3.value, style: 'textAnswer' },
         // NOTE: END Radio Group
         { text: this.s03.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
@@ -383,7 +383,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s03.other4.value, },
+        { text: 'Other (please add...) :' + this.s03.other4.value, style: 'textAnswer' },
         // END Checkbox Group
         // Section 04
         { text: this.s04.staticContent[0].sectionTitle, style: 'headingSection' },
@@ -407,7 +407,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s04.other1.value, },
+        { text: 'Other (please add...) :' + this.s04.other1.value, style: 'textAnswer' },
         // END Checkbox Group
         { text: this.s04.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
@@ -425,7 +425,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s04.other2.value, },
+        { text: 'Other (please add...) :' + this.s04.other2.value, style: 'textAnswer' },
         // END Checkbox Group
         { text: this.s04.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         // NOTE: Radio Group
@@ -468,7 +468,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s04.other3.value, },
+        { text: 'Other (please add...) :' + this.s04.other3.value, style: 'textAnswer' },
         // NOTE: END Radio Group
         { text: this.s04.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         // Checkbox Group
@@ -491,7 +491,7 @@ export class WorkbookFormComponent implements AfterViewInit {
             ]
           }
         },
-        { text: 'Other (please add...) :' + this.s04.other4.value, },
+        { text: 'Other (please add...) :' + this.s04.other4.value, style: 'textAnswer' },
         // END Checkbox Group
 
         // Section 05
@@ -499,24 +499,24 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: this.s05.staticContent[0].title0, style: 'heading' },
         { text: this.s05.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
 
-        { text: 'Formal: ' + this.s05.q1.value },
-        { text: 'Informal: ' + this.s05.q2.value },
-        { text: 'Community: ' + this.s05.q3.value },
+        { text: 'Formal: ' + this.s05.q1.value, style: 'textAnswer' },
+        { text: 'Informal: ' + this.s05.q2.value, style: 'textAnswer' },
+        { text: 'Community: ' + this.s05.q3.value, style: 'textAnswer' },
 
         { text: this.s05.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
-        { text: 'Formal: ' + this.s05.q4.value },
-        { text: 'Informal: ' + this.s05.q5.value },
-        { text: 'Community: ' + this.s05.q6.value },
+        { text: 'Formal: ' + this.s05.q4.value, style: 'textAnswer' },
+        { text: 'Informal: ' + this.s05.q5.value, style: 'textAnswer' },
+        { text: 'Community: ' + this.s05.q6.value, style: 'textAnswer' },
 
         { text: this.s05.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
-        { text: 'Formal: ' + this.s05.q7.value },
-        { text: 'Informal: ' + this.s05.q8.value },
-        { text: 'Community: ' + this.s05.q9.value },
+        { text: 'Formal: ' + this.s05.q7.value, style: 'textAnswer' },
+        { text: 'Informal: ' + this.s05.q8.value, style: 'textAnswer' },
+        { text: 'Community: ' + this.s05.q9.value, style: 'textAnswer' },
 
         { text: this.s05.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
-        { text: 'Formal: ' + this.s05.q10.value },
-        { text: 'Informal: ' + this.s05.q11.value },
-        { text: 'Community: ' + this.s05.q12.value },
+        { text: 'Formal: ' + this.s05.q10.value, style: 'textAnswer' },
+        { text: 'Informal: ' + this.s05.q11.value, style: 'textAnswer' },
+        { text: 'Community: ' + this.s05.q12.value, style: 'textAnswer' },
 
         // Section 06
         { text: this.s06.staticContent[0].sectionTitle, style: 'headingSection' },
@@ -526,12 +526,12 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: this.s07.staticContent[0].sectionTitle, style: 'headingSection' },
         { text: this.s07.staticContent[0].title0, style: 'heading' },
         { text: this.s07.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
-        { text: 'A month: ' + this.s07.q1.value },
-        { text: '3 months: ' + this.s07.q2.value },
-        { text: 'A year: ' + this.s07.q3.value },
-        { text: 'Who will help? (Informal, formal and community supports): ' + this.s07.q4.value },
-        { text: 'How e.g. what strategies?: ' + this.s07.q5.value },
-        { text: 'Monitor progress: ' + this.s07.q6.value },
+        { text: 'A month: ' + this.s07.q1.value, style: 'textAnswer' },
+        { text: '3 months: ' + this.s07.q2.value, style: 'textAnswer' },
+        { text: 'A year: ' + this.s07.q3.value, style: 'textAnswer' },
+        { text: 'Who will help? (Informal, formal and community supports): ' + this.s07.q4.value, style: 'textAnswer' },
+        { text: 'How e.g. what strategies?: ' + this.s07.q5.value, style: 'textAnswer' },
+        { text: 'Monitor progress: ' + this.s07.q6.value, style: 'textAnswer' },
         // Section 08
         { text: this.s08.staticContent[0].sectionTitle, style: 'headingSection' },
         { text: this.s08.staticContent[0].title0, style: 'heading' },
@@ -542,24 +542,28 @@ export class WorkbookFormComponent implements AfterViewInit {
         { text: this.s09.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
       ],
       styles: {
+        // margin & padding notation = [left, top, right, bottom]
         headingSection: {
           fontSize: 36,
           bold: true,
-          margin: [0, 0, 0, 16]
+          margin: [0, 36, 0, 8]
         },
         heading: {
           fontSize: 24,
           bold: true,
-          margin: [0, 0, 0, 16]
+          margin: [0, 8, 0, 8]
         },
         body: {
-          margin: [0, 16, 0, 16],
+          margin: [0, 8, 0, 8],
           color: 'gray'
         },
+        textAnswer: {
+          margin: [0, 8, 0, 8],
+        },
         subheading: {
-          fontSize: 18,
+          fontSize: 16,
           bold: true,
-          margin: [0, 0, 0, 8]
+          margin: [0, 8, 0, 8]
         },
         imageMargin: {
           margin: [0, 24, 0, 24]
