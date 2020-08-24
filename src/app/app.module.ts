@@ -29,6 +29,7 @@ import { Section06Component } from './workbook-form/section06/section06.componen
 import { Section07Component } from './workbook-form/section07/section07.component';
 import { Section08Component } from './workbook-form/section08/section08.component';
 import { Section09Component } from './workbook-form/section09/section09.component';
+import { DefinitionsService } from "./workbook-form/services/definitions.service";
 
 @NgModule({
   declarations: [
@@ -64,7 +65,7 @@ import { Section09Component } from './workbook-form/section09/section09.componen
     MatCheckboxModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DefinitionsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
