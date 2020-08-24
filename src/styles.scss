@@ -1,3 +1,5 @@
+@import 'brand';
+
 /**
 * Generated theme by Material Theme Generator
 * https://materialtheme.arcsine.dev
@@ -30,7 +32,7 @@ $fontConfig: (
 // Foreground Elements
 
 // Light Theme Text
-$dark-text: #414042;
+$dark-text: $col-primary;
 $dark-primary-text: rgba($dark-text, 0.87);
 $dark-accent-text: rgba($dark-primary-text, 0.54);
 $dark-disabled-text: rgba($dark-primary-text, 0.38);
@@ -57,7 +59,7 @@ $mat-light-theme-foreground: (
 );
 
 // Dark Theme text
-$light-text: #f1f2f2;
+$light-text: $col-background;
 $light-primary-text: $light-text;
 $light-accent-text: rgba($light-primary-text, 0.7);
 $light-disabled-text: rgba($light-primary-text, 0.5);
@@ -85,15 +87,15 @@ $mat-dark-theme-foreground: (
 
 // Background config
 // Light bg
-$light-background:    #f1f2f2;
+$light-background:    $col-background;
 $light-bg-darker-5:   darken($light-background, 5%);
 $light-bg-darker-10:  darken($light-background, 10%);
 $light-bg-darker-20:  darken($light-background, 20%);
 $light-bg-darker-30:  darken($light-background, 30%);
 $light-bg-lighter-5:  lighten($light-background, 5%);
-$dark-bg-tooltip:     lighten(#414042, 20%);
-$dark-bg-alpha-4:     rgba(#414042, 0.04);
-$dark-bg-alpha-12:    rgba(#414042, 0.12);
+$dark-bg-tooltip:     lighten($col-primary, 20%);
+$dark-bg-alpha-4:     rgba($col-primary, 0.04);
+$dark-bg-alpha-12:    rgba($col-primary, 0.12);
 
 $mat-light-theme-background: (
   background:               $light-background,
@@ -114,13 +116,13 @@ $mat-light-theme-background: (
 );
 
 // Dark bg
-$dark-background:     #414042;
+$dark-background:     $col-primary;
 $dark-bg-lighter-5:   lighten($dark-background, 5%);
 $dark-bg-lighter-10:  lighten($dark-background, 10%);
 $dark-bg-lighter-20:  lighten($dark-background, 20%);
 $dark-bg-lighter-30:  lighten($dark-background, 30%);
-$light-bg-alpha-4:    rgba(#f1f2f2, 0.04);
-$light-bg-alpha-12:   rgba(#f1f2f2, 0.12);
+$light-bg-alpha-4:    rgba($col-background, 0.04);
+$light-bg-alpha-12:   rgba($col-background, 0.12);
 
 // Background palette for dark themes.
 $mat-dark-theme-background: (
@@ -147,19 +149,19 @@ $mat-dark-theme-background: (
 // Theme Config
 
 body {
-  --primary-color: #414042;
-  --primary-lighter-color: #c6c6c6;
-  --primary-darker-color: #2a2a2b;
+  --primary-color: $col-primary;
+  --primary-lighter-color: lighten($col-primary, 20%);
+  --primary-darker-color: darken($col-primary, 20%);
   --text-primary-color: #{$light-primary-text};
   --text-primary-lighter-color: #{$dark-primary-text};
   --text-primary-darker-color: #{$light-primary-text};
 }
 
 $mat-primary: (
-  main: #414042,
-  lighter: #c6c6c6,
-  darker: #2a2a2b,
-  200: #414042, // For slide toggle,
+  main: $col-primary,
+  lighter: lighten($col-primary, 20%),
+  darker: darken($col-primary, 20%),
+  200: $col-primary, // For slide toggle,
   contrast : (
     main: $light-primary-text,
     lighter: $dark-primary-text,
@@ -169,19 +171,19 @@ $mat-primary: (
 $theme-primary: mat-palette($mat-primary, main, lighter, darker);
 
 body {
-  --accent-color: #fbaa3f;
-  --accent-lighter-color: #fee6c5;
-  --accent-darker-color: #f99029;
+  --accent-color: $col-highlight;
+  --accent-lighter-color: lighten($col-highlight, 20%);
+  --accent-darker-color: darken($col-highlight, 20%);
   --text-accent-color: #{$dark-primary-text};
   --text-accent-lighter-color: #{$dark-primary-text};
   --text-accent-darker-color: #{$dark-primary-text};
 }
 
 $mat-accent: (
-  main: #fbaa3f,
-  lighter: #fee6c5,
-  darker: #f99029,
-  200: #fbaa3f, // For slide toggle,
+  main: $col-highlight,
+  lighter: lighten($col-highlight, 20%),
+  darker: darken($col-highlight, 20%),
+  200: $col-highlight, // For slide toggle,
   contrast : (
     main: $dark-primary-text,
     lighter: $dark-primary-text,
@@ -191,19 +193,19 @@ $mat-accent: (
 $theme-accent: mat-palette($mat-accent, main, lighter, darker);
 
 body {
-  --warn-color: #ff0000;
-  --warn-lighter-color: #ffb3b3;
-  --warn-darker-color: #ff0000;
+  --warn-color: #c92a2a;
+  --warn-lighter-color: #ffc9c9;
+  --warn-darker-color: #c92a2a;
   --text-warn-color: #{$light-primary-text};
   --text-warn-lighter-color: #{$dark-primary-text};
   --text-warn-darker-color: #{$light-primary-text};
 }
 
 $mat-warn: (
-  main: #ff0000,
-  lighter: #ffb3b3,
-  darker: #ff0000,
-  200: #ff0000, // For slide toggle,
+  main: #c92a2a,
+  lighter: #ffc9c9,
+  darker: #c92a2a,
+  200: #c92a2a, // For slide toggle,
   contrast : (
     main: $light-primary-text,
     lighter: $dark-primary-text,

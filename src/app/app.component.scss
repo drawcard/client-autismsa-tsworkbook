@@ -1,13 +1,1 @@
-
-// Brand colours, with notes from the style guide
-
-$ts-charcoal: #414042; // Solid backgrounds, logo, text and highlights
-$ts-orange: #fbaa3f; // Solid backgrounds, logo, headlines and highlights
-$ts-charcoal2: #4d4d4f; // Use sparingly - Solid backgrounds, body text, instead of black whenever possible
-$ts-lgrey: #f1f2f2; // Use sparingly - Backgrounds
-
-// Assignments
-$col-primary: $ts-charcoal;
-$col-highlight: $ts-orange;
-$col-background: $ts-lgrey;
-
+@import './../brand'
