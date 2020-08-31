@@ -10,7 +10,7 @@ import { map, shareReplay } from 'rxjs/operators';
 })
 export class MainMenuComponent {
 
-  menuBaseURL: string = 'https://drawcard.com.au/autismsa';
+  menuBaseURL: string = 'https://thespectrum.org.au/myautism';
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
