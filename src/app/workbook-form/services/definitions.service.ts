@@ -7,6 +7,7 @@ export class DefinitionsService {
 
   // Section titles shared across the app
   // TODO: import the service into the menu system
+  section00Title: string = 'Section Title 000';
   section01Title: string = 'Section Title 000';
   section02Title: string = 'Section Title 000';
   section03Title: string = 'Section Title 000';

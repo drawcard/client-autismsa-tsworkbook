@@ -36,6 +36,7 @@ export class WorkbookFormComponent implements AfterViewInit {
   regex = /\<br>/gi;
 
   //Fetch data from nested child components & assign to member variable
+  section00StaticContent: any[];
   section01StaticContent: any[];
   section02StaticContent: any[];
   section03StaticContent: any[];
@@ -46,7 +47,7 @@ export class WorkbookFormComponent implements AfterViewInit {
   section08StaticContent: any[];
   section09StaticContent: any[];
 
-  @ViewChild(Section01Component) s00: Section00Component;
+  @ViewChild(Section00Component) s00: Section00Component;
   @ViewChild(Section01Component) s01: Section01Component;
   @ViewChild(Section02Component) s02: Section02Component;
   @ViewChild(Section03Component) s03: Section03Component;
@@ -64,6 +65,7 @@ export class WorkbookFormComponent implements AfterViewInit {
   imgUnchecked: string = '';
   imgChecked: string = '';
 
+  section00Title: string = '';
   section01Title: string = '';
   section02Title: string = '';
   section03Title: string = '';
@@ -87,6 +89,7 @@ export class WorkbookFormComponent implements AfterViewInit {
     this.logo = ds.logo;
     this.imgChecked = ds.imgChecked;
     this.imgUnchecked = ds.imgUnchecked;
+    this.section00Title = ds.section00Title;
     this.section01Title = ds.section01Title;
     this.section02Title = ds.section02Title;
     this.section03Title = ds.section03Title;
@@ -126,6 +129,8 @@ export class WorkbookFormComponent implements AfterViewInit {
         },
         { text: this.docName, style: 'headingSection' },
         // Section 00
+        { text: this.s00.staticContent[0].sectionTitle, style: 'headingSection' },
+        { text: this.s00.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
 
         // Section 01
         { text: this.s01.staticContent[0].sectionTitle, style: 'headingSection' },
