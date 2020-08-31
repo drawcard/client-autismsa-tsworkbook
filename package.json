@@ -8,7 +8,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "ghp": "ng deploy --base-href=/client-autismsa-tsworkbook/"
+    "prod": "ng build --prod --baseHref='https://thespectrum.org.au/myautism/'"
   },
   "private": true,
   "dependencies": {
