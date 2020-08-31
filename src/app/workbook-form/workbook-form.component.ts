@@ -1,6 +1,7 @@
 import { Component, ViewChild, AfterViewInit } from '@angular/core';
 import pdfMake from '../../../node_modules/pdfmake/build/pdfmake';
 import pdfFonts from '../../../node_modules/pdfmake/build/vfs_fonts';
+import { Section00Component } from './section00/section00.component';
 import { Section01Component } from './section01/section01.component';
 import { Section02Component } from './section02/section02.component';
 import { Section03Component } from './section03/section03.component';
@@ -45,6 +46,7 @@ export class WorkbookFormComponent implements AfterViewInit {
   section08StaticContent: any[];
   section09StaticContent: any[];
 
+  @ViewChild(Section01Component) s00: Section00Component;
   @ViewChild(Section01Component) s01: Section01Component;
   @ViewChild(Section02Component) s02: Section02Component;
   @ViewChild(Section03Component) s03: Section03Component;
@@ -123,6 +125,8 @@ export class WorkbookFormComponent implements AfterViewInit {
           style: 'imageMargin'
         },
         { text: this.docName, style: 'headingSection' },
+        // Section 00
+
         // Section 01
         { text: this.s01.staticContent[0].sectionTitle, style: 'headingSection' },
         { text: this.s01.staticContent[0].title0, style: 'heading' },

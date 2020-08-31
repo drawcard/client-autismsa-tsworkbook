@@ -31,6 +31,7 @@ import { Section08Component } from './workbook-form/section08/section08.componen
 import { Section09Component } from './workbook-form/section09/section09.component';
 import { DefinitionsService } from "./workbook-form/services/definitions.service";
 import { MindMapImagesBase64Service } from './workbook-form/services/mind-map-images-base64.service';
+import { Section00Component } from './workbook-form/section00/section00.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { MindMapImagesBase64Service } from './workbook-form/services/mind-map-im
     Section06Component,
     Section07Component,
     Section08Component,
-    Section09Component
+    Section09Component,
+    Section00Component
   ],
   imports: [
     FormsModule,
