@@ -17,7 +17,7 @@ export class Section03Component implements OnInit {
   staticContent: any = [
     {
       // Section Title
-      sectionTitle: `Section 3`,
+      sectionTitle: `Restricted and Repetitive Behaviours and Sensory Processing`,
       // Titles
       title0: `My restricted and repetitive behaviors and sensory processing: Characteristics`,
       title1: `My restricted and repetitive behaviors and sensory processing: Impact`,

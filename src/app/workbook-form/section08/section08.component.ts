@@ -10,9 +10,9 @@ export class Section08Component implements OnInit {
   staticContent: any = [
     {
       // Section Title
-      sectionTitle: `Section 8`,
+      sectionTitle: `To do list`,
       // Titles
-      title0: `To do list`,
+      title0: ``,
       title1: `Links to further information`,
       title2: `Learn more about Autism`,
       // Body

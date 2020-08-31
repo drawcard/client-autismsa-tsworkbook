@@ -1,3 +1,5 @@
+@import "../../brand";
+
 .sidenav-container {
   height: 100%;
 }
@@ -14,4 +16,13 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.wb-nav-links {
+  margin: 16px;
+  a, a:hover, a:active, a:visited {
+    margin: 0px 16px;
+    text-decoration: none;
+    color: $col-primary;
+  }
 }

@@ -17,7 +17,7 @@ export class Section02Component implements OnInit {
   staticContent: any = [
     {
       // Section Title
-      sectionTitle: `Section 2`,
+      sectionTitle: `Understanding Autism, Social Communication and Social Interaction`,
       // Titles
       title0: `My social communication and social interaction`,
       title1: `My social communication and social interaction: Strategies`,

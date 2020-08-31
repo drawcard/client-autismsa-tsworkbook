@@ -10,9 +10,9 @@ export class Section06Component implements OnInit {
   staticContent: any = [
     {
       // Section Title
-      sectionTitle: `Section 6`,
+      sectionTitle: `How to choose supports and services`,
       // Titles
-      title0: `How to choose supports and services: Questions to ask yourself about therapies, services, and supports`,
+      title0: `Questions to ask yourself about therapies, services, and supports`,
       title1: `Provider`,
       title2: `Therapy / Service`,
       title3: `Logistics`,

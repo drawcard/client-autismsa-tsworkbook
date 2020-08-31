@@ -21,7 +21,7 @@ export class Section01Component implements OnInit {
   staticContent: any = [
     {
       // Section Title
-      sectionTitle: `Section 1`,
+      sectionTitle: `My Child and Autism`,
       // Titles
       title0: `About Me`,
       // Body
