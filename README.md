@@ -2,6 +2,16 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
+## Development
+* Run `npm start &`
+
+## Production
+* Run `npm run prod`
+* When complete, copy the files over to the WPEngine SFTP folder at /myautism/.
+* If you get 404 errors in console, be sure to update the permissions of the files you copied over to 775.
+
+---
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
