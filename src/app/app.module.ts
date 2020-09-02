@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,6 +35,7 @@ import { Section09Component } from './workbook-form/section09/section09.componen
 
 import { DefinitionsService } from "./workbook-form/services/definitions.service";
 import { MindMapImagesBase64Service } from './workbook-form/services/mind-map-images-base64.service';
+import { FetchDataService } from './workbook-form/services/fetch-data.service';
 
 @NgModule({
   declarations: [
@@ -68,11 +70,14 @@ import { MindMapImagesBase64Service } from './workbook-form/services/mind-map-im
     MatRadioModule,
     MatCardModule,
     MatCheckboxModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    HttpClientJsonpModule
   ],
   providers: [
     DefinitionsService,
-    MindMapImagesBase64Service
+    MindMapImagesBase64Service,
+    FetchDataService
   ],
   bootstrap: [AppComponent]
 })

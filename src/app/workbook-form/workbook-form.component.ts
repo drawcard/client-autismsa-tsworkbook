@@ -12,8 +12,10 @@ import { Section07Component } from './section07/section07.component';
 import { Section08Component } from './section08/section08.component';
 import { Section09Component } from './section09/section09.component';
 import { ImageUploadComponent } from './image-upload/image-upload.component';
+
 import { DefinitionsService } from './services/definitions.service';
 import { MindMapImagesBase64Service } from './services/mind-map-images-base64.service';
+import { FetchDataService } from "./services/fetch-data.service";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -46,6 +48,8 @@ export class WorkbookFormComponent implements AfterViewInit {
   section07StaticContent: any[];
   section08StaticContent: any[];
   section09StaticContent: any[];
+
+  httpObject: any[];
 
   @ViewChild(Section00Component) s00: Section00Component;
   @ViewChild(Section01Component) s01: Section01Component;
@@ -84,7 +88,8 @@ export class WorkbookFormComponent implements AfterViewInit {
 
   constructor(
     private ds: DefinitionsService,
-    private mm: MindMapImagesBase64Service
+    private mm: MindMapImagesBase64Service,
+    private fd: FetchDataService
   ) {
     this.logo = ds.logo;
     this.imgChecked = ds.imgChecked;
@@ -103,6 +108,8 @@ export class WorkbookFormComponent implements AfterViewInit {
     this.mindMap002 = mm.mindMap002;
     this.mindMap003 = mm.mindMap003;
     this.mindMap004 = mm.mindMap004;
+
+    this.httpObject = fd.httpObject;
   }
 
   ngAfterViewInit(): void {
