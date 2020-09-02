@@ -20,6 +20,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ImageUploadComponent } from "./workbook-form/image-upload/image-upload.component";
+
+import { Section00Component } from './workbook-form/section00/section00.component';
 import { Section01Component } from './workbook-form/section01/section01.component';
 import { Section02Component } from './workbook-form/section02/section02.component';
 import { Section03Component } from './workbook-form/section03/section03.component';
@@ -29,9 +31,9 @@ import { Section06Component } from './workbook-form/section06/section06.componen
 import { Section07Component } from './workbook-form/section07/section07.component';
 import { Section08Component } from './workbook-form/section08/section08.component';
 import { Section09Component } from './workbook-form/section09/section09.component';
+
 import { DefinitionsService } from "./workbook-form/services/definitions.service";
 import { MindMapImagesBase64Service } from './workbook-form/services/mind-map-images-base64.service';
-import { Section00Component } from './workbook-form/section00/section00.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +70,10 @@ import { Section00Component } from './workbook-form/section00/section00.componen
     MatCheckboxModule,
     ReactiveFormsModule
   ],
-  providers: [DefinitionsService],
+  providers: [
+    DefinitionsService,
+    MindMapImagesBase64Service
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
