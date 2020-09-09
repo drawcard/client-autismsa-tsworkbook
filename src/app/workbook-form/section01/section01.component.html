@@ -4,7 +4,7 @@
     <h2 [innerHTML]="item.title0"></h2>
     <mat-card>
         <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-001.png">
-        <!-- <h3 class="wb-body" [innerHTML]="item.body0"></h3> -->
+        <h3 class="wb-body" [innerHTML]="item.body0"></h3>
         <mat-card-content>
             <mat-form-field>
                 <input matInput placeholder="My name is" value="" [formControl]="q1">
@@ -20,9 +20,8 @@
             </mat-form-field>
             <p>^Enter the details of your school / kindergarten / childcare / etc.</p>
         </mat-card-content>
-    </mat-card>
-    <h3 class="wb-body" [innerHTML]="item.body1"></h3>
-    <mat-card>
+
+        <h3 class="wb-body" [innerHTML]="item.body1"></h3>
         <mat-card-content>
             <mat-form-field>
                 <textarea matInput placeholder="I like (e.g. people, places, objects, activities):"
