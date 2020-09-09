@@ -1,12 +1,12 @@
 <div class="wb-section" *ngFor="let item of staticContent">
     <a id="section-04"></a>
     <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
-    <h2 [innerHTML]="item.title0"></h2>
     <mat-card>
         <mat-card-content>
             <mat-list>
                 <h3 class="wb-body" [innerHTML]="item.intro"></h3>
                 <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-004.png">
+                <h2 [innerHTML]="item.title0"></h2>
                 <h3 class="wb-body" [innerHTML]="item.body0"></h3>
                 <mat-list-item *ngFor="let item of cbl1">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
