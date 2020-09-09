@@ -7,15 +7,24 @@
         <app-section03></app-section03>
         <app-section04></app-section04>
         <app-section05></app-section05>
+        <!-- Generate PDF -->
+        <a id="generatePDF"></a>
+        <div class="wb-section">
+            <h1 class="wb-section-title">Create your PDF</h1>
+            <mat-card>
+                <mat-card-content>
+                    <p>You can export this workbook as a PDF file to keep for future reference, or to give to anyone.
+                    </p>
+                    <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Create
+                        PDF</button>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        <!-- end Generate PDF -->
         <app-section06></app-section06>
         <app-section07></app-section07>
         <app-section08></app-section08>
         <app-section09></app-section09>
-        <!-- Generate PDF -->
-        <a id="generatePDF"></a>
-        <h1 class="wb-section-title">Create your PDF</h1>
-        <p>You can export this workbook as a PDF file to keep for future reference, or to give to anyone.</p>
-        <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Create PDF</button>
     </form>
 </div>
 
