@@ -25,6 +25,7 @@ export class Section01Component implements OnInit {
       // Titles
       title0: `About Me`,
       // Body
+      intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
       body0: `My Autism and Me: Planning Booklet includes important information about me! It is a document that will change and develop as I do. It's purpose is to help everyone in my life understand my autism and what it means for me and my family on a day to day basis. <br><br> My Autism and Me: Planning Booklet includes information about: <br><br>
         • The characteristics of my autism <br>
         • The impact of those characteristics on me and my family <br>

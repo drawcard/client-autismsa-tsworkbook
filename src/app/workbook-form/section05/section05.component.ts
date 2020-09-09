@@ -32,6 +32,7 @@ export class Section05Component implements OnInit {
       title2: `My family’s current supports and services`,
       title3: `Supports and services my family need`,
       // Body
+      intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
       body0: `
       My current supports and services<br><br>
 Everyone needs some level of support at different stages of their lives. My supports and their role in my life will change as I do, which is why it is important to review and manage my supports.

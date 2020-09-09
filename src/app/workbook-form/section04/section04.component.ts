@@ -26,6 +26,7 @@ export class Section04Component implements OnInit {
       title3: `My learning style: Supports`,
       other: `Other (please add)...`,
       // Body
+      intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
       body0: `My learning style: Characteristics <br><br>
       Learning (cognitive) styles can be areas of difference for people on the spectrum BUT characteristics are not the same for every person with autism.  It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide development of personalised strategies that can have a positive impact on my learning and development!
       <br><br>Sometimes...
