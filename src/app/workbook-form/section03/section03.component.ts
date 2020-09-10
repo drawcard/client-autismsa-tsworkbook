@@ -19,8 +19,7 @@ export class Section03Component implements OnInit {
       // Section Title
       sectionTitle: `Restricted and Repetitive Behaviours and Sensory Processing`,
       // Titles
-      intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-      title0: `My restricted and repetitive behaviors and sensory processing: Characteristics`,
+      intro: `Learn more about restricted and repetitive behaviors in autism and sensory processing differences your child may experience.   Follow Janie to see how restricted and repetitive behaviors and her sensory processing differences impact on her and her family and see an example of how to complete the Autism and Me: Planning Booklet.`, title0: `My restricted and repetitive behaviors and sensory processing: Characteristics`,
       title1: `My restricted and repetitive behaviors and sensory processing: Impact`,
       title2: `My restricted and repetitive behaviors and sensory processing: Strategies`,
       title3: `My restricted and repetitive behaviors and sensory processing: Supports`,

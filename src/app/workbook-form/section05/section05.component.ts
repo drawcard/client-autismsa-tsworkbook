@@ -32,8 +32,7 @@ export class Section05Component implements OnInit {
       title2: `My family’s current supports and services`,
       title3: `Supports and services my family need`,
       // Body
-      intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
-      body0: `
+      intro: `There are many supports and services available to people on the spectrum and their family but navigate the world of funding and services can be confusing. What should you be looking for, what questions should you be asking yourself and the service providers? Explore these questions for your own situation, see how Janie and her family approached access to services and see an example of completing the Autism and Me: Planning Booklet.`, body0: `
       My current supports and services<br><br>
 Everyone needs some level of support at different stages of their lives. My supports and their role in my life will change as I do, which is why it is important to review and manage my supports.
 There are many people in my current network who support me in a range of ways, they are listed below. <br><br>

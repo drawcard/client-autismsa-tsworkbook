@@ -14,7 +14,7 @@ export class Section00Component implements OnInit {
       // Titles
       title0: ``,
       // Body
-      intro: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`,
+      intro: `In this short video we introduce the online module videos, the Autism and Me: Planning Booklet and facts sheets, as well as tips for getting the most out of this online module.`,
       body0: ``,
       body1: ``,
     }
