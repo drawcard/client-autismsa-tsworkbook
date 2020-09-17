@@ -15,7 +15,6 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
 
 import { DefinitionsService } from './services/definitions.service';
 import { MindMapImagesBase64Service } from './services/mind-map-images-base64.service';
-import { FetchDataService } from "./services/fetch-data.service";
 
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
 
@@ -89,7 +88,6 @@ export class WorkbookFormComponent implements AfterViewInit {
   constructor(
     private ds: DefinitionsService,
     private mm: MindMapImagesBase64Service,
-    private fd: FetchDataService
   ) {
     this.logo = ds.logo;
     this.imgChecked = ds.imgChecked;
@@ -108,8 +106,6 @@ export class WorkbookFormComponent implements AfterViewInit {
     this.mindMap002 = mm.mindMap002;
     this.mindMap003 = mm.mindMap003;
     this.mindMap004 = mm.mindMap004;
-
-    this.httpObject = fd.httpObject;
   }
 
   ngAfterViewInit(): void {

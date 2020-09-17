@@ -3,6 +3,7 @@
     <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <mat-card>
         <mat-card-content>
+            <markdown [data]='returnedData'></markdown>
             <h3 class="wb-body" [innerHTML]="item.intro"></h3>
             <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-005.png">
             <h2 [innerHTML]="item.title0"></h2>

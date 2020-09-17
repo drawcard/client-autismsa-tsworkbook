@@ -3,6 +3,7 @@
     <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <mat-card>
         <mat-card-content>
+            <markdown [data]='returnedData'></markdown>
             <h2 [innerHTML]="item.title0"></h2>
             <h3 [innerHTML]="item.body0"></h3>
             <mat-form-field>

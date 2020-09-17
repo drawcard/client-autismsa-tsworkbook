@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
+import { HttpClient } from "@angular/common/http";
+import * as Setting from './../../workbook-settings';
+
 @Component({
   selector: 'app-section05',
   templateUrl: './section05.component.html',
@@ -21,6 +24,11 @@ export class Section05Component implements OnInit {
   q10 = new FormControl('');
   q11 = new FormControl('');
   q12 = new FormControl('');
+
+  fileName: string = 'section-05-content.md'; // Markdown content filename
+  filePath: string = Setting.CONTENT_URL + this.fileName; // Markdown file location
+  sourceURL: string = Setting.FORM_URL + 'assets/parser.php?filepath=' + this.filePath; // Completed query URL (points to parser.php on the server)
+  returnedData: string;
 
   staticContent: any = [
     {
@@ -57,9 +65,25 @@ These are supports and service in addition to the ones we already have, which we
     }
   ];
 
-  constructor() { }
+  constructor(private http: HttpClient) {
+    this.fetchContent();
+  }
 
   ngOnInit(): void {
+  }
+
+  fetchContent() {
+    // Retrieve the markdown content file, via the PHP parser
+    return this.http.get(this.sourceURL, { responseType: 'text' })
+      .subscribe(result => {
+        // Store the returned data
+        this.returnedData = result;
+      },
+        error => {
+          // Trigger a communication error if the file can't be retrieved for some reason
+          error = "Communication error: Content could not be fetched! Please contact the website administrator.";
+          window.alert(error);
+        });
   }
 
 }

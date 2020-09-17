@@ -35,7 +35,6 @@ import { Section09Component } from './workbook-form/section09/section09.componen
 
 import { DefinitionsService } from "./workbook-form/services/definitions.service";
 import { MindMapImagesBase64Service } from './workbook-form/services/mind-map-images-base64.service';
-import { FetchDataService } from './workbook-form/services/fetch-data.service';
 
 import { MarkdownModule } from 'ngx-markdown';
 
@@ -80,7 +79,6 @@ import { MarkdownModule } from 'ngx-markdown';
   providers: [
     DefinitionsService,
     MindMapImagesBase64Service,
-    FetchDataService
   ],
   bootstrap: [AppComponent]
 })

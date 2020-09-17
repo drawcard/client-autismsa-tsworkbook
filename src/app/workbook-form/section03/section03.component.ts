@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { MatRadioChange } from '@angular/material/radio';
 import { FormControl } from '@angular/forms';
 
+import { HttpClient } from "@angular/common/http";
+import * as Setting from './../../workbook-settings';
+
 @Component({
   selector: 'app-section03',
   templateUrl: './section03.component.html',
@@ -13,6 +16,11 @@ export class Section03Component implements OnInit {
   other2 = new FormControl('');
   other3 = new FormControl('');
   other4 = new FormControl('');
+
+  fileName: string = 'section-03-content.md'; // Markdown content filename
+  filePath: string = Setting.CONTENT_URL + this.fileName; // Markdown file location
+  sourceURL: string = Setting.FORM_URL + 'assets/parser.php?filepath=' + this.filePath; // Completed query URL (points to parser.php on the server)
+  returnedData: string;
 
   staticContent: any = [
     {
@@ -63,7 +71,9 @@ export class Section03Component implements OnInit {
     // Other
   ];
 
-  constructor() {
+  constructor(private http: HttpClient) {
+    this.fetchContent();
+
     this.cbl1 = [
       // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
       { name: "I have a strong interest in certain objects or activities ", checked: false },
@@ -141,6 +151,20 @@ export class Section03Component implements OnInit {
       this.master_indeterminate = false;
       this.master_checked = false;
     }
+  }
+
+  fetchContent() {
+    // Retrieve the markdown content file, via the PHP parser
+    return this.http.get(this.sourceURL, { responseType: 'text' })
+      .subscribe(result => {
+        // Store the returned data
+        this.returnedData = result;
+      },
+        error => {
+          // Trigger a communication error if the file can't be retrieved for some reason
+          error = "Communication error: Content could not be fetched! Please contact the website administrator.";
+          window.alert(error);
+        });
   }
 
 }
