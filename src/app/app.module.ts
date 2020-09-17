@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { HttpClientModule, HttpClientJsonpModule, HttpClient } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -37,6 +37,8 @@ import { DefinitionsService } from "./workbook-form/services/definitions.service
 import { MindMapImagesBase64Service } from './workbook-form/services/mind-map-images-base64.service';
 import { FetchDataService } from './workbook-form/services/fetch-data.service';
 
+import { MarkdownModule } from 'ngx-markdown';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -72,7 +74,8 @@ import { FetchDataService } from './workbook-form/services/fetch-data.service';
     MatCheckboxModule,
     ReactiveFormsModule,
     HttpClientModule,
-    HttpClientJsonpModule
+    HttpClientJsonpModule,
+    MarkdownModule.forRoot({ loader: HttpClient }),
   ],
   providers: [
     DefinitionsService,
