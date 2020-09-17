@@ -35,3 +35,8 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+* TODO: Implement markdown files for individual paragraphs
+* TODO: Hook up https://github.com/zeitdev/markdown-to-pdfmake or https://github.com/jwerre/remarkable_pdfmake to bring Markdown to the PDF generator
+* TODO: Set up mindmap images to point to real files on the server, and delete the old base64 code
+* TODO: Finish form state saving: https://www.npmjs.com/package/angular-forms-web-storage-persistence
