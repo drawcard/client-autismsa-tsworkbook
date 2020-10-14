@@ -1,0 +1,48 @@
+{
+    "section00": [
+        {
+            "youtubeVideoURL": "https://www.youtube.com/watch?v=C0DPdy98e4c",
+            "paragraphs": [
+                {
+                    "paragraph1": "paragraphs/paragraphs-00-01.md",
+                    "paragraph2": "paragraphs/paragraphs-00-02.md"
+                }
+            ],
+            "checkboxes": [
+                {}
+            ],
+            "radios": [
+                {}
+            ],
+            "textFields": [
+                {}
+            ],
+            "textAreas": [
+                {}
+            ]
+        }
+    ],
+    "section01": [
+        {
+            "youtubeVideoURL": "https://www.youtube.com/watch?v=C0DPdy98e4c",
+            "paragraphs": [
+                {
+                    "paragraph1": "paragraphs/paragraphs-01-01.md",
+                    "paragraph2": "paragraphs/paragraphs-01-02.md"
+                }
+            ],
+            "checkboxes": [
+                {}
+            ],
+            "radios": [
+                {}
+            ],
+            "textFields": [
+                {}
+            ],
+            "textAreas": [
+                {}
+            ]
+        }
+    ]
+}
