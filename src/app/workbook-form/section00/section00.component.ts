@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from "@angular/common/http";
 import * as Setting from './../../workbook-settings';
+import ContentFilePaths from '../../../assets/content/content-filepaths.json';
 
 @Component({
   selector: 'app-section00',
@@ -23,62 +24,52 @@ export class Section00Component implements OnInit {
     }
   ];
 
+  jsonContent: any = ContentFilePaths;
+
+  youtubeVideoURL: any = this.jsonContent["section00"][0].youtubeVideoURL;
+  paragraphs: any = this.jsonContent["section00"][0]["paragraphs"][0];
+  checkboxes: any = this.jsonContent["section00"][0]["checkboxes"][0];
+  radios: any = this.jsonContent["section00"][0]["radios"][0];
+  textFields: any = this.jsonContent["section00"][0]["textFields"][0];
+  textAreas: any = this.jsonContent["section00"][0]["textAreas"][0];
+
+  markdownStore$: string[] = [];
+
   // Names of each of the markdown files on the server, for this section
 
-  // TODO: Test data - replace with real section files!
-  fileArray: any = [
-    "section-00-content.md",
-    "section-01-content.md",
-    "section-02-content.md",
-    "section-03-content.md",
-    "section-04-content.md",
-    "section-05-content.md",
-    "section-06-content.md",
-    "section-07-content.md",
-    "section-08-content.md",
-    "section-09-content.md"
-  ];
-  // Initialise content storage object
-  // TODO: Make this accessible to the PDF generator as well (via shared service?)
-  contentStore$: any = [];
-
   constructor(private http: HttpClient) {
-    // Pass fileArray object to the method
-    this.fetchContent(this.fileArray);
+    this.fetchParagraphs();
   }
 
-  private fetchContent(input: any) {
+  private fetchParagraphs() {
+    // https://stackoverflow.com/a/49892384
+    let that = this;
 
-    let files = input;
+    // Get values
+    let paragraphs = that.paragraphs;
 
-    // Iterate over every file
-    for (let i = 0; i < files.length; i++) {
+    // Fer each returned value, do the following:
+    Object.keys(paragraphs).forEach(function (value) {
 
-      // Fetch filename from this.fileArray[] above
-      let forFileName = Setting.CONTENT_URL + files[i];
-      // Construct a query URL (pointing to parser.php on the server)
-      let forSourceURL = Setting.FORM_URL + 'assets/parser.php?filepath=' + forFileName;
+      let fileNames = paragraphs[value];
+      let sourceURLs = '../../../assets/content/' + fileNames;
 
       // Retrieve the markdown content file, via the PHP parser
-      this.http.get(forSourceURL, { responseType: 'text' })
+      that.http.get(sourceURLs, { responseType: 'text' })
         .subscribe((data: string) => {
           // Store the returned data
-          this.contentStore$.push(data);
-          // Display an error if the markdown file cannot be found on the server, or is empty
-          let dataStreamCheck = data;
-          if (dataStreamCheck.length <= 1) {
-            window.alert('Sorry, an error has occurred: File ' + this.fileArray[i] + ' is missing or empty. Please contact the website administrator for assistance.');
-          }
+          that.markdownStore$.push(data);
         },
           error => {
             // Trigger a communication error if the file can't be retrieved for some reason
-            error = "Communication error: Content could not be fetched! Please contact the website administrator.";
+            error = "Communication error: File " + sourceURLs + " could not be fetched! Please contact the website administrator.";
             window.alert(error);
-          })
-    }
-    console.log(this.contentStore$);
+          });
+      console.log(that.markdownStore$);
+    });
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
 
+  }
 }
