@@ -64,8 +64,8 @@ export class Section00Component implements OnInit {
             error = "Communication error: File " + sourceURLs + " could not be fetched! Please contact the website administrator.";
             window.alert(error);
           });
-      console.log(that.markdownStore$);
     });
+    console.log(that.markdownStore$);
   }
 
   ngOnInit(): void {
