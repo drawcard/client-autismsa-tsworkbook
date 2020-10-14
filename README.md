@@ -2,6 +2,12 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.3.
 
+# IMPORTANT!
+
+### Be sure to sync any file asset changes from the live server to this repository, and commit changes, before updating this repo.
+### Markdown files are on the FTP server at: https://thespectrum.org.au/myautism/assets/
+### If this is not done, you will risk losing changes to the application's assets, that other team members have made.
+
 ## Development
 * Run `npm start &`
 
