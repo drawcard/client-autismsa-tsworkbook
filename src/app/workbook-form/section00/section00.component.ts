@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from "@angular/common/http";
-import * as Setting from './../../workbook-settings';
 import ContentFilePaths from '../../../assets/content/content-filepaths.json';
 
 @Component({
