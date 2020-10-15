@@ -20,33 +20,6 @@ export class Section02Component implements OnInit {
   other3 = new FormControl('');
   other4 = new FormControl('');
 
-  staticContent: any = [
-    {
-      // Section Title
-      sectionTitle: ``,
-      // Titles
-      intro: `Look further into autism, including many of the social communication and social interaction characteristics of autism and the impact they may have on a person’s development. Learn more about these characteristics by checking in again with Janie and her story. See an example of how to complete the Autism and Me: Planning Booklet.`,
-      title0: `My social communication and social interaction`,
-      title1: `My social communication and social interaction: Strategies`,
-      title2: `My social communication and social interaction: Supports`,
-      title3: `My social communication and social interaction: Characteristics`,
-      // Body
-      body0: `
-      `,
-      body1: `My social communication and social interaction: Impact <br><br>
-      My autism changes how I learn, which can affect me and my family in our everyday activities.
-      <br><br>Sometimes...
-      `,
-      body2: `My social communication and social interaction: Strategies <br><br>
-      There are many strategies that can assist me in all areas of my development. The key is to make sure the strategies my family and I use fit with the characteristics that are true to me.  Below are some strategies, some we already use and know work well for me, some we have not tried yet but may be helpful.
-      <br><br>To find out more about any of the strategies in this Planning Booklet you may wish to seek further training or input from different professionals. See the Further Information links list for training options.
-      `,
-      body3: `My social communication and social interaction: Supports <br><br>
-      My autism changes how I learn, which can affect me and my family in our everyday activities.
-      `,
-    }
-  ];
-
   master_checked: boolean = false;
   master_indeterminate: boolean = false;
   cbl1 = [];

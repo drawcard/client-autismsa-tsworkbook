@@ -21,34 +21,6 @@ export class Section04Component implements OnInit {
   other3 = new FormControl('');
   other4 = new FormControl('');
 
-  staticContent: any = [
-    {
-      // Section Title
-      sectionTitle: `Learning Styles and Key Strategies `,
-      // Titles
-      title0: `My learning style: Characteristics`,
-      title1: `My learning style: Impact`,
-      title2: `My learning style: Strategies`,
-      title3: `My learning style: Supports`,
-      other: `Other (please add)...`,
-      // Body
-      intro: `Everyone learns differently, this is especially the case for children on the spectrum. Learn more about how children with autism learn and knowing this, some strategies on how to help your child successfully learn and engage. Check in with Janie and her family to see how they approached  The final section of this video looks at key strategies.  See an example of how to complete the Autism and Me: Planning Booklet for learning styles and key strategies.`, body0: `My learning style: Characteristics <br><br>
-      Learning (cognitive) styles can be areas of difference for people on the spectrum BUT characteristics are not the same for every person with autism.  It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide development of personalised strategies that can have a positive impact on my learning and development!
-      <br><br>Sometimes...
-      `,
-      body1: `My learning style: Impact <br><br>
-      My autism changes how I learn which affects me and my family:
-      `,
-      body2: `My learning style: Strategies <br><br>
-      There are many strategies that can assist me in all areas of my development. The key is to make sure the strategies my family and I use, fit with the characteristics that are true to me.  Below are some strategies, some we already use and know work well for me, some we have not tried yet but may be helpful.
-      <br><br>To find out more about any of the strategies in this Planning Booklet you may wish to seek further training or input from different professionals. See the Further Information links list for training options.
-      `,
-      body3: `My learning style: Supports <br><br>
-      Who could support me and my family to further understand my learning style, its impacts, and using my strategies?
-      `,
-    }
-  ];
-
   master_checked: boolean = false;
   master_indeterminate: boolean = false;
   cbl1 = [];

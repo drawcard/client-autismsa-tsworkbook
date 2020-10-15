@@ -594,19 +594,16 @@ export class WorkbookFormComponent implements OnInit {
         { text: 'Community: ' + this.s05.q3.value, style: 'textAnswer' },
 
         htmlToPdfmake(this.markdownService.compile(this.mdStore[21])),
-        { text: this.s05.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q4.value, style: 'textAnswer' },
         { text: 'Informal: ' + this.s05.q5.value, style: 'textAnswer' },
         { text: 'Community: ' + this.s05.q6.value, style: 'textAnswer' },
 
         htmlToPdfmake(this.markdownService.compile(this.mdStore[22])),
-        { text: this.s05.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q7.value, style: 'textAnswer' },
         { text: 'Informal: ' + this.s05.q8.value, style: 'textAnswer' },
         { text: 'Community: ' + this.s05.q9.value, style: 'textAnswer' },
 
         htmlToPdfmake(this.markdownService.compile(this.mdStore[23])),
-        { text: this.s05.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q10.value, style: 'textAnswer' },
         { text: 'Informal: ' + this.s05.q11.value, style: 'textAnswer' },
         { text: 'Community: ' + this.s05.q12.value, style: 'textAnswer' },
