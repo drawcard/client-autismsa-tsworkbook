@@ -1,6 +1,4 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
-import pdfMake from '../../../node_modules/pdfmake/build/pdfmake';
-import pdfFonts from '../../../node_modules/pdfmake/build/vfs_fonts';
+import { Component, ViewChild, OnInit } from '@angular/core';
 import { Section00Component } from './section00/section00.component';
 import { Section01Component } from './section01/section01.component';
 import { Section02Component } from './section02/section02.component';
@@ -16,7 +14,21 @@ import { ImageUploadComponent } from './image-upload/image-upload.component';
 import { DefinitionsService } from './services/definitions.service';
 import { MindMapImagesBase64Service } from './services/mind-map-images-base64.service';
 
+// Fetch Data Service
+import { HttpClient } from '@angular/common/http';
+import { FetchDataService } from './services/fetch-data.service';
+
+// PDF Generator
+import pdfMake from '../../../node_modules/pdfmake/build/pdfmake';
+import pdfFonts from '../../../node_modules/pdfmake/build/vfs_fonts';
 pdfMake.vfs = pdfFonts.pdfMake.vfs;
+
+// Converts Markdown to HTML content
+import { MarkdownService } from 'ngx-markdown';
+
+// HTML to PDFMake Plugin Module
+import htmlToPdfmake from "html-to-pdfmake";
+
 
 @Component({
   selector: 'app-workbook-form',
@@ -24,7 +36,7 @@ pdfMake.vfs = pdfFonts.pdfMake.vfs;
   styleUrls: ['./workbook-form.component.scss']
 })
 
-export class WorkbookFormComponent implements AfterViewInit {
+export class WorkbookFormComponent implements OnInit {
 
   b1_intro: string;
   sectionHeading: any[];
@@ -85,9 +97,16 @@ export class WorkbookFormComponent implements AfterViewInit {
   mindMap003: string = '';
   mindMap004: string = '';
 
+  // Initialise objects for Markdown content retrieval
+  dataStore: any;
+  mdStore: string[] = [];
+
   constructor(
     private ds: DefinitionsService,
     private mm: MindMapImagesBase64Service,
+    private markdownService: MarkdownService,
+    private http: HttpClient,
+    private fetchDataService: FetchDataService
   ) {
     this.logo = ds.logo;
     this.imgChecked = ds.imgChecked;
@@ -108,13 +127,42 @@ export class WorkbookFormComponent implements AfterViewInit {
     this.mindMap004 = mm.mindMap004;
   }
 
-  ngAfterViewInit(): void {
+  ngOnInit(): void {
+    // Fetch Markdown Content for display in the PDF
+    this.fetchMarkDownContent();
+  }
 
+  fetchMarkDownContent() {
+    // Retrieve data from FetchDataService
+    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
+
+    let that = this; // https://stackoverflow.com/a/49892384
+
+    // Set variables
+    let dataStrings = this.dataStore["dataStrings"];
+
+    // On each dataString, do the following
+    Object.keys(dataStrings).forEach(function (value) {
+
+      let fileName = dataStrings[value];
+      let filePath = '../../../assets/content/' + fileName;
+
+      // Retrieve the markdown data
+      that.http.get(filePath, { responseType: 'text' })
+        .subscribe((data) => {
+          // Store the returned markdown data
+          that.mdStore.push(data);
+        },
+          error => {
+            // Trigger a communication error if the file can't be retrieved for some reason
+            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
+            window.alert(error);
+          });
+    });
   }
 
   // PDF Generator
   generatePdf() {
-    console.log('generatePDF() -> ' + this.iu.cardImageBase64);
     const documentDefinition = {
       pageSize: 'A4',
       pageMargins: [40, 40, 40, 40],
@@ -131,9 +179,9 @@ export class WorkbookFormComponent implements AfterViewInit {
           style: 'imageMargin'
         },
         { text: this.docName, style: 'headingSection' },
+
         // Section 00
-        { text: this.s00.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s00.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[0])),
 
         // Section 01
         { text: this.s01.staticContent[0].sectionTitle, style: 'headingSection' },

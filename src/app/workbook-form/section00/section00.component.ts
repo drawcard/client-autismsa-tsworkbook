@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-
 import { HttpClient } from "@angular/common/http";
 import ContentFilePaths from '../../../assets/content/content-filepaths.json';
+import { FetchDataService } from '../services/fetch-data.service';
 
 @Component({
   selector: 'app-section00',
@@ -10,65 +10,41 @@ import ContentFilePaths from '../../../assets/content/content-filepaths.json';
 })
 export class Section00Component implements OnInit {
 
-  staticContent: any = [
-    {
-      // Section Title
-      sectionTitle: `Introduction`,
-      // Titles
-      title0: ``,
-      // Body
-      intro: `In this short video we introduce the online module videos, the Autism and Me: Planning Booklet and facts sheets, as well as tips for getting the most out of this online module.`,
-      body0: ``,
-      body1: ``,
-    }
-  ];
+  dataStore: any;
+  mdStore: string[] = [];
 
-  jsonContent: any = ContentFilePaths;
+  constructor(private http: HttpClient, private fetchDataService: FetchDataService) { }
 
-  youtubeVideoURL: any = this.jsonContent["section00"][0].youtubeVideoURL;
-  paragraphs: any = this.jsonContent["section00"][0]["paragraphs"][0];
-  checkboxes: any = this.jsonContent["section00"][0]["checkboxes"][0];
-  radios: any = this.jsonContent["section00"][0]["radios"][0];
-  textFields: any = this.jsonContent["section00"][0]["textFields"][0];
-  textAreas: any = this.jsonContent["section00"][0]["textAreas"][0];
-
-  markdownStore$: string[] = [];
-
-  // Names of each of the markdown files on the server, for this section
-
-  constructor(private http: HttpClient) {
-    this.fetchParagraphs();
+  ngOnInit(): void {
+    this.fetchMarkDownContent();
   }
 
-  private fetchParagraphs() {
-    // https://stackoverflow.com/a/49892384
-    let that = this;
+  fetchMarkDownContent() {
+    // Retrieve data from FetchDataService
+    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
 
-    // Get values
-    let paragraphs = that.paragraphs;
+    let that = this; // https://stackoverflow.com/a/49892384
 
-    // Fer each returned value, do the following:
-    Object.keys(paragraphs).forEach(function (value) {
+    // Set variables
+    let dataStrings = this.dataStore["dataStrings"];
 
-      let fileNames = paragraphs[value];
-      let sourceURLs = '../../../assets/content/' + fileNames;
+    // On each dataString, do the following
+    Object.keys(dataStrings).forEach(function (value) {
 
-      // Retrieve the markdown content file, via the PHP parser
-      that.http.get(sourceURLs, { responseType: 'text' })
-        .subscribe((data: string) => {
-          // Store the returned data
-          that.markdownStore$.push(data);
+      let fileName = dataStrings[value];
+      let filePath = '../../../assets/content/' + fileName;
+
+      // Retrieve the markdown data
+      that.http.get(filePath, { responseType: 'text' })
+        .subscribe((data) => {
+          // Store the returned markdown data
+          that.mdStore.push(data);
         },
           error => {
             // Trigger a communication error if the file can't be retrieved for some reason
-            error = "Communication error: File " + sourceURLs + " could not be fetched! Please contact the website administrator.";
+            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
             window.alert(error);
           });
     });
-    console.log(that.markdownStore$);
-  }
-
-  ngOnInit(): void {
-
   }
 }

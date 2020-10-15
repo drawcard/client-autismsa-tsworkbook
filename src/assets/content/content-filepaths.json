@@ -1,48 +1,10 @@
 {
-    "section00": [
-        {
-            "youtubeVideoURL": "https://www.youtube.com/watch?v=C0DPdy98e4c",
-            "paragraphs": [
-                {
-                    "paragraph1": "paragraphs/paragraphs-00-01.md",
-                    "paragraph2": "paragraphs/paragraphs-00-02.md"
-                }
-            ],
-            "checkboxes": [
-                {}
-            ],
-            "radios": [
-                {}
-            ],
-            "textFields": [
-                {}
-            ],
-            "textAreas": [
-                {}
-            ]
-        }
-    ],
-    "section01": [
-        {
-            "youtubeVideoURL": "https://www.youtube.com/watch?v=C0DPdy98e4c",
-            "paragraphs": [
-                {
-                    "paragraph1": "paragraphs/paragraphs-01-01.md",
-                    "paragraph2": "paragraphs/paragraphs-01-02.md"
-                }
-            ],
-            "checkboxes": [
-                {}
-            ],
-            "radios": [
-                {}
-            ],
-            "textFields": [
-                {}
-            ],
-            "textAreas": [
-                {}
-            ]
-        }
-    ]
+    "youtubeURLs": {
+        "URL01": "https://www.youtube.com/watch?v=C0DPdy98e4c",
+        "URL02": "https://www.youtube.com/watch?v=2J7xlDH4QkA"
+    },
+    "dataStrings": {
+        "block01": "paragraphs/block01.md",
+        "block02": "paragraphs/block02.md"
+    }
 }
