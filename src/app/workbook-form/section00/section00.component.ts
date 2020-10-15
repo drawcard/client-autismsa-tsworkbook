@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import ContentFilePaths from '../../../assets/content/content-filepaths.json';
 import { FetchDataService } from '../services/fetch-data.service';
 
 @Component({

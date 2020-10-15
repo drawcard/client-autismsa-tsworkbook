@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 import { HttpClient } from "@angular/common/http";
-import * as Setting from './../../workbook-settings';
+import { FetchDataService } from '../services/fetch-data.service';
 
 @Component({
   selector: 'app-section05',
@@ -10,6 +10,9 @@ import * as Setting from './../../workbook-settings';
   styleUrls: ['./section05.component.scss']
 })
 export class Section05Component implements OnInit {
+
+  dataStore: any;
+  mdStore: string[] = [];
 
   // Initialise Form Data Fields
   q1 = new FormControl('');
@@ -24,11 +27,6 @@ export class Section05Component implements OnInit {
   q10 = new FormControl('');
   q11 = new FormControl('');
   q12 = new FormControl('');
-
-  fileName: string = 'section-05-content.md'; // Markdown content filename
-  filePath: string = Setting.CONTENT_URL + this.fileName; // Markdown file location
-  sourceURL: string = Setting.FORM_URL + 'assets/parser.php?filepath=' + this.filePath; // Completed query URL (points to parser.php on the server)
-  returnedData: string;
 
   staticContent: any = [
     {
@@ -65,25 +63,41 @@ These are supports and service in addition to the ones we already have, which we
     }
   ];
 
-  constructor(private http: HttpClient) {
-    this.fetchContent();
+  constructor(private http: HttpClient, private fetchDataService: FetchDataService) {
+
   }
 
   ngOnInit(): void {
+    this.fetchMarkDownContent();
   }
 
-  fetchContent() {
-    // Retrieve the markdown content file, via the PHP parser
-    return this.http.get(this.sourceURL, { responseType: 'text' })
-      .subscribe(result => {
-        // Store the returned data
-        this.returnedData = result;
-      },
-        error => {
-          // Trigger a communication error if the file can't be retrieved for some reason
-          error = "Communication error: Content could not be fetched! Please contact the website administrator.";
-          window.alert(error);
-        });
+  fetchMarkDownContent() {
+    // Retrieve data from FetchDataService
+    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
+
+    let that = this; // https://stackoverflow.com/a/49892384
+
+    // Set variables
+    let dataStrings = this.dataStore["dataStrings"];
+
+    // On each dataString, do the following
+    Object.keys(dataStrings).forEach(function (value) {
+
+      let fileName = dataStrings[value];
+      let filePath = '../../../assets/content/' + fileName;
+
+      // Retrieve the markdown data
+      that.http.get(filePath, { responseType: 'text' })
+        .subscribe((data) => {
+          // Store the returned markdown data
+          that.mdStore.push(data);
+        },
+          error => {
+            // Trigger a communication error if the file can't be retrieved for some reason
+            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
+            window.alert(error);
+          });
+    });
   }
 
 }

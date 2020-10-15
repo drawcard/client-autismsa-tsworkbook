@@ -1,0 +1,1 @@
+It is always helpful for the people in my life to know what I like, what I am good at, what I find challenging and the supports I need. This information can help guide decisions around how to interact with me, what I am likely to be successful at and what skills I need to continue developing.

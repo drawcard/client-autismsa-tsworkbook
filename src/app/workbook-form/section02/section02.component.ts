@@ -3,7 +3,7 @@ import { MatRadioChange } from '@angular/material/radio';
 import { FormControl } from '@angular/forms';
 
 import { HttpClient } from "@angular/common/http";
-import * as Setting from './../../workbook-settings';
+import { FetchDataService } from '../services/fetch-data.service';
 
 @Component({
   selector: 'app-section02',
@@ -12,29 +12,26 @@ import * as Setting from './../../workbook-settings';
 })
 export class Section02Component implements OnInit {
 
+  dataStore: any;
+  mdStore: string[] = [];
+
   other1 = new FormControl('');
   other2 = new FormControl('');
   other3 = new FormControl('');
   other4 = new FormControl('');
 
-  fileName: string = 'section-02-content.md'; // Markdown content filename
-  filePath: string = Setting.CONTENT_URL + this.fileName; // Markdown file location
-  sourceURL: string = Setting.FORM_URL + 'assets/parser.php?filepath=' + this.filePath; // Completed query URL (points to parser.php on the server)
-  returnedData: string;
-
   staticContent: any = [
     {
       // Section Title
-      sectionTitle: `Understanding Autism, Social Communication and Social Interaction`,
+      sectionTitle: ``,
       // Titles
-      intro: `Look further into autism, including many of the social communication and social interaction characteristics of autism and the impact they may have on a person’s development. Learn more about these characteristics by checking in again with Janie and her story. See an example of how to complete the Autism and Me: Planning Booklet.`, title0: `My social communication and social interaction`,
+      intro: `Look further into autism, including many of the social communication and social interaction characteristics of autism and the impact they may have on a person’s development. Learn more about these characteristics by checking in again with Janie and her story. See an example of how to complete the Autism and Me: Planning Booklet.`,
+      title0: `My social communication and social interaction`,
       title1: `My social communication and social interaction: Strategies`,
       title2: `My social communication and social interaction: Supports`,
       title3: `My social communication and social interaction: Characteristics`,
       // Body
-      body0: `My social communication and social interaction: Characteristics <br><br>
-      Social communication and social interaction are areas of difference for people on the spectrum BUT these characteristics are not the same for every person with autism.  It is important to understand what is true to me and my autism. From here we can understand how these characteristics impact on me and my family.  This information can increase awareness and acceptance of my behaviour as well as guide the development of personalised strategies that can have a positive impact on my communication and play!
-      <br><br>Sometimes...
+      body0: `
       `,
       body1: `My social communication and social interaction: Impact <br><br>
       My autism changes how I learn, which can affect me and my family in our everyday activities.
@@ -73,9 +70,7 @@ export class Section02Component implements OnInit {
     // Other
   ];
 
-  constructor(private http: HttpClient) {
-
-    this.fetchContent();
+  constructor(private http: HttpClient, private fetchDataService: FetchDataService) {
 
     this.cbl1 = [
       // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
@@ -132,6 +127,36 @@ export class Section02Component implements OnInit {
   }
 
   ngOnInit(): void {
+    this.fetchMarkDownContent();
+  }
+
+  fetchMarkDownContent() {
+    // Retrieve data from FetchDataService
+    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
+
+    let that = this; // https://stackoverflow.com/a/49892384
+
+    // Set variables
+    let dataStrings = this.dataStore["dataStrings"];
+
+    // On each dataString, do the following
+    Object.keys(dataStrings).forEach(function (value) {
+
+      let fileName = dataStrings[value];
+      let filePath = '../../../assets/content/' + fileName;
+
+      // Retrieve the markdown data
+      that.http.get(filePath, { responseType: 'text' })
+        .subscribe((data) => {
+          // Store the returned markdown data
+          that.mdStore.push(data);
+        },
+          error => {
+            // Trigger a communication error if the file can't be retrieved for some reason
+            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
+            window.alert(error);
+          });
+    });
   }
 
   radioChange(event: MatRadioChange, data) {
@@ -166,19 +191,4 @@ export class Section02Component implements OnInit {
       this.master_checked = false;
     }
   }
-
-  fetchContent() {
-    // Retrieve the markdown content file, via the PHP parser
-    return this.http.get(this.sourceURL, { responseType: 'text' })
-      .subscribe(result => {
-        // Store the returned data
-        this.returnedData = result;
-      },
-        error => {
-          // Trigger a communication error if the file can't be retrieved for some reason
-          error = "Communication error: Content could not be fetched! Please contact the website administrator.";
-          window.alert(error);
-        });
-  }
-
 }

@@ -1,25 +1,26 @@
 {
     "youtubeURLs": {
-        "URL01": "https://www.youtube.com/watch?v=C0DPdy98e4c",
-        "URL02": "https://www.youtube.com/watch?v=2J7xlDH4QkA"
+        "id01": "https://www.youtube.com/watch?v=C0DPdy98e4c",
+        "id02": "https://www.youtube.com/watch?v=2J7xlDH4QkA"
     },
     "sectionTitles": {
-        "section00-title": "Introduction",
-        "section01-title": "My Child and Autism",
-        "section02-title": "Understanding Autism, Social Communication and Social Interaction",
-        "section03-title": "Restricted and Repetitive Behaviours and Sensory Processing",
-        "section04-title": "Learning Styles and Key Strategies",
-        "section05-title": "Supports and services",
-        "section06-title": "How to choose supports and services",
-        "section07-title": "Setting Goals",
-        "createPDF-title": "Create your PDF",
-        "section08-title": "To Do List",
-        "section09-title": "Miscellaneous"
+        "id00-section00-title": "Introduction",
+        "id01-section01-title": "My Child and Autism",
+        "id02-section02-title": "Understanding Autism, Social Communication and Social Interaction",
+        "id03-section03-title": "Restricted and Repetitive Behaviours and Sensory Processing",
+        "id04-section04-title": "Learning Styles and Key Strategies",
+        "id05-section05-title": "Supports and services",
+        "id06-section06-title": "How to choose supports and services",
+        "id07-section07-title": "Setting Goals",
+        "id08-createPDF-title": "Create your PDF",
+        "id09-section08-title": "To Do List",
+        "id10-section09-title": "Miscellaneous"
     },
     "dataStrings": {
         "section00-00": "paragraphs/section00-00.md",
         "section01-00": "paragraphs/section01-00.md",
         "section01-01": "paragraphs/section01-01.md",
+        "section01-02": "paragraphs/section01-02.md",
         "section02-00": "paragraphs/section02-00.md",
         "section02-01": "paragraphs/section02-01.md",
         "section02-02": "paragraphs/section02-02.md",
@@ -28,7 +29,7 @@
         "section03-00": "paragraphs/section03-00.md",
         "section03-01": "paragraphs/section03-01.md",
         "section03-02": "paragraphs/section03-02.md",
-        "section03-03": "paragraphs/section34-03.md",
+        "section03-03": "paragraphs/section03-03.md",
         "section03-04": "paragraphs/section03-04.md",
         "section04-00": "paragraphs/section04-00.md",
         "section04-01": "paragraphs/section04-01.md",

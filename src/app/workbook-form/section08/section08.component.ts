@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from "@angular/common/http";
-import * as Setting from './../../workbook-settings';
+import { FetchDataService } from '../services/fetch-data.service';
 
 @Component({
   selector: 'app-section08',
@@ -9,6 +9,9 @@ import * as Setting from './../../workbook-settings';
   styleUrls: ['./section08.component.scss']
 })
 export class Section08Component implements OnInit {
+
+  dataStore: any;
+  mdStore: string[] = [];
 
   staticContent: any = [
     {
@@ -83,29 +86,41 @@ Much more information on a wide range of topics is available at: https://thespec
     }
   ];
 
-  fileName: string = 'section-08-content.md'; // Markdown content filename
-  filePath: string = Setting.CONTENT_URL + this.fileName; // Markdown file location
-  sourceURL: string = Setting.FORM_URL + 'assets/parser.php?filepath=' + this.filePath; // Completed query URL (points to parser.php on the server)
-  returnedData: string;
+  constructor(private http: HttpClient, private fetchDataService: FetchDataService) {
 
-  constructor(private http: HttpClient) {
-    this.fetchContent();
   }
 
-  fetchContent() {
-    // Retrieve the markdown content file, via the PHP parser
-    return this.http.get(this.sourceURL, { responseType: 'text' })
-      .subscribe(result => {
-        // Store the returned data
-        this.returnedData = result;
-      },
-        error => {
-          // Trigger a communication error if the file can't be retrieved for some reason
-          error = "Communication error: Content could not be fetched! Please contact the website administrator.";
-          window.alert(error);
-        });
+  ngOnInit(): void {
+    this.fetchMarkDownContent();
   }
 
-  ngOnInit(): void { }
+  fetchMarkDownContent() {
+    // Retrieve data from FetchDataService
+    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
+
+    let that = this; // https://stackoverflow.com/a/49892384
+
+    // Set variables
+    let dataStrings = this.dataStore["dataStrings"];
+
+    // On each dataString, do the following
+    Object.keys(dataStrings).forEach(function (value) {
+
+      let fileName = dataStrings[value];
+      let filePath = '../../../assets/content/' + fileName;
+
+      // Retrieve the markdown data
+      that.http.get(filePath, { responseType: 'text' })
+        .subscribe((data) => {
+          // Store the returned markdown data
+          that.mdStore.push(data);
+        },
+          error => {
+            // Trigger a communication error if the file can't be retrieved for some reason
+            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
+            window.alert(error);
+          });
+    });
+  }
 
 }

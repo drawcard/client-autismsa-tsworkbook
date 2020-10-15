@@ -1,11 +1,8 @@
 <div class="wb-section" *ngFor="let item of staticContent">
     <a id="section-06"></a>
-    <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <mat-card>
         <mat-card-content>
-            <markdown [data]='returnedData'></markdown>
-            <h2 [innerHTML]="item.title0"></h2>
-            <h3 [innerHTML]="item.body0"></h3>
+            <markdown [data]="mdStore[24]"></markdown>
             <img class="wb-mind-map" src="assets/img/mind_map_001.png" />
             <img class="wb-mind-map" src="assets/img/mind_map_002.png" />
             <img class="wb-mind-map" src="assets/img/mind_map_003.png" />

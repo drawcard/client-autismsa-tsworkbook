@@ -1,11 +1,8 @@
-<div class="wb-section" *ngFor="let item of staticContent">
+<div class="wb-section">
     <a id="section-08"></a>
-    <h1 class="wb-section-title" [innerHTML]="item.sectionTitle"></h1>
     <mat-card>
         <mat-card-content>
-            <markdown [data]='returnedData'></markdown>
-            <h2 [innerHTML]="item.title0"></h2>
-            <h3 [innerHTML]="item.body0"></h3>
+            <markdown [data]="mdStore[27]"></markdown>
         </mat-card-content>
     </mat-card>
 </div>

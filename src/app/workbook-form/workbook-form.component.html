@@ -15,8 +15,7 @@
             <h1 class="wb-section-title">Create your PDF</h1>
             <mat-card>
                 <mat-card-content>
-                    <p>You can export this workbook as a PDF file to keep for future reference, or to give to anyone.
-                    </p>
+                    <markdown [data]="mdStore[26]"></markdown>
                     <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Create
                         PDF</button>
                 </mat-card-content>

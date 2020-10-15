@@ -184,23 +184,21 @@ export class WorkbookFormComponent implements OnInit {
         htmlToPdfmake(this.markdownService.compile(this.mdStore[0])),
 
         // Section 01
-        { text: this.s01.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s01.staticContent[0].title0, style: 'heading' },
-        { text: this.s01.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[1])),
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[2])),
         { image: (this.iu.cardImageBase64 ? this.iu.cardImageBase64 : this.iu.blankImage), width: 100, style: 'imageMargin' }, // No image uploaded? Show blank image
         { text: 'My name is: ' + this.s01.q1.value, style: 'textAnswer' },
         { text: 'My age is: ' + this.s01.q2.value, style: 'textAnswer' },
         { text: 'I live with: ' + this.s01.q3.value, style: 'textAnswer' },
         { text: 'My school / kindergarten / childcare details are: ' + this.s01.q4.value, style: 'textAnswer' },
-        { text: this.s01.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[3])),
         { text: 'I like (e.g.people, places, objects, activities): ' + this.s01.q5.value, style: 'textAnswer' },
         { text: 'I am good at (strengths): ' + this.s01.q6.value, style: 'textAnswer' },
         { text: 'I have trouble with (challenges): ' + this.s01.q7.value, style: 'textAnswer' },
         { text: 'I need (supports and strategies): ' + this.s01.q8.value, style: 'textAnswer' },
         // Section 02
-        { text: this.s02.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s02.staticContent[0].title0, style: 'heading' },
-        { text: this.s02.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[4])),
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[5])),
         // Checkbox Group
         {
           table: {
@@ -233,7 +231,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s02.other1.value, style: 'textAnswer' },
         // END Checkbox Group
-        { text: this.s02.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[6])),
         // Radio Group
         {
           table: {
@@ -254,7 +252,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s02.other2.value, style: 'textAnswer' },
         // END Checkbox Group
-        { text: this.s02.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[7])),
         // NOTE: Radio Group
         {
           table: {
@@ -317,7 +315,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s02.other3.value, style: 'textAnswer' },
         // NOTE: END Radio Group
-        { text: this.s02.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[8])),
         // Checkbox Group
         {
           table: {
@@ -340,9 +338,8 @@ export class WorkbookFormComponent implements OnInit {
         { text: 'Other (please add...) :' + this.s02.other4.value, style: 'textAnswer' },
         // END Checkbox Group
         // Section 03
-        { text: this.s03.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s03.staticContent[0].title0, style: 'heading' },
-        { text: this.s03.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[9])),
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[10])),
         // Checkbox Group
         {
           table: {
@@ -366,7 +363,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s03.other1.value, style: 'textAnswer' },
         // END Checkbox Group
-        { text: this.s03.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[11])),
         // Checkbox Group
         {
           table: {
@@ -385,7 +382,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s03.other2.value, style: 'textAnswer' },
         // END Checkbox Group
-        { text: this.s03.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[12])),
         // NOTE: Radio Group
         {
           table: {
@@ -458,7 +455,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s03.other3.value, style: 'textAnswer' },
         // NOTE: END Radio Group
-        { text: this.s03.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[13])),
         // Checkbox Group
         {
           table: {
@@ -481,9 +478,8 @@ export class WorkbookFormComponent implements OnInit {
         { text: 'Other (please add...) :' + this.s03.other4.value, style: 'textAnswer' },
         // END Checkbox Group
         // Section 04
-        { text: this.s04.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s04.staticContent[0].title0, style: 'heading' },
-        { text: this.s04.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[14])),
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[15])),
         // Checkbox Group
         {
           table: {
@@ -504,7 +500,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s04.other1.value, style: 'textAnswer' },
         // END Checkbox Group
-        { text: this.s04.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[16])),
         // Checkbox Group
         {
           table: {
@@ -522,7 +518,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s04.other2.value, style: 'textAnswer' },
         // END Checkbox Group
-        { text: this.s04.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[17])),
         // NOTE: Radio Group
         {
           table: {
@@ -565,7 +561,7 @@ export class WorkbookFormComponent implements OnInit {
         },
         { text: 'Other (please add...) :' + this.s04.other3.value, style: 'textAnswer' },
         // NOTE: END Radio Group
-        { text: this.s04.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[18])),
         // Checkbox Group
         {
           table: {
@@ -590,41 +586,39 @@ export class WorkbookFormComponent implements OnInit {
         // END Checkbox Group
 
         // Section 05
-        { text: this.s05.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s05.staticContent[0].title0, style: 'heading' },
-        { text: this.s05.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[19])),
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[20])),
 
         { text: 'Formal: ' + this.s05.q1.value, style: 'textAnswer' },
         { text: 'Informal: ' + this.s05.q2.value, style: 'textAnswer' },
         { text: 'Community: ' + this.s05.q3.value, style: 'textAnswer' },
 
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[21])),
         { text: this.s05.staticContent[0].body1.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q4.value, style: 'textAnswer' },
         { text: 'Informal: ' + this.s05.q5.value, style: 'textAnswer' },
         { text: 'Community: ' + this.s05.q6.value, style: 'textAnswer' },
 
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[22])),
         { text: this.s05.staticContent[0].body2.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q7.value, style: 'textAnswer' },
         { text: 'Informal: ' + this.s05.q8.value, style: 'textAnswer' },
         { text: 'Community: ' + this.s05.q9.value, style: 'textAnswer' },
 
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[23])),
         { text: this.s05.staticContent[0].body3.replace(this.regex, '\n'), style: 'body' },
         { text: 'Formal: ' + this.s05.q10.value, style: 'textAnswer' },
         { text: 'Informal: ' + this.s05.q11.value, style: 'textAnswer' },
         { text: 'Community: ' + this.s05.q12.value, style: 'textAnswer' },
 
         // Section 06
-        { text: this.s06.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s06.staticContent[0].title0, style: 'heading' },
-        { text: this.s06.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[24])),
         { image: this.mindMap001, width: 500, style: 'imageMargin' },
         { image: this.mindMap002, width: 500, style: 'imageMargin' },
         { image: this.mindMap003, width: 500, style: 'imageMargin' },
         { image: this.mindMap004, width: 500, style: 'imageMargin' },
         // Section 07
-        { text: this.s07.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s07.staticContent[0].title0, style: 'heading' },
-        { text: this.s07.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[25])),
         { text: 'A month: ' + this.s07.q1.value, style: 'textAnswer' },
         { text: '3 months: ' + this.s07.q2.value, style: 'textAnswer' },
         { text: 'A year: ' + this.s07.q3.value, style: 'textAnswer' },
@@ -632,13 +626,9 @@ export class WorkbookFormComponent implements OnInit {
         { text: 'How e.g. what strategies?: ' + this.s07.q5.value, style: 'textAnswer' },
         { text: 'Monitor progress: ' + this.s07.q6.value, style: 'textAnswer' },
         // Section 08
-        { text: this.s08.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s08.staticContent[0].title0, style: 'heading' },
-        { text: this.s08.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[27])),
         // Section 09
-        { text: this.s09.staticContent[0].sectionTitle, style: 'headingSection' },
-        { text: this.s09.staticContent[0].title0, style: 'heading' },
-        { text: this.s09.staticContent[0].body0.replace(this.regex, '\n'), style: 'body' },
+        htmlToPdfmake(this.markdownService.compile(this.mdStore[28])),
       ],
       styles: {
         // margin & padding notation = [left, top, right, bottom]

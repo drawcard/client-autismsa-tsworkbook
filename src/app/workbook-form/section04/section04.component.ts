@@ -3,7 +3,7 @@ import { MatRadioChange } from '@angular/material/radio';
 import { FormControl } from '@angular/forms';
 
 import { HttpClient } from "@angular/common/http";
-import * as Setting from './../../workbook-settings';
+import { FetchDataService } from '../services/fetch-data.service';
 
 @Component({
   selector: 'app-section04',
@@ -13,15 +13,13 @@ import * as Setting from './../../workbook-settings';
 
 export class Section04Component implements OnInit {
 
+  dataStore: any;
+  mdStore: string[] = [];
+
   other1 = new FormControl('');
   other2 = new FormControl('');
   other3 = new FormControl('');
   other4 = new FormControl('');
-
-  fileName: string = 'section-04-content.md'; // Markdown content filename
-  filePath: string = Setting.CONTENT_URL + this.fileName; // Markdown file location
-  sourceURL: string = Setting.FORM_URL + 'assets/parser.php?filepath=' + this.filePath; // Completed query URL (points to parser.php on the server)
-  returnedData: string;
 
   staticContent: any = [
     {
@@ -66,8 +64,7 @@ export class Section04Component implements OnInit {
     // Other
   ];
 
-  constructor(private http: HttpClient) {
-    this.fetchContent();
+  constructor(private http: HttpClient, private fetchDataService: FetchDataService) {
 
     this.cbl1 = [
       // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
@@ -109,6 +106,36 @@ export class Section04Component implements OnInit {
   }
 
   ngOnInit(): void {
+    this.fetchMarkDownContent();
+  }
+
+  fetchMarkDownContent() {
+    // Retrieve data from FetchDataService
+    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
+
+    let that = this; // https://stackoverflow.com/a/49892384
+
+    // Set variables
+    let dataStrings = this.dataStore["dataStrings"];
+
+    // On each dataString, do the following
+    Object.keys(dataStrings).forEach(function (value) {
+
+      let fileName = dataStrings[value];
+      let filePath = '../../../assets/content/' + fileName;
+
+      // Retrieve the markdown data
+      that.http.get(filePath, { responseType: 'text' })
+        .subscribe((data) => {
+          // Store the returned markdown data
+          that.mdStore.push(data);
+        },
+          error => {
+            // Trigger a communication error if the file can't be retrieved for some reason
+            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
+            window.alert(error);
+          });
+    });
   }
 
   radioChange(event: MatRadioChange, data) {
@@ -142,20 +169,6 @@ export class Section04Component implements OnInit {
       this.master_indeterminate = false;
       this.master_checked = false;
     }
-  }
-
-  fetchContent() {
-    // Retrieve the markdown content file, via the PHP parser
-    return this.http.get(this.sourceURL, { responseType: 'text' })
-      .subscribe(result => {
-        // Store the returned data
-        this.returnedData = result;
-      },
-        error => {
-          // Trigger a communication error if the file can't be retrieved for some reason
-          error = "Communication error: Content could not be fetched! Please contact the website administrator.";
-          window.alert(error);
-        });
   }
 
 }
