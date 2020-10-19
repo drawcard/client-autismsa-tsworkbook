@@ -16,6 +16,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 * When complete, copy the files over to the WPEngine SFTP folder at /myautism/.
 * If you get 404 errors in console, be sure to update the permissions of the files you copied over to 775.
 
+## Technical Notes
+* If you see warnings in your debug console like the following:  `"core.js:4744 WARNING: sanitizing HTML stripped some content, see http://g.co/ng/security#xss"` you may ignore these as they are emitted by the ngx-markdown library - no visible content is being stripped. See: https://github.com/jfcere/ngx-markdown/issues/263
+
 ---
 
 ## Development server
