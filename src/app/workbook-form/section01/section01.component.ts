@@ -55,7 +55,7 @@ export class Section01Component implements OnInit {
           error => {
             // Trigger a communication error if the file can't be retrieved for some reason
             error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
-            window.alert(error);
+            console.error(error);
           });
     });
   }
