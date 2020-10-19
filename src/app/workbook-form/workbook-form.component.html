@@ -15,7 +15,7 @@
             <h1 class="wb-section-title">Create your PDF</h1>
             <mat-card>
                 <mat-card-content>
-                    <markdown [data]="mdStore[26]"></markdown>
+                    <div markdown class="wb-body" [data]="mdStore[26]"></div>
                     <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Create
                         PDF</button>
                 </mat-card-content>
