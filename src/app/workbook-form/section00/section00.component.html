@@ -1,10 +1,10 @@
 <div class="wb-section">
-
-
     <a id="section-00"></a>
     <mat-card class="wb-section">
-        <div markdown class="wb-highlight" [data]="mdStore[0]"></div>
-
+        <ng-container class="loading-bar" *ngIf="!mdStore[0]">
+            <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+        </ng-container>
+        <div markdown ngClass="wb-highlight" *ngIf="mdStore[0]" [data]="mdStore[0]"></div>
         <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-000.png">
     </mat-card>
 </div>

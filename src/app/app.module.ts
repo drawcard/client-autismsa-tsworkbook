@@ -20,6 +20,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatCheckboxModule } from "@angular/material/checkbox";
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+
 import { ImageUploadComponent } from "./workbook-form/image-upload/image-upload.component";
 
 import { Section00Component } from './workbook-form/section00/section00.component';
@@ -71,6 +73,7 @@ import { MarkdownModule } from 'ngx-markdown';
     MatRadioModule,
     MatCardModule,
     MatCheckboxModule,
+    MatProgressBarModule,
     ReactiveFormsModule,
     HttpClientModule,
     HttpClientJsonpModule,

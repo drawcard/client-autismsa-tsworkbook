@@ -13,7 +13,10 @@
         <a id="generatePDF"></a>
         <mat-card class="wb-section">
             <mat-card-content>
-                <div markdown class="wb-highlight" [data]="mdStore[26]"></div>
+                <ng-container class="loading-bar" *ngIf="!mdStore[26]">
+                    <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+                </ng-container>
+                <div markdown class="wb-highlight" *ngIf="mdStore[26]" [data]="mdStore[26]"></div>
                 <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Create
                     PDF</button>
             </mat-card-content>

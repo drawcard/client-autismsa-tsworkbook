@@ -1,10 +1,16 @@
 <a id="section-01"></a>
 <div class="wb-section">
     <mat-card class="wb-section">
-        <div markdown class="wb-highlight" [data]="mdStore[1]"></div>
+        <ng-container class="loading-bar" *ngIf="!mdStore[1]">
+            <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+        </ng-container>
+        <div markdown class="wb-highlight" *ngIf="mdStore[1]" [data]="mdStore[1]"></div>
         <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-001.png">
         <mat-card-content>
-            <div markdown class="wb-highlight" [data]="mdStore[2]"></div>
+            <ng-container class="loading-bar" *ngIf="!mdStore[2]">
+                <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+            </ng-container>
+            <div markdown class="wb-highlight" *ngIf="mdStore[2]" [data]="mdStore[2]"></div>
             <mat-form-field>
                 <input matInput placeholder="My name is" value="" [formControl]="q1">
             </mat-form-field>
@@ -22,7 +28,10 @@
 
 
         <mat-card-content>
-            <div markdown class="wb-highlight" [data]="mdStore[3]"></div>
+            <ng-container class="loading-bar" *ngIf="!mdStore[3]">
+                <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+            </ng-container>
+            <div markdown class="wb-highlight" *ngIf="mdStore[3]" [data]="mdStore[3]"></div>
             <mat-form-field>
                 <textarea matInput placeholder="I like (e.g. people, places, objects, activities):"
                     [formControl]="q5"></textarea>

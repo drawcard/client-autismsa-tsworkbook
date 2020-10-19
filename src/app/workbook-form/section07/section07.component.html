@@ -2,7 +2,10 @@
 <div class="wb-section">
     <mat-card class="wb-section">
         <mat-card-content>
-            <div markdown class="wb-highlight" [data]="mdStore[25]"></div>
+            <ng-container class="loading-bar" *ngIf="!mdStore[25]">
+                <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+            </ng-container>
+            <div markdown class="wb-highlight" *ngIf="mdStore[25]" [data]="mdStore[25]"></div>
             <mat-form-field>
                 <input matInput placeholder="A month: " value="" [formControl]="q1">
             </mat-form-field>

@@ -3,9 +3,15 @@
     <mat-card class="wb-section">
         <mat-card-content>
             <mat-list>
-                <div markdown class="wb-highlight" [data]="mdStore[9]"></div>
+                <ng-container class="loading-bar" *ngIf="!mdStore[9]">
+                    <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+                </ng-container>
+                <div markdown class="wb-highlight" *ngIf="mdStore[9]" [data]="mdStore[9]"></div>
                 <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-003.png">
-                <div markdown class="wb-highlight" [data]="mdStore[10]"></div>
+                <ng-container class="loading-bar" *ngIf="!mdStore[10]">
+                    <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+                </ng-container>
+                <div markdown class="wb-highlight" *ngIf="mdStore[10]" [data]="mdStore[10]"></div>
                 <mat-list-item *ngFor="let item of cbl1">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>
@@ -15,7 +21,9 @@
                         <input matInput placeholder="Other (please add...)" value="" [formControl]="other1">
                     </mat-form-field>
                 </mat-list-item>
-
+                <ng-container class="loading-bar" *ngIf="!mdStore[11]">
+                    <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+                </ng-container>
                 <div markdown class="wb-highlight" [data]="mdStore[11]"></div>
                 <mat-list-item *ngFor="let item of cbl2">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
@@ -26,8 +34,10 @@
                         <input matInput placeholder="Other (please add...)" value="" [formControl]="other2">
                     </mat-form-field>
                 </mat-list-item>
-
-                <div markdown class="wb-highlight" [data]="mdStore[12]"></div>
+                <ng-container class="loading-bar" *ngIf="!mdStore[12]">
+                    <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+                </ng-container>
+                <div markdown class="wb-highlight" *ngIf="mdStore[12]" [data]="mdStore[12]"></div>
                 <ng-container *ngFor="let item of rad1; let i=index">
                     <label class="radio-label" id="example-radio-group-label">{{item.name}}</label>
                     <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group">
@@ -41,8 +51,10 @@
                         <input matInput placeholder="Other (please add...)" value="" [formControl]="other3">
                     </mat-form-field>
                 </mat-list-item>
-
-                <div markdown class="wb-highlight" [data]="mdStore[13]"></div>
+                <ng-container class="loading-bar" *ngIf="!mdStore[13]">
+                    <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+                </ng-container>
+                <div markdown class="wb-highlight" *ngIf="mdStore[13]" [data]="mdStore[13]"></div>
                 <mat-list-item *ngFor="let item of cbl4">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
                     </mat-checkbox>

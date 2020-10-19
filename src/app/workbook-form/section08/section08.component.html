@@ -2,7 +2,10 @@
 <div class="wb-section">
     <mat-card class="wb-section">
         <mat-card-content>
-            <div markdown class="wb-info" [data]="mdStore[27]"></div>
+            <ng-container class="loading-bar" *ngIf="!mdStore[27]">
+                <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
+            </ng-container>
+            <div markdown class="wb-info" *ngIf="mdStore[27]" [data]="mdStore[27]"></div>
         </mat-card-content>
     </mat-card>
 </div>
