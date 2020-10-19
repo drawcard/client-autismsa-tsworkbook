@@ -47,21 +47,6 @@ export class WorkbookFormComponent implements OnInit {
   cardImageBase64: string = "test";
   docName: string = 'Autism & Me: Workbook';
 
-  // Regular expression for stripping <br> tags in the PDF output
-  regex = /\<br>/gi;
-
-  //Fetch data from nested child components & assign to member variable
-  section00StaticContent: any[];
-  section01StaticContent: any[];
-  section02StaticContent: any[];
-  section03StaticContent: any[];
-  section04StaticContent: any[];
-  section05StaticContent: any[];
-  section06StaticContent: any[];
-  section07StaticContent: any[];
-  section08StaticContent: any[];
-  section09StaticContent: any[];
-
   httpObject: any[];
 
   @ViewChild(Section00Component) s00: Section00Component;
@@ -113,16 +98,6 @@ export class WorkbookFormComponent implements OnInit {
     this.logo = ds.logo;
     this.imgChecked = ds.imgChecked;
     this.imgUnchecked = ds.imgUnchecked;
-    this.section00Title = ds.section00Title;
-    this.section01Title = ds.section01Title;
-    this.section02Title = ds.section02Title;
-    this.section03Title = ds.section03Title;
-    this.section04Title = ds.section04Title;
-    this.section05Title = ds.section05Title;
-    this.section06Title = ds.section06Title;
-    this.section07Title = ds.section07Title;
-    this.section08Title = ds.section08Title;
-    this.section09Title = ds.section09Title;
     this.mindMap001 = mm.mindMap001;
     this.mindMap002 = mm.mindMap002;
     this.mindMap003 = mm.mindMap003;
@@ -159,11 +134,8 @@ export class WorkbookFormComponent implements OnInit {
           // Store the returned markdown data
           that.mdStore.push(data);
         },
-          error => {
-            // Trigger a communication error if the file can't be retrieved for some reason
-            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
-            console.error(error);
-          });
+          () => { }
+        );
     });
   }
 
