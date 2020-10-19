@@ -10,18 +10,13 @@
         <app-section06></app-section06>
         <app-section07></app-section07>
         <!-- Generate PDF -->
+        <a id="generatePDF"></a>
         <mat-card class="wb-section">
-            <a id="generatePDF"></a>
-
-
-
             <mat-card-content>
                 <div markdown class="wb-highlight" [data]="mdStore[26]"></div>
                 <button class="generate-pdf" mat-raised-button color="primary" (click)="generatePdf()">Create
                     PDF</button>
             </mat-card-content>
-
-
         </mat-card>
         <!-- end Generate PDF -->
         <app-section08></app-section08>
