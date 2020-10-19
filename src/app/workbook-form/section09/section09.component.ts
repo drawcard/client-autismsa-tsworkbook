@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { HttpClient } from "@angular/common/http";
 import { FetchDataService } from '../services/fetch-data.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-section09',
@@ -28,13 +29,13 @@ export class Section09Component implements OnInit {
     let that = this; // https://stackoverflow.com/a/49892384
 
     // Set variables
-    let dataStrings = this.dataStore["dataStrings"];
+    let paragraphs = this.dataStore["paragraphs"];
 
     // On each dataString, do the following
-    Object.keys(dataStrings).forEach(function (value) {
+    Object.keys(paragraphs).forEach(function (value) {
 
-      let fileName = dataStrings[value];
-      let filePath = '../../../assets/content/' + fileName;
+      let fileName = paragraphs[value];
+      let filePath = environment.filePath + fileName;
 
       // Retrieve the markdown data
       that.http.get(filePath, { responseType: 'text' })

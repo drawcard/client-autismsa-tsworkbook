@@ -1,4 +1,6 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
+import { environment } from '../../environments/environment';
+
 import { Section00Component } from './section00/section00.component';
 import { Section01Component } from './section01/section01.component';
 import { Section02Component } from './section02/section02.component';
@@ -130,6 +132,10 @@ export class WorkbookFormComponent implements OnInit {
   ngOnInit(): void {
     // Fetch Markdown Content for display in the PDF
     this.fetchMarkDownContent();
+
+    console.info("PARAGRAPHS");
+    console.debug(this.mdStore);
+    console.info("--- END PARAGRAPHS");
   }
 
   fetchMarkDownContent() {
@@ -139,13 +145,13 @@ export class WorkbookFormComponent implements OnInit {
     let that = this; // https://stackoverflow.com/a/49892384
 
     // Set variables
-    let dataStrings = this.dataStore["dataStrings"];
+    let paragraphs = this.dataStore["paragraphs"];
 
     // On each dataString, do the following
-    Object.keys(dataStrings).forEach(function (value) {
+    Object.keys(paragraphs).forEach(function (value) {
 
-      let fileName = dataStrings[value];
-      let filePath = '../../../assets/content/' + fileName;
+      let fileName = paragraphs[value];
+      let filePath = environment.filePath + fileName;
 
       // Retrieve the markdown data
       that.http.get(filePath, { responseType: 'text' })
