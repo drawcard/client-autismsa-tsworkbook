@@ -92,31 +92,11 @@ export class Section03Component implements OnInit {
   }
 
   fetchMarkDownContent() {
-    // Retrieve data from FetchDataService
-    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
-
-    let that = this; // https://stackoverflow.com/a/49892384
-
-    // Set variables
-    let paragraphs = this.dataStore["paragraphs"];
-
-    // On each dataString, do the following
-    Object.keys(paragraphs).forEach(function (value) {
-
-      let fileName = paragraphs[value];
-      let filePath = environment.filePath + fileName;
-
-      // Retrieve the markdown data
-      that.http.get(filePath, { responseType: 'text' })
-        .subscribe((data) => {
-          // Store the returned markdown data
-          that.mdStore.push(data);
-        },
-          error => {
-            // Trigger a communication error if the file can't be retrieved for some reason
-            error = "Communication error: File " + filePath + " could not be fetched! Please contact the website administrator.";
-            console.error(error);
-          });
+    // Subscribe to FetchDataService
+    this.fetchDataService.requestDataFromMultipleSources().subscribe(responseList => {
+      for (let i = 0; i < this.fetchDataService.fileCounter; i++) {
+        this.mdStore[i] = responseList[i];
+      }
     });
   }
 

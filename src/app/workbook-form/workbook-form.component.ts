@@ -114,28 +114,12 @@ export class WorkbookFormComponent implements OnInit {
   }
 
   fetchMarkDownContent() {
-    // Retrieve data from FetchDataService
-    this.fetchDataService.dataStream.subscribe(jsonData => this.dataStore = jsonData);
-
-    let that = this; // https://stackoverflow.com/a/49892384
-
-    // Set variables
-    let paragraphs = this.dataStore["paragraphs"];
-
-    // On each dataString, do the following
-    Object.keys(paragraphs).forEach(function (value) {
-
-      let fileName = paragraphs[value];
-      let filePath = environment.filePath + fileName;
-
-      // Retrieve the markdown data
-      that.http.get(filePath, { responseType: 'text' })
-        .subscribe((data) => {
-          // Store the returned markdown data
-          that.mdStore.push(data);
-        },
-          () => { }
-        );
+    // Subscribe to FetchDataService
+    this.fetchDataService.requestDataFromMultipleSources().subscribe(responseList => {
+      // Store the data to object
+      for (let i = 0; i < this.fetchDataService.fileCounter; i++) {
+        this.mdStore[i] = responseList[i];
+      }
     });
   }
 
