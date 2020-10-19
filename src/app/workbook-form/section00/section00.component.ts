@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 import { FetchDataService } from '../services/fetch-data.service';
 import { environment } from '../../../environments/environment';
+import { delay } from 'rxjs/operators';
+import { pipe } from 'rxjs';
 
 @Component({
   selector: 'app-section00',

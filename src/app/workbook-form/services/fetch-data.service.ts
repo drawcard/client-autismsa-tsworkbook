@@ -1,23 +1,54 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, forkJoin, Observable } from 'rxjs';
+import { BehaviorSubject, forkJoin, from, Observable } from 'rxjs';
+import { catchError, delay, mergeMap, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
 import ContentFilePaths from "../../../assets/content/content-filepaths.json";
+import RateLimiter from 'rxjs-ratelimiter';
 
 @Injectable({
   providedIn: 'root'
 })
 export class FetchDataService {
 
-  // Initialise payload
-  private jsonObject = ContentFilePaths;
+  fileArray: string[] =
+    [
+      (environment.filePath + 'paragraphs/paragraph-000.md'),
+      (environment.filePath + 'paragraphs/paragraph-001.md'),
+      (environment.filePath + 'paragraphs/paragraph-002.md'),
+      (environment.filePath + 'paragraphs/paragraph-003.md'),
+      (environment.filePath + 'paragraphs/paragraph-004.md'),
+      (environment.filePath + 'paragraphs/paragraph-005.md'),
+      (environment.filePath + 'paragraphs/paragraph-006.md'),
+      (environment.filePath + 'paragraphs/paragraph-007.md'),
+      (environment.filePath + 'paragraphs/paragraph-008.md'),
+      (environment.filePath + 'paragraphs/paragraph-009.md'),
+      (environment.filePath + 'paragraphs/paragraph-010.md'),
+      (environment.filePath + 'paragraphs/paragraph-011.md'),
+      (environment.filePath + 'paragraphs/paragraph-012.md'),
+      (environment.filePath + 'paragraphs/paragraph-013.md'),
+      (environment.filePath + 'paragraphs/paragraph-014.md'),
+      (environment.filePath + 'paragraphs/paragraph-015.md'),
+      (environment.filePath + 'paragraphs/paragraph-016.md'),
+      (environment.filePath + 'paragraphs/paragraph-017.md'),
+      (environment.filePath + 'paragraphs/paragraph-018.md'),
+      (environment.filePath + 'paragraphs/paragraph-019.md'),
+      (environment.filePath + 'paragraphs/paragraph-020.md'),
+      (environment.filePath + 'paragraphs/paragraph-021.md'),
+      (environment.filePath + 'paragraphs/paragraph-022.md'),
+      (environment.filePath + 'paragraphs/paragraph-023.md'),
+      (environment.filePath + 'paragraphs/paragraph-024.md'),
+      (environment.filePath + 'paragraphs/paragraph-025.md'),
+      (environment.filePath + 'paragraphs/paragraph-026.md'),
+      (environment.filePath + 'paragraphs/paragraph-027.md'),
+      (environment.filePath + 'paragraphs/paragraph-028.md')
+    ]
 
-  // Create an observable for the payload
-  private payload = new BehaviorSubject<any>(this.jsonObject);
+  // Don't hammer the website with API requests (otherwise you will get Error 429: Too many requests)
+  // https://github.com/insidewhy/rxjs-ratelimiter
+  private rateLimiter = new RateLimiter(6, 200);
 
-  // Data object exposed in this service
-  dataStream = this.payload.asObservable();
-
+  // Initialise file counter
   fileCounter: number = 0;
 
   constructor(private http: HttpClient) {
@@ -26,40 +57,38 @@ export class FetchDataService {
 
 
   public requestDataFromMultipleSources(): Observable<any[]> {
+    let response000 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-000.md', { responseType: 'text' }).pipe(retry()));
+    let response001 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-001.md', { responseType: 'text' }).pipe(retry()));
+    let response002 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-002.md', { responseType: 'text' }).pipe(retry()));
+    let response003 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-003.md', { responseType: 'text' }).pipe(retry()));
+    let response004 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-004.md', { responseType: 'text' }).pipe(retry()));
+    let response005 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-005.md', { responseType: 'text' }).pipe(retry()));
+    let response006 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-006.md', { responseType: 'text' }).pipe(retry()));
+    let response007 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-007.md', { responseType: 'text' }).pipe(retry()));
+    let response008 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-008.md', { responseType: 'text' }).pipe(retry()));
+    let response009 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-009.md', { responseType: 'text' }).pipe(retry()));
+    let response010 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-010.md', { responseType: 'text' }).pipe(retry()));
+    let response011 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-011.md', { responseType: 'text' }).pipe(retry()));
+    let response012 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-012.md', { responseType: 'text' }).pipe(retry()));
+    let response013 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-013.md', { responseType: 'text' }).pipe(retry()));
+    let response014 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-014.md', { responseType: 'text' }).pipe(retry()));
+    let response015 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-015.md', { responseType: 'text' }).pipe(retry()));
+    let response016 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-016.md', { responseType: 'text' }).pipe(retry()));
+    let response017 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-017.md', { responseType: 'text' }).pipe(retry()));
+    let response018 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-018.md', { responseType: 'text' }).pipe(retry()));
+    let response019 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-019.md', { responseType: 'text' }).pipe(retry()));
+    let response020 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-020.md', { responseType: 'text' }).pipe(retry()));
+    let response021 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-021.md', { responseType: 'text' }).pipe(retry()));
+    let response022 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-022.md', { responseType: 'text' }).pipe(retry()));
+    let response023 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-023.md', { responseType: 'text' }).pipe(retry()));
+    let response024 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-024.md', { responseType: 'text' }).pipe(retry()));
+    let response025 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-025.md', { responseType: 'text' }).pipe(retry()));
+    let response026 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-026.md', { responseType: 'text' }).pipe(retry()));
+    let response027 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-027.md', { responseType: 'text' }).pipe(retry()));
+    let response028 = this.rateLimiter.limit(this.http.get(environment.filePath + 'paragraphs/paragraph-028.md', { responseType: 'text' }).pipe(retry()));
 
-    // Retrieve all markdown files via HTTP Get request
-    let response000 = this.http.get(environment.filePath + 'paragraphs/paragraph-000.md', { responseType: 'text' });
-    let response001 = this.http.get(environment.filePath + 'paragraphs/paragraph-001.md', { responseType: 'text' });
-    let response002 = this.http.get(environment.filePath + 'paragraphs/paragraph-002.md', { responseType: 'text' });
-    let response003 = this.http.get(environment.filePath + 'paragraphs/paragraph-003.md', { responseType: 'text' });
-    let response004 = this.http.get(environment.filePath + 'paragraphs/paragraph-004.md', { responseType: 'text' });
-    let response005 = this.http.get(environment.filePath + 'paragraphs/paragraph-005.md', { responseType: 'text' });
-    let response006 = this.http.get(environment.filePath + 'paragraphs/paragraph-006.md', { responseType: 'text' });
-    let response007 = this.http.get(environment.filePath + 'paragraphs/paragraph-007.md', { responseType: 'text' });
-    let response008 = this.http.get(environment.filePath + 'paragraphs/paragraph-008.md', { responseType: 'text' });
-    let response009 = this.http.get(environment.filePath + 'paragraphs/paragraph-009.md', { responseType: 'text' });
-    let response010 = this.http.get(environment.filePath + 'paragraphs/paragraph-010.md', { responseType: 'text' });
-    let response011 = this.http.get(environment.filePath + 'paragraphs/paragraph-011.md', { responseType: 'text' });
-    let response012 = this.http.get(environment.filePath + 'paragraphs/paragraph-012.md', { responseType: 'text' });
-    let response013 = this.http.get(environment.filePath + 'paragraphs/paragraph-013.md', { responseType: 'text' });
-    let response014 = this.http.get(environment.filePath + 'paragraphs/paragraph-014.md', { responseType: 'text' });
-    let response015 = this.http.get(environment.filePath + 'paragraphs/paragraph-015.md', { responseType: 'text' });
-    let response016 = this.http.get(environment.filePath + 'paragraphs/paragraph-016.md', { responseType: 'text' });
-    let response017 = this.http.get(environment.filePath + 'paragraphs/paragraph-017.md', { responseType: 'text' });
-    let response018 = this.http.get(environment.filePath + 'paragraphs/paragraph-018.md', { responseType: 'text' });
-    let response019 = this.http.get(environment.filePath + 'paragraphs/paragraph-019.md', { responseType: 'text' });
-    let response020 = this.http.get(environment.filePath + 'paragraphs/paragraph-020.md', { responseType: 'text' });
-    let response021 = this.http.get(environment.filePath + 'paragraphs/paragraph-021.md', { responseType: 'text' });
-    let response022 = this.http.get(environment.filePath + 'paragraphs/paragraph-022.md', { responseType: 'text' });
-    let response023 = this.http.get(environment.filePath + 'paragraphs/paragraph-023.md', { responseType: 'text' });
-    let response024 = this.http.get(environment.filePath + 'paragraphs/paragraph-024.md', { responseType: 'text' });
-    let response025 = this.http.get(environment.filePath + 'paragraphs/paragraph-025.md', { responseType: 'text' });
-    let response026 = this.http.get(environment.filePath + 'paragraphs/paragraph-026.md', { responseType: 'text' });
-    let response027 = this.http.get(environment.filePath + 'paragraphs/paragraph-027.md', { responseType: 'text' });
-    let response028 = this.http.get(environment.filePath + 'paragraphs/paragraph-028.md', { responseType: 'text' });
-
-    // Total file count - update this number if the tally of variables above changes
-    this.fileCounter = 28;
+    let fileIDs = 28; // NOTE: Update this to match the last ID # in the file list above
+    this.fileCounter = fileIDs + 1;
 
     // Return HTTP content
     return forkJoin([
