@@ -26,7 +26,8 @@
                 type="button">
                 <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
             </button>
-            <span>Autism and Me: Workbook</span>
+            <span class="app-title">Autism and Me: Workbook</span>
+            <button mat-raised-button (click)="clearLocalStorage()" color="accent">Reset Form</button>
         </mat-toolbar>
         <app-workbook-form></app-workbook-form>
     </mat-sidenav-content>

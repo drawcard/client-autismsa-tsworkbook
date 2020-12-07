@@ -102,6 +102,31 @@ export class Section02Component implements OnInit {
 
   ngOnInit(): void {
     this.fetchMarkDownContent();
+    this.getLocalStorage();
+    this.setLocalStorage();
+  }
+  setLocalStorage() {
+    this.other1.valueChanges.subscribe(other1_input_value => {
+      localStorage.setItem("s2_other1_input_value", other1_input_value);
+    });
+    this.other2.valueChanges.subscribe(other2_input_value => {
+      localStorage.setItem("s2_other2_input_value", other2_input_value);
+    });
+    this.other3.valueChanges.subscribe(other3_input_value => {
+      localStorage.setItem("s2_other3_input_value", other3_input_value);
+    });
+    this.other4.valueChanges.subscribe(other4_input_value => {
+      localStorage.setItem("s2_other4_input_value", other4_input_value);
+    });
+  }
+
+  getLocalStorage() {
+    if (localStorage.length > 0) {
+      this.other1.setValue(localStorage.getItem("s2_other1_input_value"));
+      this.other2.setValue(localStorage.getItem("s2_other2_input_value"));
+      this.other3.setValue(localStorage.getItem("s2_other3_input_value"));
+      this.other4.setValue(localStorage.getItem("s2_other4_input_value"));
+    }
   }
 
   fetchMarkDownContent() {

@@ -16,8 +16,18 @@ export class MainMenuComponent {
     .pipe(
       map(result => result.matches),
       shareReplay()
-    );
+  );
 
-  constructor(private breakpointObserver: BreakpointObserver) { }
 
+  constructor(private breakpointObserver: BreakpointObserver) {
+
+  }
+
+  clearLocalStorage() {
+    var clearAll = confirm("Warning! This will clear all saved form data. Continue?");
+    if (clearAll == true) {
+      localStorage.clear();
+      location.reload(); // Reload the browser window
+    }
+  }
 }
