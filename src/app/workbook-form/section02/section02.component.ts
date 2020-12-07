@@ -48,7 +48,7 @@ export class Section02Component implements OnInit {
 
     this.cbl1 = [
       // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
-      { name: "Use a visual support to provide warning of what is next ", checked: false },
+      { name: "I need a visual support to provide warning of what is next", checked: false },
       { name: "I find it tricky to give eye contact", checked: false },
       { name: "I have trouble knowing what others are going to do e.g. I don’t reach out my arms when someone is about to pick me up, or I don’t seem to understand familiar games e.g. ‘Peek-a-Boo’ or ‘Chasey’", checked: false },
       { name: "I find understanding body language and gestures confusing e.g. smiling when smiled at; pointing or waving in context ", checked: false },

@@ -27,7 +27,7 @@ export class Section03Component implements OnInit {
   cbl2 = [];
   cbl4 = [];
   rad1 = [
-    { name: "Use a visual support to provide warning of what is next ", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
+    { name: "I need a visual support to provide warning of what is next", selected: null, id: "0", rating: ['Currently use', 'Have not tried yet'] },
     { name: "Use a visual support to provide warning of unexpected changes", selected: null, id: "1", rating: ['Currently use', 'Have not tried yet'] },
     { name: "Create and follow routines for regular tasks e.g. bedtime, dinner time  ", selected: null, id: "2", rating: ['Currently use', 'Have not tried yet'] },
     { name: "Use visual supports to assist completing my routines e.g. a visual schedule of bedtime routine ", selected: null, id: "3", rating: ['Currently use', 'Have not tried yet'] },
