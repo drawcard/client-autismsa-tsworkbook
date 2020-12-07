@@ -260,16 +260,18 @@ body {
 // Allow checkbox label wrapping
 .mat-checkbox-layout .mat-checkbox-label {
   white-space: initial !important;
+  line-height: 1.2;
 }
 
 // Align checkbox top left of wrapped labels
 .mat-checkbox-inner-container {
-  margin: 0px !important;
-  margin-right: 8px !important;
+  margin: 5px 8px 8px 5px !important;
 }
 
 // Correct sizing of mat-list-item
 .mat-list-base .mat-list-item {
   font-size: 16px;
   line-height: 1.6rem;
+  height: unset !important;
+  padding: 8px 0px !important;
 }
