@@ -455,8 +455,7 @@ export class WorkbookFormComponent implements OnInit {
               [{ text: this.s04.cbl1[4].name }, { image: (this.s04.cbl1[4].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s04.cbl1[5].name }, { image: (this.s04.cbl1[5].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
               [{ text: this.s04.cbl1[6].name }, { image: (this.s04.cbl1[6].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl1[7].name }, { image: (this.s04.cbl1[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
-              [{ text: this.s04.cbl1[8].name }, { image: (this.s04.cbl1[8].checked ? this.imgChecked : this.imgUnchecked), width: 16 }],
+              [{ text: this.s04.cbl1[7].name }, { image: (this.s04.cbl1[7].checked ? this.imgChecked : this.imgUnchecked), width: 16 }]
             ]
           }
         },
