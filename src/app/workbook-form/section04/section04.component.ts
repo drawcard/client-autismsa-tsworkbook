@@ -44,8 +44,7 @@ export class Section04Component implements OnInit {
       { name: "I understand visual information better than verbal information i.e. I need to see information rather than hear it", checked: false },
       { name: "I notice lots of details but find it difficult to see the bigger picture ", checked: false },
       { name: "I have a good long-term memory i.e. remember many facts and events from the past", checked: false },
-      { name: "I have a good long-term memory i.e. remember many facts and events from the past", checked: false },
-      { name: "I have difficulties with my working memory i.e. I have trouble remembering what I need to do nextel5", checked: false },
+      { name: "I have difficulties with my working memory i.e. I have trouble remembering what I need to do next", checked: false },
       { name: "I find being organised tricky i.e. remembering all my things", checked: false },
       { name: "I am good at using skills in the environment I learned them, in but find it hard to use these skills in new environments  ", checked: false },
       { name: "I can do certain things well and easily but find other things hard  ", checked: false },
@@ -56,7 +55,7 @@ export class Section04Component implements OnInit {
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
         { name: "I remember lots of things that my family forget ", checked: false },
         { name: "It is hard to get me to stop an activity I love ", checked: false },
-        { name: "It is hard to get me to do things I do not care about e.g. brushing teeth ", checked: false },
+      { name: "It is hard to get me to do things I do not care about e.g. brushing teeth", checked: false },
         { name: "I can be unorganised, so sometimes/frequently I cannot find things, or I forget things ", checked: false },
         { name: "I follow instructions and complete tasks for one person but not another e.g. I brush my teeth at my house but not at Nanna’s house ", checked: false },
         { name: "We often need to deal with unexpected issues as my abilities and needs change regularly ", checked: false },
