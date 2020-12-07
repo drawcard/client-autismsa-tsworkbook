@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject, forkJoin, from, Observable } from 'rxjs';
 import { catchError, delay, mergeMap, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
-import ContentFilePaths from "../../../assets/content/content-filepaths.json";
 import RateLimiter from 'rxjs-ratelimiter';
 
 @Injectable({
