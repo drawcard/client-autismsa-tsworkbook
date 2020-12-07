@@ -5,6 +5,10 @@
             <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
         </ng-container>
         <div markdown ngClass="wb-highlight" *ngIf="mdStore[0]" [data]="mdStore[0]"></div>
-        <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-000.png">
+        <div class="videoWrapper">
+          <iframe width="928" height="522" src="https://www.youtube.com/embed/-Xpx4WWK4bg" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
     </mat-card>
 </div>

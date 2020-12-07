@@ -7,7 +7,11 @@
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[4]" [data]="mdStore[4]"></div>
-                <img class="img-responsive" src="assets/img/ts-youtube-thumbnail-002.png">
+                <div class="videoWrapper">
+                  <iframe width="928" height="522" src="https://www.youtube.com/embed/tw73rxmNcLU" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
                 <ng-container class="loading-bar" *ngIf="!mdStore[5]">
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
                 </ng-container>
