@@ -74,15 +74,32 @@ export class Section01Component implements OnInit {
 
   setLocalStorage() {
     if (localStorage.length > 0) {
+      // don't display if value = null
+      if (localStorage.s0_q1_input_value) {
       this.q1.setValue(localStorage.getItem("s0_q1_input_value"));
+      }
+      if (localStorage.s0_q2_input_value) {
       this.q2.setValue(localStorage.getItem("s0_q2_input_value"));
+      }
+      if (localStorage.s0_q3_input_value) {
       this.q3.setValue(localStorage.getItem("s0_q3_input_value"));
+      }
+      if (localStorage.s0_q4_input_value) {
       this.q4.setValue(localStorage.getItem("s0_q4_input_value"));
+      }
+      if (localStorage.s0_q5_input_value) {
       this.q5.setValue(localStorage.getItem("s0_q5_input_value"));
+      }
+      if (localStorage.s0_q6_input_value) {
       this.q6.setValue(localStorage.getItem("s0_q6_input_value"));
+      }
+      if (localStorage.s0_q7_input_value) {
       this.q7.setValue(localStorage.getItem("s0_q7_input_value"));
+      }
+      if (localStorage.s0_q8_input_value) {
       this.q8.setValue(localStorage.getItem("s0_q8_input_value"));
     }
+  }
   }
 
   fetchMarkDownContent() {
