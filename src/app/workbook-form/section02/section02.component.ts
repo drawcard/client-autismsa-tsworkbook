@@ -5,6 +5,7 @@ import { FormControl } from '@angular/forms';
 import { HttpClient } from "@angular/common/http";
 import { FetchDataService } from '../services/fetch-data.service';
 import { environment } from '../../../environments/environment';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-section02',
@@ -21,8 +22,6 @@ export class Section02Component implements OnInit {
   other3 = new FormControl('');
   other4 = new FormControl('');
 
-  master_checked: boolean = false;
-  master_indeterminate: boolean = false;
   cbl1 = [];
   cbl2 = [];
   cbl4 = [];
@@ -141,34 +140,8 @@ export class Section02Component implements OnInit {
   radioChange(event: MatRadioChange, data) {
     var obj = this.rad1.filter(x => x.id == data.id)[0];
     obj.selected = event.value;
+    // alert('changed radio!');
   }
 
-  master_change() {
-    for (let value of Object.values(this.cbl1)) {
-      value.checked = this.master_checked;
-    }
-  }
-
-  list_change() {
-    let checked_count = 0;
-    //Get total checked items
-    for (let value of Object.values(this.cbl1)) {
-      if (value.checked)
-        checked_count++;
-    }
-
-    if (checked_count > 0 && checked_count < this.cbl1.length) {
-      // If some checkboxes are checked but not all; then set Indeterminate state of the master to true.
-      this.master_indeterminate = true;
-    } else if (checked_count == this.cbl1.length) {
-      //If checked count is equal to total items; then check the master checkbox and also set Indeterminate state to false.
-      this.master_indeterminate = false;
-      this.master_checked = true;
-    } else {
-      //If none of the checkboxes in the list is checked then uncheck master also set Indeterminate to false.
-      this.master_indeterminate = false;
-      this.master_checked = false;
-    }
-  }
-
+  checkboxChange() { }
 }

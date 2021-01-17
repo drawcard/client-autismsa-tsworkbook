@@ -55,7 +55,7 @@ export class Section04Component implements OnInit {
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
         { name: "I remember lots of things that my family forget ", checked: false },
         { name: "It is hard to get me to stop an activity I love ", checked: false },
-      { name: "It is hard to get me to do things I do not care about e.g. brushing teeth", checked: false },
+        { name: "It is hard to get me to do things I do not care about e.g. brushing teeth", checked: false },
         { name: "I can be unorganised, so sometimes/frequently I cannot find things, or I forget things ", checked: false },
         { name: "I follow instructions and complete tasks for one person but not another e.g. I brush my teeth at my house but not at Nanna’s house ", checked: false },
         { name: "We often need to deal with unexpected issues as my abilities and needs change regularly ", checked: false },
@@ -121,32 +121,5 @@ export class Section04Component implements OnInit {
     obj.selected = event.value;
   }
 
-  master_change() {
-    for (let value of Object.values(this.cbl1)) {
-      value.checked = this.master_checked;
-    }
-  }
-
-  list_change() {
-    let checked_count = 0;
-    //Get total checked items
-    for (let value of Object.values(this.cbl1)) {
-      if (value.checked)
-        checked_count++;
-    }
-
-    if (checked_count > 0 && checked_count < this.cbl1.length) {
-      // If some checkboxes are checked but not all; then set Indeterminate state of the master to true.
-      this.master_indeterminate = true;
-    } else if (checked_count == this.cbl1.length) {
-      //If checked count is equal to total items; then check the master checkbox and also set Indeterminate state to false.
-      this.master_indeterminate = false;
-      this.master_checked = true;
-    } else {
-      //If none of the checkboxes in the list is checked then uncheck master also set Indeterminate to false.
-      this.master_indeterminate = false;
-      this.master_checked = false;
-    }
-  }
-
+  checkboxChange() { }
 }

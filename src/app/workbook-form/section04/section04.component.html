@@ -17,7 +17,8 @@
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[15]" [data]="mdStore[15]"></div>
                 <mat-list-item *ngFor="let item of cbl1">
-                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
+                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
+                      {{ item.name }}
                     </mat-checkbox>
                 </mat-list-item>
                 <mat-list-item>
@@ -30,7 +31,8 @@
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[16]" [data]="mdStore[16]"></div>
                 <mat-list-item *ngFor="let item of cbl2">
-                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
+                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
+                      {{ item.name }}
                     </mat-checkbox>
                 </mat-list-item>
                 <mat-list-item>
@@ -60,7 +62,8 @@
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[18]" [data]="mdStore[18]"></div>
                 <mat-list-item *ngFor="let item of cbl4">
-                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="list_change()">{{ item.name }}
+                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
+                      {{ item.name }}
                     </mat-checkbox>
                 </mat-list-item>
                 <mat-list-item>
