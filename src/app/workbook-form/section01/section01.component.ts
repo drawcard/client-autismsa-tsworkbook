@@ -16,18 +16,6 @@ export class Section01Component implements OnInit {
   mdStore: string[] = [];
   localStore: any;
 
-  // Initialise Form Data Fields
-
-  questions: any = [
-    "q1",
-    "q2",
-    "q3",
-    "q4",
-    "q5",
-    "q6",
-    "q7",
-    "q8"
-  ];
   q1 = new FormControl('');
   q2 = new FormControl('');
   q3 = new FormControl('');
