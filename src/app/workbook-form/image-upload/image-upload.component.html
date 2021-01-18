@@ -12,14 +12,11 @@
                             <img [src]="cardImageBase64" />
                         </ng-container>
                         <ng-template #elseTemplate>
-                            <img src="assets/img/placeholder.png" class="placeholder">
+                            <img [src]="blankImage" class="placeholder">
                         </ng-template>
                     </div>
                 </div>
             </fieldset>
         </div>
     </mat-card-content>
-    <mat-card-actions>
-        <button mat-raised-button (click)="removeImage()" *ngIf="isImageSaved">Remove image</button>
-    </mat-card-actions>
 </mat-card>

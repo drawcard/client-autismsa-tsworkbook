@@ -18,6 +18,7 @@ export class ImageUploadComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.getImage();
   }
 
   fileChangeEvent(fileInput: any) {
@@ -64,7 +65,7 @@ export class ImageUploadComponent implements OnInit {
             this.cardImageBase64 = imgBase64Path;
             this.isImageSaved = true;
             console.log("fileChangeEvent() -> " + this.cardImageBase64);
-            // this.previewImagePath = imgBase64Path;
+            localStorage.setItem("base64ImageUpload", this.cardImageBase64);
           }
         };
       };
@@ -73,11 +74,13 @@ export class ImageUploadComponent implements OnInit {
     }
   }
 
-  removeImage() {
-    this.cardImageBase64 = this.blankImage;
-    this.isImageSaved = false;
-    console.log("removeImage() -> " + this.cardImageBase64);
-    // TODO: Reset the HTML5 file upload element as well
+  getImage() {
+    // If the profile image is available in localStorage, fetch it
+    if (localStorage.getItem("base64ImageUpload")) {
+      this.isImageSaved = true;
+      this.cardImageBase64 = localStorage.getItem("base64ImageUpload");
+      this.blankImage = this.cardImageBase64;
+      console.log(this.blankImage);
+    }
   }
-
 }
