@@ -78,29 +78,29 @@ export class Section02Component implements OnInit {
     ],
       this.cbl2 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
-      { id: 1, name: "I can often feel frustrated as I am not easily understood ", checked: false },
-      { id: 2, name: "It can be harder or slower to get things done as I need support to follow verbal instructions", checked: false },
-      { id: 3, name: "I need more processing time to respond to verbal information", checked: false },
-      { id: 4, name: "It can be difficult having unfamiliar visitors/carers in the home", checked: false },
-      { id: 5, name: "I need a space in the house that is just mine, for calm down time", checked: false },
-      { id: 6, name: "I may need support during playtime between me and my siblings/friends ", checked: false },
-      { id: 7, name: "I find it helpful when my family and friends adjust their communication style to help me understand ", checked: false },
-      { id: 8, name: "I can find it hard to attend mainstream social activities with my family", checked: false },
-      { id: 9, name: "My extended family and friends can find it hard to understand me ", checked: false },
+        { id: 1, name: "I can often feel frustrated as I am not easily understood ", checked: false },
+        { id: 2, name: "It can be harder or slower to get things done as I need support to follow verbal instructions", checked: false },
+        { id: 3, name: "I need more processing time to respond to verbal information", checked: false },
+        { id: 4, name: "It can be difficult having unfamiliar visitors/carers in the home", checked: false },
+        { id: 5, name: "I need a space in the house that is just mine, for calm down time", checked: false },
+        { id: 6, name: "I may need support during playtime between me and my siblings/friends ", checked: false },
+        { id: 7, name: "I find it helpful when my family and friends adjust their communication style to help me understand ", checked: false },
+        { id: 8, name: "I can find it hard to attend mainstream social activities with my family", checked: false },
+        { id: 9, name: "My extended family and friends can find it hard to understand me ", checked: false },
         // Other
       ],
       this.cbl4 = [
         // Thanks: https://www.freakyjolly.com/angular-material-check-uncheck-checkbox-list-with-indeterminate-state-using-matcheckboxmodule/
-      { id: 1, name: "Parents", checked: false },
-      { id: 2, name: "Other family members", checked: false },
-      { id: 3, name: "Educators (childcare/kindergarten/school)", checked: false },
-      { id: 4, name: "Developmental educators", checked: false },
-      { id: 5, name: "Occupational Therapists", checked: false },
-      { id: 6, name: "Speech Pathologists", checked: false },
-      { id: 7, name: "Behaviour practitioners", checked: false },
-      { id: 8, name: "Psychologists", checked: false },
-      { id: 9, name: "Coaches e.g. swimming coach, gymnastic coach", checked: false },
-      { id: 10, name: "Therapists", checked: false },
+        { id: 1, name: "Parents", checked: false },
+        { id: 2, name: "Other family members", checked: false },
+        { id: 3, name: "Educators (childcare/kindergarten/school)", checked: false },
+        { id: 4, name: "Developmental educators", checked: false },
+        { id: 5, name: "Occupational Therapists", checked: false },
+        { id: 6, name: "Speech Pathologists", checked: false },
+        { id: 7, name: "Behaviour practitioners", checked: false },
+        { id: 8, name: "Psychologists", checked: false },
+        { id: 9, name: "Coaches e.g. swimming coach, gymnastic coach", checked: false },
+        { id: 10, name: "Therapists", checked: false },
         // Other
       ]
   }
@@ -109,6 +109,7 @@ export class Section02Component implements OnInit {
     this.fetchMarkDownContent();
     this.getLocalStorage();
     this.setLocalStorage();
+    this.getCheckbox();
   }
   setLocalStorage() {
     this.other1.valueChanges.subscribe(other1_input_value => {
@@ -149,21 +150,26 @@ export class Section02Component implements OnInit {
     // alert('changed radio!');
   }
 
-  setCheckbox(id, event) {
-    let currentlyChecked = { id: id, checked: event.checked };
-
-    if (event.checked === true) {
-      this.selection.push(currentlyChecked);
-      let dedupArray = _.uniqWith(this.selection, _.isEqual);
-      localStorage.setItem('checkboxSelected', JSON.stringify(dedupArray));
-    }
-    else {
-      this.deselected = _.pullAllWith(this.selection, [{ id: id, checked: true }], _.isEqual);
-      localStorage.setItem('checkboxSelected', JSON.stringify(this.selection));
+  getCheckbox() {
+    // If localStorage has checkbox values, retrieve and store in this.selection
+    if (localStorage.getItem('checkboxSelection')) {
+      this.selection = JSON.parse(localStorage.getItem('checkboxSelection'));
     }
   }
 
-  getCheckbox() {
+  setCheckbox(id, name, event) {
+    let currentlyChecked = { id: id, checked: event.checked }; // The current id & checked state of the checkbox
 
+    if (event.checked === true) {
+      let uniqueValues = [];
+      this.selection.push(currentlyChecked); // Update array with current checkbox state
+      uniqueValues = _.uniqWith(this.selection, _.isEqual); // De-duplicate entries
+      this.selection = uniqueValues;
+      localStorage.setItem(`checkboxSelection-${name}`, JSON.stringify(this.selection)); // Store the array in browser
+    }
+    else {
+      this.deselected = _.pullAllWith(this.selection, [{ id: id, checked: true }], _.isEqual); // Remove deselected checkbox from array
+      localStorage.setItem(`checkboxSelection-${name}`, JSON.stringify(this.selection)); // Store the array in browser
+    }
   }
 }
