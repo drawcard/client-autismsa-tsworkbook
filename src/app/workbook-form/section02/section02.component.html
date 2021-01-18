@@ -16,11 +16,16 @@
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[5]" [data]="mdStore[5]"></div>
+
+
                 <mat-list-item *ngFor="let item of cbl1">
-                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
-                      {{ item.name }}
+                    <mat-checkbox #checkbox [(ngModel)]="item.checked" [id]="item.id" [disabled]="false"
+                      (change)="setCheckbox(item.id, $event)">
+                      {{ item.name }} - {{ item.id }}
                     </mat-checkbox>
                 </mat-list-item>
+
+
                 <mat-list-item>
                     <mat-form-field>
                         <input matInput placeholder="Other (please add...)" value="" [formControl]="other1">
