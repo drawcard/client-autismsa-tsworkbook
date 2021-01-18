@@ -20,7 +20,7 @@
 
                 <mat-list-item *ngFor="let item of cbl1">
                     <mat-checkbox #checkbox [(ngModel)]="item.checked" [id]="item.id" [disabled]="false"
-                      (change)="setCheckbox(item.id, 's02-cb1', $event)">
+                      (change)="setCheckbox(item.id, checkboxNames[0], $event)">
                       {{ item.name }} - {{ item.id }}
                     </mat-checkbox>
                 </mat-list-item>

@@ -23,9 +23,15 @@ export class Section02Component implements OnInit {
   other3 = new FormControl('');
   other4 = new FormControl('');
 
+  // Checkbox data
   @ViewChildren('checkbox') item;
   selection = [];
   deselected = [];
+  checkboxNames = [ // names of checkbox 'groups'
+    's02-cbl1',
+    's02-cbl2',
+    's02-cbl4'
+  ];
 
   cbl1 = [];
   cbl2 = [];
@@ -151,10 +157,12 @@ export class Section02Component implements OnInit {
   }
 
   getCheckbox() {
-    // If localStorage has checkbox values, retrieve and store in this.selection
-    if (localStorage.getItem('checkboxSelection')) {
-      this.selection = JSON.parse(localStorage.getItem('checkboxSelection'));
-    }
+    this.checkboxNames.forEach(element => {
+      // If localStorage has checkbox values, retrieve and store in this.selection
+      if (localStorage.getItem(`checkboxSelection-${element}`)) {
+        this.selection = JSON.parse(localStorage.getItem(`checkboxSelection-${element}`));
+      }
+    });
   }
 
   setCheckbox(id, name, event) {
