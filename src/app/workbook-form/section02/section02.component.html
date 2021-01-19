@@ -20,8 +20,8 @@
 
                 <mat-list-item *ngFor="let item of cbl1">
                     <mat-checkbox #checkbox [(ngModel)]="item.checked" [id]="item.id" [disabled]="false"
-                      (change)="setCheckbox(item.id, checkboxNames[0], $event)">
-                      {{ item.name }} - {{ item.id }}
+                      (change)="setCheckbox(item.id, item.groupName, item.label, $event)">
+                      {{ item.label }} - {{ item.id }}
                     </mat-checkbox>
                 </mat-list-item>
 
@@ -37,7 +37,7 @@
                 <div markdown class="wb-highlight" *ngIf="mdStore[5]" [data]="mdStore[6]"></div>
                 <mat-list-item *ngFor="let item of cbl2">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
-                      {{ item.name }}
+                      {{ item.label }}
                     </mat-checkbox>
                 </mat-list-item>
                 <mat-list-item>
@@ -70,7 +70,7 @@
                 <div markdown class="wb-highlight" *ngIf="mdStore[8]" [data]="mdStore[8]"></div>
                 <mat-list-item *ngFor="let item of cbl4">
                     <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
-                      {{ item.name }}
+                      {{ item.label }}
                     </mat-checkbox>
                 </mat-list-item>
 
