@@ -116,8 +116,8 @@ export class Section02Component implements OnInit {
     this.fetchMarkDownContent();
     this.getLocalStorage();
     this.setLocalStorage();
-    this.getCheckbox();
-    this.initCheckbox();
+    this.getCheckboxes();
+    this.initCheckboxes();
   }
   setLocalStorage() {
     this.other1.valueChanges.subscribe(other1_input_value => {
@@ -158,25 +158,25 @@ export class Section02Component implements OnInit {
     // alert('changed radio!');
   }
 
-  initCheckbox() {
+  initCheckboxes() {
     this.checkboxNames.forEach(element => {
       // If localStorage has checkbox values, retrieve and store in this.selection
       if (localStorage.getItem(`checkboxSelection-${element}`)) {
-        let fetchStorage = JSON.parse(localStorage.getItem(`checkboxSelection-${element}`));
+        let fetchedStorage = JSON.parse(localStorage.getItem(`checkboxSelection-${element}`));
         // Merge two arrays, so that the first array is updated with changes from the second
         // https://stackoverflow.com/a/39127724
-        let merged = _.map(
+        let mergedArray = _.map(
           _.assign(
             _.mapKeys(this.cbl1, v => v.id), // first array
-            _.mapKeys(fetchStorage, v => v.id) // second array
+            _.mapKeys(fetchedStorage, v => v.id) // second array
           )
         );
-        this.cbl1 = merged;
+        this.cbl1 = mergedArray;
       }
     });
   }
 
-  getCheckbox() {
+  getCheckboxes() {
     this.checkboxNames.forEach(element => {
       // If localStorage has checkbox values, retrieve and store in this.selection
       if (localStorage.getItem(`checkboxSelection-${element}`)) {
@@ -185,7 +185,7 @@ export class Section02Component implements OnInit {
     });
   }
 
-  setCheckbox(id, groupName, label, event) {
+  setCheckboxes(id, groupName, label, event) {
     let currentlyChecked = { id: id, groupName: groupName, label: label, checked: event.checked }; // The current id & checked state of the checkbox
 
     if (event.checked === true) {
