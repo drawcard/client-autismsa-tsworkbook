@@ -16,16 +16,12 @@
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[5]" [data]="mdStore[5]"></div>
-
-
-                <mat-list-item *ngFor="let item of cbl1">
-                    <mat-checkbox #checkbox [(ngModel)]="item.checked" [id]="item.id" [disabled]="false"
-                      (change)="setCheckboxes(item.id, item.groupName, item.label, $event)">
+                <mat-list-item *ngFor="let item of s02_cbl1; let cbID=index">
+                  <mat-checkbox #checkbox [(ngModel)]="item.checked" [disabled]="false"
+                    (change)="setCheckboxes(cbID, item.groupName, item.label, $event)">
                       {{ item.label }}
                     </mat-checkbox>
                 </mat-list-item>
-
-
                 <mat-list-item>
                     <mat-form-field>
                         <input matInput placeholder="Other (please add...)" value="" [formControl]="other1">
@@ -35,10 +31,11 @@
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[5]" [data]="mdStore[6]"></div>
-                <mat-list-item *ngFor="let item of cbl2">
-                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
-                      {{ item.label }}
-                    </mat-checkbox>
+                <mat-list-item *ngFor="let item of s02_cbl2; let cbID=index">
+                  <mat-checkbox #checkbox [(ngModel)]="item.checked" [disabled]="false"
+                    (change)="setCheckboxes(cbID, item.groupName, item.label, $event)">
+                    {{ item.label }}
+                  </mat-checkbox>
                 </mat-list-item>
                 <mat-list-item>
                     <mat-form-field>
@@ -68,12 +65,12 @@
                     <mat-progress-bar mode="indeterminate" color="warn"></mat-progress-bar>
                 </ng-container>
                 <div markdown class="wb-highlight" *ngIf="mdStore[8]" [data]="mdStore[8]"></div>
-                <mat-list-item *ngFor="let item of cbl4">
-                    <mat-checkbox [(ngModel)]="item.checked" [disabled]="false" (change)="checkboxChange()">
+                <mat-list-item *ngFor="let item of s02_cbl4; let cbID=index">
+                  <mat-checkbox #checkbox [(ngModel)]="item.checked" [disabled]="false"
+                    (change)="setCheckboxes(cbID, item.groupName, item.label, $event)">
                       {{ item.label }}
                     </mat-checkbox>
                 </mat-list-item>
-
                 <mat-list-item>
                     <mat-form-field>
                         <input matInput placeholder="Other (please add...)" value="" [formControl]="other4">
